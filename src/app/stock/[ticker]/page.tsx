@@ -1,0 +1,72 @@
+"use client";
+
+import { useState, useEffect } from "react";
+import { useParams, useRouter } from "next/navigation";
+import { Navbar } from "@/components/layout/Navbar";
+import { SearchBar } from "@/components/layout/SearchBar";
+import { StockHeader } from "@/components/stock/StockHeader";
+import { CalculatorForm } from "@/components/stock/CalculatorForm";
+import { Skeleton } from "@/components/ui/Skeleton";
+import { fetchAndParseStocks, fetchAllStocks } from "@/lib/csvParser";
+import type { StockInfo } from "@/lib/types";
+
+export default function StockCalculatorPage() {
+  const params = useParams();
+  const router = useRouter();
+  const ticker = decodeURIComponent(params.ticker as string);
+
+  const [stock, setStock] = useState<StockInfo | null>(null);
+  const [allStocks, setAllStocks] = useState<StockInfo[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    Promise.all([fetchAndParseStocks(), fetchAllStocks()]).then(
+      ([map, all]) => {
+        const found = map.get(ticker);
+        if (!found) {
+          router.replace("/");
+          return;
+        }
+        setStock(found);
+        setAllStocks(all);
+        setLoading(false);
+      }
+    );
+  }, [ticker, router]);
+
+  return (
+    <div className="min-h-screen bg-[#2a2a2a]">
+      <header className="flex items-center justify-between pr-6">
+        <Navbar />
+        <SearchBar stocks={allStocks} variant="navbar" />
+      </header>
+
+      <main className="max-w-lg mx-auto px-6 py-8">
+        <div className="rounded-2xl bg-[#333333] p-6 space-y-6">
+          {loading || !stock ? (
+            <>
+              <div className="flex items-center gap-3">
+                <Skeleton className="w-14 h-14 rounded-full" />
+                <div className="space-y-2">
+                  <Skeleton className="h-5 w-32" />
+                  <Skeleton className="h-4 w-24" />
+                  <Skeleton className="h-4 w-28" />
+                </div>
+              </div>
+              <div className="grid grid-cols-3 gap-3">
+                {[1, 2, 3].map((i) => (
+                  <Skeleton key={i} className="h-12 rounded-xl" />
+                ))}
+              </div>
+            </>
+          ) : (
+            <>
+              <StockHeader stock={stock} showPrice />
+              <CalculatorForm ticker={ticker} />
+            </>
+          )}
+        </div>
+      </main>
+    </div>
+  );
+}
