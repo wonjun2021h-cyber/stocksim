@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { Navbar } from "@/components/layout/Navbar";
+import { HeaderToolbar } from "@/components/layout/HeaderToolbar";
 import { SearchBar } from "@/components/layout/SearchBar";
 import { MarketTicker } from "@/components/home/MarketTicker";
 import { PopularStocks } from "@/components/home/PopularStocks";
@@ -20,27 +21,29 @@ export default function HomePage() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#2a2a2a]">
+    <div className="min-h-screen bg-page">
       {/* Top bar: nav + search */}
       <header className="flex items-center justify-between pr-6">
         <Navbar />
-        <SearchBar
-          stocks={stocks}
-          variant="navbar"
-          placeholder="주식 검색하기"
-        />
+        <HeaderToolbar>
+          <SearchBar
+            stocks={stocks}
+            variant="navbar"
+            placeholder="주식 검색하기"
+          />
+        </HeaderToolbar>
       </header>
 
       <main className="max-w-5xl mx-auto px-6 py-24 grid grid-cols-1 lg:grid-cols-2 gap-14 items-start">
         {/* Left column — hero */}
         <section className="flex flex-col gap-8 mt-20 lg:mt-16">
           <div className="space-y-3">
-            <h1 className="text-3xl font-bold text-white leading-snug">
+            <h1 className="text-3xl font-bold text-ink leading-snug">
               내 미래 자산을
               <br />
               예측해보세요
             </h1>
-            <div className="space-y-1 text-[#aaa] text-sm leading-relaxed">
+            <div className="space-y-1 text-muted text-sm leading-relaxed">
               <p>투자 금액 주기 기간을 입력하면</p>
               <p>최근 12년치 데이터를 활용해서</p>
               <p>내 미래의 자산을 한 번에 계산해드립니다</p>
@@ -60,7 +63,7 @@ export default function HomePage() {
 
           {/* Popular stocks */}
           <div>
-            <h2 className="text-white font-semibold mb-3 flex items-center gap-2">
+            <h2 className="text-ink font-semibold mb-3 flex items-center gap-2">
               인기 주식
               <span aria-label="인기">📈</span>
             </h2>

@@ -15,15 +15,15 @@ interface TickerCardProps {
 
 function TickerCard({ label, value, change, isUp, icon }: TickerCardProps) {
   return (
-    <div className="flex items-center gap-3 rounded-xl bg-[#333333] px-4 py-3 min-w-[140px] select-none">
-      <div className={`shrink-0 ${isUp ? "text-[#ff4d4d]" : "text-[#4da6ff]"}`}>
+    <div className="flex items-center gap-3 rounded-xl bg-panel px-4 py-3 min-w-[140px] select-none border border-line dark:border-transparent">
+      <div className={`shrink-0 ${isUp ? "text-accent-up" : "text-accent-down"}`}>
         {icon}
       </div>
       <div>
-        <p className="text-[11px] text-[#888] leading-none mb-1">{label}</p>
-        <p className="text-sm font-semibold text-white leading-none">{value}</p>
+        <p className="text-[11px] text-subtle leading-none mb-1">{label}</p>
+        <p className="text-sm font-semibold text-ink leading-none">{value}</p>
         {change && (
-          <p className={`text-[11px] mt-0.5 ${isUp ? "text-[#ff4d4d]" : "text-[#4da6ff]"}`}>
+          <p className={`text-[11px] mt-0.5 ${isUp ? "text-accent-up" : "text-accent-down"}`}>
             {change}
           </p>
         )}

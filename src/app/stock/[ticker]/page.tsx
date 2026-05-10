@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { useParams, useRouter } from "next/navigation";
 import { Navbar } from "@/components/layout/Navbar";
+import { HeaderToolbar } from "@/components/layout/HeaderToolbar";
 import { SearchBar } from "@/components/layout/SearchBar";
 import { StockHeader } from "@/components/stock/StockHeader";
 import { CalculatorForm } from "@/components/stock/CalculatorForm";
@@ -35,14 +36,16 @@ export default function StockCalculatorPage() {
   }, [ticker, router]);
 
   return (
-    <div className="min-h-screen bg-[#2a2a2a]">
+    <div className="min-h-screen bg-page">
       <header className="flex items-center justify-between pr-6">
         <Navbar />
-        <SearchBar stocks={allStocks} variant="navbar" />
+        <HeaderToolbar>
+          <SearchBar stocks={allStocks} variant="navbar" />
+        </HeaderToolbar>
       </header>
 
       <main className="max-w-lg mx-auto px-6 py-8">
-        <div className="rounded-2xl bg-[#333333] p-6 space-y-6">
+        <div className="rounded-2xl bg-panel p-6 space-y-6 border border-line dark:border-transparent">
           {loading || !stock ? (
             <>
               <div className="flex items-center gap-3">

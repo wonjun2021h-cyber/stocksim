@@ -43,12 +43,12 @@ export function CalculatorForm({ ticker }: CalculatorFormProps) {
 
   return (
     <div className="flex flex-col gap-6">
-      <p className="text-[#aaa] text-sm">설정하기</p>
+      <p className="text-muted text-sm">설정하기</p>
 
       <div className="grid grid-cols-3 gap-3">
         {/* Amount */}
         <div className="flex flex-col gap-2">
-          <label className="text-sm text-white font-medium text-center">금액</label>
+          <label className="text-sm text-ink font-medium text-center">금액</label>
           <div className="relative">
             <input
               type="number"
@@ -58,23 +58,23 @@ export function CalculatorForm({ ticker }: CalculatorFormProps) {
                 if (errors.amount) setErrors((p) => ({ ...p, amount: undefined }));
               }}
               placeholder="100,000"
-              className={`w-full rounded-xl bg-[#3d3d3d] px-3 py-3 text-sm text-white placeholder-[#555] outline-none text-center transition-all duration-150
-                border ${errors.amount ? "border-red-500/60" : "border-transparent focus:border-[#555]"}
+              className={`w-full rounded-xl bg-elevated px-3 py-3 text-sm text-ink placeholder:text-faint outline-none text-center transition-all duration-150
+                border ${errors.amount ? "border-red-500/60" : "border-transparent focus:border-ring"}
               `}
             />
           </div>
           {errors.amount && (
-            <p className="text-xs text-red-400 text-center">{errors.amount}</p>
+            <p className="text-xs text-red-600 dark:text-red-400 text-center">{errors.amount}</p>
           )}
         </div>
 
         {/* Period */}
         <div className="flex flex-col gap-2">
-          <label className="text-sm text-white font-medium text-center">주기</label>
+          <label className="text-sm text-ink font-medium text-center">주기</label>
           <select
             value={period}
             onChange={(e) => setPeriod(e.target.value as PeriodLabel)}
-            className="w-full rounded-xl bg-[#3d3d3d] px-3 py-3 text-sm text-white outline-none cursor-pointer border border-transparent focus:border-[#555] transition-colors appearance-none text-center"
+            className="w-full rounded-xl bg-elevated px-3 py-3 text-sm text-ink outline-none cursor-pointer border border-transparent focus:border-ring transition-colors appearance-none text-center"
           >
             {PERIOD_OPTIONS.map((p) => (
               <option key={p} value={p}>
@@ -86,7 +86,7 @@ export function CalculatorForm({ ticker }: CalculatorFormProps) {
 
         {/* Duration */}
         <div className="flex flex-col gap-2">
-          <label className="text-sm text-white font-medium text-center">기간</label>
+          <label className="text-sm text-ink font-medium text-center">기간</label>
           <div className="relative">
             <input
               type="number"
@@ -97,22 +97,22 @@ export function CalculatorForm({ ticker }: CalculatorFormProps) {
               }}
               placeholder="12"
               min={1}
-              className={`w-full rounded-xl bg-[#3d3d3d] px-3 py-3 text-sm text-white placeholder-[#555] outline-none text-center transition-all duration-150
-                border ${errors.duration ? "border-red-500/60" : "border-transparent focus:border-[#555]"}
+              className={`w-full rounded-xl bg-elevated px-3 py-3 text-sm text-ink placeholder:text-faint outline-none text-center transition-all duration-150
+                border ${errors.duration ? "border-red-500/60" : "border-transparent focus:border-ring"}
               `}
             />
           </div>
           <select
             value={durationUnit}
             onChange={(e) => setDurationUnit(e.target.value as DurationUnit)}
-            className="w-full rounded-xl bg-[#3d3d3d] px-3 py-2 text-xs text-white outline-none cursor-pointer border border-transparent focus:border-[#555] transition-colors appearance-none text-center"
+            className="w-full rounded-xl bg-elevated px-3 py-2 text-xs text-ink outline-none cursor-pointer border border-transparent focus:border-ring transition-colors appearance-none text-center"
           >
             <option value="days">일</option>
             <option value="months">개월</option>
             <option value="years">년</option>
           </select>
           {errors.duration && (
-            <p className="text-xs text-red-400 text-center">{errors.duration}</p>
+            <p className="text-xs text-red-600 dark:text-red-400 text-center">{errors.duration}</p>
           )}
         </div>
       </div>
@@ -122,11 +122,12 @@ export function CalculatorForm({ ticker }: CalculatorFormProps) {
         {DURATION_OPTIONS.map((d) => (
           <button
             key={d}
+            type="button"
             onClick={() => setDuration(String(d))}
             className={`px-3 py-1 rounded-full text-xs font-medium transition-colors duration-150 ${
               duration === String(d)
-                ? "bg-white text-black"
-                : "bg-[#3d3d3d] text-[#aaa] hover:bg-[#4a4a4a]"
+                ? "bg-ink text-page"
+                : "bg-elevated text-muted hover:bg-muted-row"
             }`}
           >
             {durationUnit === "years"
@@ -142,8 +143,9 @@ export function CalculatorForm({ ticker }: CalculatorFormProps) {
 
       <div className="flex justify-end">
         <button
+          type="button"
           onClick={handleSubmit}
-          className="px-6 py-2.5 rounded-full bg-[#555] hover:bg-[#666] text-white text-sm font-medium transition-colors duration-150 active:scale-95"
+          className="px-6 py-2.5 rounded-full bg-ring hover:bg-muted-row text-ink text-sm font-medium transition-colors duration-150 active:scale-95 border border-line"
         >
           결과 확인하기
         </button>

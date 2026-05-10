@@ -198,9 +198,9 @@ export function ResultCards({
     <div ref={cardRef} className="space-y-3">
       {/* 수익률 보정 배지 */}
       {correctionApplied && (
-        <div className="flex items-center gap-2 rounded-xl bg-[#1e3a2a] border border-[#4caf7d]/40 px-4 py-2.5">
-          <span className="text-[#4caf7d] text-base">📊</span>
-          <p className="text-[#4caf7d] text-xs font-medium">
+        <div className="flex items-center gap-2 rounded-xl bg-emerald-50 dark:bg-[#1e3a2a] border border-emerald-300/70 dark:border-[#4caf7d]/40 px-4 py-2.5">
+          <span className="text-emerald-700 dark:text-[#4caf7d] text-base">📊</span>
+          <p className="text-emerald-800 dark:text-[#4caf7d] text-xs font-medium">
             수익률 보정 적용됨
             {result.cagrCapped && " · 데이터 30% 캡"}
             {dynamicCapped && ` · ${years.toFixed(0)}년 기간 캡(${(dynamicCap * 100).toFixed(0)}%)`}
@@ -211,9 +211,9 @@ export function ResultCards({
 
       {/* 데이터 검토 경고 */}
       {needsDataReview && (
-        <div className="flex items-center gap-2 rounded-xl bg-[#4a3a1a] border border-[#f6c453]/40 px-4 py-2.5">
-          <span className="text-[#f6c453] text-base">⚠️</span>
-          <p className="text-[#f6c453] text-xs font-medium">
+        <div className="flex items-center gap-2 rounded-xl bg-amber-50 dark:bg-[#4a3a1a] border border-amber-300/70 dark:border-[#f6c453]/40 px-4 py-2.5">
+          <span className="text-amber-700 dark:text-[#f6c453] text-base">⚠️</span>
+          <p className="text-amber-900 dark:text-[#f6c453] text-xs font-medium">
             데이터 검토 필요 — 최대 수익이 비정상적으로 높습니다
           </p>
         </div>
@@ -221,18 +221,18 @@ export function ResultCards({
 
       {/* 장기 데이터 없음 경고 */}
       {result.dataInsufficient && (
-        <div className="flex items-center gap-2 rounded-xl bg-[#3a2a2a] border border-[#ff8080]/40 px-4 py-2.5">
-          <span className="text-[#ff8080] text-base">⚠️</span>
-          <p className="text-[#ff8080] text-xs font-medium">
+        <div className="flex items-center gap-2 rounded-xl bg-danger-bg border border-danger-border px-4 py-2.5">
+          <span className="text-danger-text text-base">⚠️</span>
+          <p className="text-danger-text text-xs font-medium">
             장기 데이터 없음 — 하한선 보정이 적용되지 않습니다
           </p>
         </div>
       )}
 
-      <p className="text-[#aaa] text-sm">
-        원금 <span className="text-white font-semibold">{investedDisplay}원</span>으로
+      <p className="text-muted text-sm">
+        원금 <span className="text-ink font-semibold">{investedDisplay}원</span>으로
         {result.rollingWindowYears > 0 && (
-          <span className="text-[#888] text-xs ml-1">
+          <span className="text-subtle text-xs ml-1">
             ({result.rollingWindowYears.toFixed(0)}년 데이터 기준)
           </span>
         )}
@@ -240,37 +240,37 @@ export function ResultCards({
 
       {/* Max gain card */}
       <div
-        className="group rounded-2xl bg-[#3d3d3d] p-5 cursor-default
+        className="group rounded-2xl bg-elevated p-5 cursor-default border border-line/80 dark:border-transparent
           transition-all duration-200 ease-out
-          hover:scale-[1.04] hover:shadow-[0_8px_32px_rgba(0,0,0,0.5)]"
+          hover:scale-[1.04] hover:shadow-lg dark:hover:shadow-[0_8px_32px_rgba(0,0,0,0.5)]"
       >
-        <p className="text-[#aaa] text-sm mb-2">최대 수익</p>
-        <p className={`text-2xl font-bold ${maxIsLoss ? "text-[#4da6ff]" : "text-[#ff4d4d]"}`}>
+        <p className="text-muted text-sm mb-2">최대 수익</p>
+        <p className={`text-2xl font-bold ${maxIsLoss ? "text-accent-down" : "text-accent-up"}`}>
           {maxGainKRW >= 0 ? "+" : ""}
           {formatKRW(maxGainKRW)}원 ({maxGainPct >= 0 ? "+" : ""}
           {maxGainPct.toFixed(1)}%)
         </p>
-        <p className="text-[#aaa] text-sm mt-1">
+        <p className="text-muted text-sm mt-1">
           {formatKRW(bestFinalKRW)} 원 예상
         </p>
       </div>
 
       {/* Min gain card */}
       <div
-        className="group rounded-2xl bg-[#3d3d3d] p-5 cursor-default
+        className="group rounded-2xl bg-elevated p-5 cursor-default border border-line/80 dark:border-transparent
           transition-all duration-200 ease-out
-          hover:scale-[1.04] hover:shadow-[0_8px_32px_rgba(0,0,0,0.5)]"
+          hover:scale-[1.04] hover:shadow-lg dark:hover:shadow-[0_8px_32px_rgba(0,0,0,0.5)]"
       >
-        <p className="text-[#aaa] text-sm mb-2">최소 수익</p>
-        <p className={`text-2xl font-bold ${minIsLoss ? "text-[#4da6ff]" : "text-[#ff4d4d]"}`}>
+        <p className="text-muted text-sm mb-2">최소 수익</p>
+        <p className={`text-2xl font-bold ${minIsLoss ? "text-accent-down" : "text-accent-up"}`}>
           {minGainKRW >= 0 ? "+" : ""}
           {formatKRW(minGainKRW)}원 ({minGainPct >= 0 ? "+" : ""}
           {minGainPct.toFixed(1)}%)
         </p>
-        <p className="text-[#aaa] text-sm mt-1">
+        <p className="text-muted text-sm mt-1">
           {formatKRW(worstFinalKRW)} 원 예상
           {floorKRW !== null && worstFinalKRW > rawWorstFinalKRW && (
-            <span className="text-[#888] text-xs ml-1">(하한선 적용됨)</span>
+            <span className="text-subtle text-xs ml-1">(하한선 적용됨)</span>
           )}
         </p>
       </div>
@@ -296,7 +296,7 @@ export function ShareActions({ ticker }: { ticker: string }) {
     <div className="flex items-center gap-3 justify-center">
       <button
         onClick={handleSaveImage}
-        className="flex items-center gap-2 px-4 py-2 rounded-full bg-[#3d3d3d] hover:bg-[#4a4a4a] text-[#aaa] hover:text-white text-xs transition-colors duration-150"
+        className="flex items-center gap-2 px-4 py-2 rounded-full bg-elevated hover:bg-muted-row text-muted hover:text-ink text-xs transition-colors duration-150 border border-line/70 dark:border-transparent"
       >
         <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
@@ -305,7 +305,7 @@ export function ShareActions({ ticker }: { ticker: string }) {
       </button>
       <button
         onClick={handleCopyLink}
-        className="flex items-center gap-2 px-4 py-2 rounded-full bg-[#3d3d3d] hover:bg-[#4a4a4a] text-[#aaa] hover:text-white text-xs transition-colors duration-150"
+        className="flex items-center gap-2 px-4 py-2 rounded-full bg-elevated hover:bg-muted-row text-muted hover:text-ink text-xs transition-colors duration-150 border border-line/70 dark:border-transparent"
       >
         <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />

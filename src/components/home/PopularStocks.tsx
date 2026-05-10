@@ -36,8 +36,8 @@ export function PopularStocks({ stocks }: PopularStocksProps) {
   ) as StockInfo[];
 
   return (
-    <div className="rounded-2xl bg-[#333333] overflow-hidden">
-      <div className="divide-y divide-[#3a3a3a]">
+    <div className="rounded-2xl bg-panel overflow-hidden border border-line dark:border-transparent">
+      <div className="divide-y divide-line">
         {ordered.map((stock, index) => (
           <Link
             key={stock.ticker}
@@ -46,10 +46,10 @@ export function PopularStocks({ stocks }: PopularStocksProps) {
                 ? `/stock/${stock.ticker}`
                 : "#"
             }
-            className="flex items-center gap-3 px-4 py-3.5 hover:bg-[#3a3a3a] transition-colors duration-150 group"
+            className="flex items-center gap-3 px-4 py-3.5 hover:bg-muted-row transition-colors duration-150 group"
           >
             {/* Rank */}
-            <span className="text-[#666] text-sm w-5 text-center shrink-0">
+            <span className="text-faint text-sm w-5 text-center shrink-0">
               {index + 1}
             </span>
 
@@ -58,7 +58,7 @@ export function PopularStocks({ stocks }: PopularStocksProps) {
 
             {/* Name + ticker */}
             <div className="flex-1 min-w-0">
-              <p className="text-white text-sm font-medium truncate group-hover:text-white">
+              <p className="text-ink text-sm font-medium truncate group-hover:text-ink">
                 {stock.name}
               </p>
             </div>
@@ -68,15 +68,15 @@ export function PopularStocks({ stocks }: PopularStocksProps) {
 
             {/* Annual return */}
             {stock.hasInsufficientData ? (
-              <span className="text-xs font-semibold shrink-0 text-[#f6c453]">
+              <span className="text-xs font-semibold shrink-0 text-accent-warn">
                 데이터 부족
               </span>
             ) : stock.annualReturnRate !== null && (
               <span
                 className={`text-xs font-semibold shrink-0 ${
                   stock.annualReturnRate >= 0
-                    ? "text-[#ff4d4d]"
-                    : "text-[#4da6ff]"
+                    ? "text-accent-up"
+                    : "text-accent-down"
                 }`}
               >
                 {stock.hasPeriodMismatchWarning ? "⚠️ " : ""}

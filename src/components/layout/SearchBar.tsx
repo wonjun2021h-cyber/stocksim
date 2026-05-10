@@ -63,13 +63,13 @@ export function SearchBar({
       <div
         className={`flex items-center gap-2 rounded-full px-4 py-2 transition-all duration-200 border ${
           focused
-            ? "bg-[#3d3d3d] border-[#555] shadow-[0_4px_24px_rgba(0,0,0,0.5)]"
-            : "bg-[#333333] border-transparent"
+            ? "bg-elevated border-ring shadow-md dark:border-ring dark:shadow-[0_4px_24px_rgba(0,0,0,0.5)]"
+            : "bg-panel border-transparent"
         } ${variant === "navbar" ? "w-48 focus-within:w-64" : "w-full"}`}
         style={{ transition: "width 0.2s ease, box-shadow 0.2s ease" }}
       >
         <svg
-          className="w-4 h-4 text-[#888] shrink-0"
+          className="w-4 h-4 text-subtle shrink-0"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -87,12 +87,13 @@ export function SearchBar({
           onChange={(e) => setQuery(e.target.value)}
           onFocus={() => setFocused(true)}
           placeholder={placeholder}
-          className="bg-transparent outline-none text-sm text-white placeholder-[#666] w-full"
+          className="bg-transparent outline-none text-sm text-ink placeholder:text-faint w-full"
         />
         {query && (
           <button
+            type="button"
             onClick={() => setQuery("")}
-            className="text-[#666] hover:text-[#aaa] transition-colors shrink-0"
+            className="text-faint hover:text-muted transition-colors shrink-0"
           >
             <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20">
               <path
@@ -106,33 +107,33 @@ export function SearchBar({
       </div>
 
       {showDropdown && (
-        <div className="absolute top-full mt-2 w-full min-w-[240px] rounded-xl bg-[#333] border border-[#4a4a4a] shadow-[0_8px_32px_rgba(0,0,0,0.6)] overflow-hidden z-50">
+        <div className="absolute top-full mt-2 w-full min-w-[240px] rounded-xl bg-panel border border-line shadow-lg dark:shadow-[0_8px_32px_rgba(0,0,0,0.6)] overflow-hidden z-50">
           {results.map((stock) => (
             <button
               key={stock.ticker}
+              type="button"
               onClick={() => handleSelect(stock.ticker)}
-              className="w-full flex items-center gap-3 px-4 py-3 hover:bg-[#3d3d3d] transition-colors text-left"
+              className="w-full flex items-center gap-3 px-4 py-3 hover:bg-muted-row transition-colors text-left"
             >
               <div
-                className="w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold shrink-0"
-                style={{ backgroundColor: "#555" }}
+                className="w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold shrink-0 bg-ring text-ink"
               >
                 {stock.ticker.substring(0, 2)}
               </div>
               <div>
-                <p className="text-sm font-medium text-white">{stock.name}</p>
-                <p className="text-xs text-[#888]">{stock.ticker}</p>
+                <p className="text-sm font-medium text-ink">{stock.name}</p>
+                <p className="text-xs text-subtle">{stock.ticker}</p>
               </div>
               {stock.hasInsufficientData ? (
-                <span className="ml-auto text-xs font-medium text-[#f6c453]">
+                <span className="ml-auto text-xs font-medium text-accent-warn">
                   데이터 부족
                 </span>
               ) : stock.annualReturnRate !== null && (
                 <span
                   className={`ml-auto text-xs font-medium ${
                     stock.annualReturnRate >= 0
-                      ? "text-[#ff4d4d]"
-                      : "text-[#4da6ff]"
+                      ? "text-accent-up"
+                      : "text-accent-down"
                   }`}
                 >
                   {stock.hasPeriodMismatchWarning ? "⚠️ " : ""}

@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { useParams, useSearchParams, useRouter } from "next/navigation";
 import { Navbar } from "@/components/layout/Navbar";
+import { HeaderToolbar } from "@/components/layout/HeaderToolbar";
 import { SearchBar } from "@/components/layout/SearchBar";
 import { StockHeader } from "@/components/stock/StockHeader";
 import { ResultCards, ShareActions } from "@/components/stock/ResultCards";
@@ -66,14 +67,16 @@ export default function ResultPage() {
   const isGood = result !== null && result.base > 0;
 
   return (
-    <div className="min-h-screen bg-[#2a2a2a] flex flex-col">
+    <div className="min-h-screen bg-page flex flex-col">
       <header className="flex items-center justify-between pr-6">
         <Navbar />
-        <SearchBar stocks={allStocks} variant="navbar" />
+        <HeaderToolbar>
+          <SearchBar stocks={allStocks} variant="navbar" />
+        </HeaderToolbar>
       </header>
 
       <main className="flex-1 max-w-lg mx-auto w-full px-6 py-8 flex flex-col gap-6">
-        <div className="rounded-2xl bg-[#333333] p-6 space-y-6">
+        <div className="rounded-2xl bg-panel p-6 space-y-6 border border-line dark:border-transparent">
           {/* Stock header */}
           {loading || !stock ? (
             <div className="flex items-center gap-3">
@@ -104,9 +107,9 @@ export default function ResultPage() {
               ticker={ticker}
             />
           ) : (
-            <div className="flex items-center gap-2 rounded-xl bg-[#3a2a2a] border border-[#ff8080]/40 px-4 py-3">
-              <span className="text-[#ff8080] text-base">⚠️</span>
-              <p className="text-[#ff8080] text-sm font-medium">
+            <div className="flex items-center gap-2 rounded-xl bg-danger-bg border border-danger-border px-4 py-3">
+              <span className="text-danger-text text-base">⚠️</span>
+              <p className="text-danger-text text-sm font-medium">
                 유효한 가격 데이터가 없어 시뮬레이션을 계산할 수 없습니다
               </p>
             </div>
@@ -114,7 +117,7 @@ export default function ResultPage() {
 
           {/* Positive message */}
           {!loading && (
-            <p className="text-white font-semibold text-center text-base">
+            <p className="text-ink font-semibold text-center text-base">
               {isGood
                 ? "수익을 낼 수 있어요!! 📈"
                 : "장기 투자로 기회를 잡아보세요! 📊"}
@@ -128,7 +131,7 @@ export default function ResultPage() {
         )}
 
         {/* Bottom search bar */}
-        <div className="rounded-full bg-[#333333] overflow-hidden">
+        <div className="rounded-full bg-panel overflow-hidden border border-line dark:border-transparent">
           <SearchBar
             stocks={allStocks}
             variant="inline"

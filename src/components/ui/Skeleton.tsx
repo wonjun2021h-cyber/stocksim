@@ -7,7 +7,7 @@ interface SkeletonProps {
 export function Skeleton({ className = "" }: SkeletonProps) {
   return (
     <div
-      className={`animate-pulse rounded-lg bg-[#3d3d3d] ${className}`}
+      className={`animate-pulse rounded-lg bg-elevated ${className}`}
       aria-hidden="true"
     />
   );
@@ -19,7 +19,7 @@ export function MarketTickerSkeleton() {
       {[1, 2, 3].map((i) => (
         <div
           key={i}
-          className="flex items-center gap-2 rounded-xl bg-[#333333] px-4 py-3 min-w-[140px]"
+          className="flex items-center gap-2 rounded-xl bg-panel px-4 py-3 min-w-[140px] border border-line dark:border-transparent"
         >
           <Skeleton className="h-4 w-4 rounded-full" />
           <div className="flex flex-col gap-1.5">
@@ -38,7 +38,7 @@ export function StockListSkeleton({ count = 5 }: { count?: number }) {
       {Array.from({ length: count }).map((_, i) => (
         <div
           key={i}
-          className="flex items-center gap-3 px-4 py-3 border-b border-[#3a3a3a]"
+          className="flex items-center gap-3 px-4 py-3 border-b border-line"
         >
           <Skeleton className="h-5 w-5 rounded-full shrink-0" />
           <Skeleton className="h-9 w-9 rounded-full shrink-0" />
