@@ -14,10 +14,17 @@ export interface StockInfo {
   priceHistory: StockDataPoint[];
 }
 
+export interface MarketQuote {
+  price: number;
+  change: number;
+  changePercent: number;
+  isUp: boolean;
+}
+
 export interface MarketData {
-  usdKrw: number;
-  nasdaq: number;
-  sp500: number;
+  usdKrw: MarketQuote;
+  nasdaq: MarketQuote;
+  sp500: MarketQuote;
   isLoading: boolean;
 }
 

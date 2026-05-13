@@ -1,32 +1,33 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import type { MarketData } from "@/lib/types";
+import type { MarketData, MarketQuote } from "@/lib/types";
 import { MarketDataProvider } from "@/lib/api/interface";
 import { MarketTickerSkeleton } from "@/components/ui/Skeleton";
 
 interface TickerCardProps {
   label: string;
-  value: string;
-  change?: string;
-  isUp?: boolean;
-  icon: React.ReactNode;
+  quote: MarketQuote;
+  formatPrice: (p: number) => string;
 }
 
-function TickerCard({ label, value, change, isUp, icon }: TickerCardProps) {
+function TickerCard({ label, quote, formatPrice }: TickerCardProps) {
+  const color = quote.isUp ? "text-accent-up" : "text-accent-down";
+  const sign = quote.isUp ? "+" : "";
+
   return (
     <div className="flex items-center gap-3 rounded-xl bg-panel px-4 py-3 min-w-[140px] select-none border border-line dark:border-transparent">
-      <div className={`shrink-0 ${isUp ? "text-accent-up" : "text-accent-down"}`}>
-        {icon}
+      <div className={`shrink-0 ${color}`}>
+        {quote.isUp ? <UpArrowIcon /> : <DownArrowIcon />}
       </div>
       <div>
         <p className="text-[11px] text-subtle leading-none mb-1">{label}</p>
-        <p className="text-sm font-semibold text-ink leading-none">{value}</p>
-        {change && (
-          <p className={`text-[11px] mt-0.5 ${isUp ? "text-accent-up" : "text-accent-down"}`}>
-            {change}
-          </p>
-        )}
+        <p className="text-sm font-semibold text-ink leading-none">
+          {formatPrice(quote.price)}
+        </p>
+        <p className={`text-[11px] mt-0.5 ${color}`}>
+          {sign}{quote.changePercent.toFixed(2)}%
+        </p>
       </div>
     </div>
   );
@@ -44,12 +45,6 @@ const DownArrowIcon = () => (
   </svg>
 );
 
-const CheckIcon = () => (
-  <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.5}>
-    <polyline points="20 6 9 17 4 12" />
-  </svg>
-);
-
 export function MarketTicker() {
   const [data, setData] = useState<MarketData | null>(null);
   const [loading, setLoading] = useState(true);
@@ -59,32 +54,27 @@ export function MarketTicker() {
     provider.getMarketData().then((d) => {
       setData(d);
       setLoading(false);
-    });
+    }).catch(() => setLoading(false));
   }, []);
 
-  if (loading || !data) {
-    return <MarketTickerSkeleton />;
-  }
+  if (loading || !data) return <MarketTickerSkeleton />;
 
   return (
     <div className="flex gap-3 flex-wrap">
       <TickerCard
         label="달러 환율"
-        value={data.usdKrw.toLocaleString("ko-KR")}
-        isUp={false}
-        icon={<DownArrowIcon />}
+        quote={data.usdKrw}
+        formatPrice={(p) => p.toLocaleString("ko-KR")}
       />
       <TickerCard
         label="나스닥"
-        value={data.nasdaq.toLocaleString("ko-KR")}
-        isUp={true}
-        icon={<UpArrowIcon />}
+        quote={data.nasdaq}
+        formatPrice={(p) => p.toLocaleString("ko-KR")}
       />
       <TickerCard
         label="S&P500"
-        value={data.sp500.toLocaleString("ko-KR")}
-        isUp={true}
-        icon={<CheckIcon />}
+        quote={data.sp500}
+        formatPrice={(p) => p.toLocaleString("ko-KR")}
       />
     </div>
   );

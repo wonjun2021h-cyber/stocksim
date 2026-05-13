@@ -23,7 +23,24 @@ export interface IStockPriceProvider {
 }
 
 // ---------------------------------------------------------------------------
-// Factory — swap these exports when connecting a real API
+// Real Yahoo Finance implementation (via internal API route)
 // ---------------------------------------------------------------------------
-export { MockMarketDataProvider as MarketDataProvider } from "./mockData";
+export class YahooMarketDataProvider implements IMarketDataProvider {
+  async getMarketData(): Promise<MarketData> {
+    const res = await fetch("/api/market", { cache: "no-store" });
+    if (!res.ok) throw new Error("market fetch failed");
+    const data = await res.json();
+    return {
+      usdKrw: data.usdKrw,
+      nasdaq: data.nasdaq,
+      sp500: data.sp500,
+      isLoading: false,
+    };
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Factory — swapped to real Yahoo Finance provider
+// ---------------------------------------------------------------------------
+export { YahooMarketDataProvider as MarketDataProvider };
 export { MockStockPriceProvider as StockPriceProvider } from "./mockData";

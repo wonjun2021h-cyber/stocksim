@@ -12,12 +12,11 @@ import type { IMarketDataProvider, IStockPriceProvider } from "./interface";
 // ---------------------------------------------------------------------------
 export class MockMarketDataProvider implements IMarketDataProvider {
   async getMarketData(): Promise<MarketData> {
-    // Simulate network delay
     await new Promise((r) => setTimeout(r, 500));
     return {
-      usdKrw: 1480.8,
-      nasdaq: 24836.78,
-      sp500: 7165.08,
+      usdKrw: { price: 1480.8, change: -3.2, changePercent: -0.22, isUp: false },
+      nasdaq: { price: 24836.78, change: 124.5, changePercent: 0.5, isUp: true },
+      sp500: { price: 7165.08, change: 38.2, changePercent: 0.54, isUp: true },
       isLoading: false,
     };
   }

@@ -7,6 +7,7 @@ const NAV_ITEMS = [
   { label: "홈", href: "/" },
   { label: "주식 전체 보기", href: "/stocks" },
   { label: "복리 계산기", href: "/compound" },
+  { label: "뉴스", href: "/news" },
 ];
 
 export function Navbar() {
