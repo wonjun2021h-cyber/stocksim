@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { ThemeToggle } from "@/components/layout/ThemeToggle";
 
 const NAV_ITEMS = [
   { label: "홈", href: "/" },
@@ -14,11 +15,11 @@ export function Navbar() {
   const pathname = usePathname();
 
   return (
-    <nav className="flex items-center gap-8 px-6 py-4">
-      <Link href="/" className="text-ink font-bold text-lg tracking-tight">
+    <nav className="flex flex-1 items-center gap-8 px-6 py-4 min-w-0">
+      <Link href="/" className="text-ink font-bold text-lg tracking-tight shrink-0">
         StockSim
       </Link>
-      <div className="flex items-center gap-6">
+      <div className="flex items-center gap-6 min-w-0">
         {NAV_ITEMS.map(({ label, href }) => {
           const isActive =
             href === "/" ? pathname === "/" : pathname.startsWith(href);
@@ -39,6 +40,9 @@ export function Navbar() {
             </Link>
           );
         })}
+      </div>
+      <div className="ml-auto shrink-0 pl-4">
+        <ThemeToggle />
       </div>
     </nav>
   );

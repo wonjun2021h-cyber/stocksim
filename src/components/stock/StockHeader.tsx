@@ -3,10 +3,9 @@ import { StockLogo } from "@/components/ui/StockLogo";
 
 interface StockHeaderProps {
   stock: StockInfo;
-  showPrice?: boolean;
 }
 
-export function StockHeader({ stock, showPrice = false }: StockHeaderProps) {
+export function StockHeader({ stock }: StockHeaderProps) {
   return (
     <div className="flex items-start gap-3">
       <StockLogo ticker={stock.ticker} size="lg" />
@@ -15,32 +14,28 @@ export function StockHeader({ stock, showPrice = false }: StockHeaderProps) {
           <h1 className="text-lg font-bold text-ink">{stock.name}</h1>
           <span className="text-subtle text-sm">{stock.ticker}</span>
         </div>
-        {showPrice && (
-          <div className="mt-1">
-            <p className="text-base font-semibold text-ink">
-              {stock.currentPrice !== null
-                ? `$${stock.currentPrice.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`
-                : "로딩 중..."}
+        <div className="mt-1">
+          {stock.hasInsufficientData ? (
+            <p className="text-sm font-medium mt-0.5 text-accent-warn" data-no-share>
+              데이터 부족
             </p>
-            {stock.hasInsufficientData ? (
-              <p className="text-sm font-medium mt-0.5 text-accent-warn">데이터 부족</p>
-            ) : stock.annualReturnRate !== null && (
-              <p
-                className={`text-sm font-medium mt-0.5 ${
-                  stock.annualReturnRate >= 0
-                    ? "text-accent-up"
-                    : "text-accent-down"
-                }`}
-              >
-                {stock.hasPeriodMismatchWarning ? "⚠️ " : ""}
-                연 평균 상승률{" "}
-                {stock.annualReturnRate >= 0 ? "+" : ""}
-                {stock.annualReturnRate.toFixed(2)}% CAGR (
-                {Math.round((stock.annualReturnPeriodYears ?? 0) * 10) / 10}년 기준)
-              </p>
-            )}
-          </div>
-        )}
+          ) : stock.annualReturnRate !== null && (
+            <p
+              data-no-share
+              className={`text-sm font-medium mt-0.5 ${
+                stock.annualReturnRate >= 0
+                  ? "text-accent-up"
+                  : "text-accent-down"
+              }`}
+            >
+              {stock.hasPeriodMismatchWarning ? "⚠️ " : ""}
+              연 평균 상승률{" "}
+              {stock.annualReturnRate >= 0 ? "+" : ""}
+              {stock.annualReturnRate.toFixed(2)}% CAGR (
+              {Math.round((stock.annualReturnPeriodYears ?? 0) * 10) / 10}년 기준)
+            </p>
+          )}
+        </div>
       </div>
     </div>
   );

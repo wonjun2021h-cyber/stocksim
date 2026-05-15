@@ -176,24 +176,59 @@ function computeAnnualReturn(
 
 /**
  * Client-side: fetch CSV from /data/stocks.csv and parse it.
+ * Also merges JSON-based stocks if index.json exists.
  * Returns a map of ticker → StockInfo for fast lookup.
  */
 export async function fetchAndParseStocks(): Promise<Map<string, StockInfo>> {
-  const res = await fetch("/data/stocks.csv");
-  const text = await res.text();
-  const stocks = parseWideFormatCSV(text);
+  const stocks = await fetchAllStocks();
   const map = new Map<string, StockInfo>();
   for (const s of stocks) {
     map.set(s.ticker, s);
+    map.set(s.name, s);
   }
   return map;
 }
 
 /**
  * Helper to get all stocks as a list (for stock browser / search).
+ * Merges CSV stocks with JSON-based stocks (JSON takes priority for duplicates).
  */
 export async function fetchAllStocks(): Promise<StockInfo[]> {
-  const res = await fetch("/data/stocks.csv");
-  const text = await res.text();
-  return parseWideFormatCSV(text);
+  // Always load CSV stocks
+  const csvPromise = fetch("/data/stocks.csv")
+    .then((r) => r.text())
+    .then((text) => parseWideFormatCSV(text))
+    .catch(() => [] as StockInfo[]);
+
+  // Try loading JSON index (populated after download script runs)
+  const jsonPromise = fetch("/data/stocks/index.json")
+    .then((r) => (r.ok ? r.json() : []))
+    .then(async (index: { ticker: string; name: string; uptrending: boolean; dataPoints: number; startDate: string; endDate: string }[]) => {
+      if (!Array.isArray(index) || index.length === 0) return [] as StockInfo[];
+      // Return lightweight StockInfo objects (no full history — loaded on demand)
+      return index.map((entry) => ({
+        ticker: entry.ticker,
+        name: entry.name,
+        currentPrice: null,
+        annualReturnRate: null,
+        annualReturnPeriodYears: null,
+        hasInsufficientData: false,
+        hasPeriodMismatchWarning: false,
+        priceHistory: [],
+      })) as StockInfo[];
+    })
+    .catch(() => [] as StockInfo[]);
+
+  const [csvStocks, jsonStocks] = await Promise.all([csvPromise, jsonPromise]);
+
+  // Merge: JSON stocks take priority over CSV for duplicates
+  const merged = new Map<string, StockInfo>();
+  for (const s of csvStocks) {
+    merged.set(s.ticker.toUpperCase(), s);
+  }
+  for (const s of jsonStocks) {
+    merged.set(s.ticker.toUpperCase(), s);
+  }
+
+  return Array.from(merged.values());
 }

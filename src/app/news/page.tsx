@@ -7,104 +7,126 @@ import { HeaderToolbar } from "@/components/layout/HeaderToolbar";
 import { useNews, NewsArticle, NewsCategory } from "@/hooks/useNews";
 import { formatDistanceToNow } from "@/components/home/newsUtils";
 
-const BADGE_STYLES: Record<NewsCategory, string> = {
-  긴급: "bg-red-500/15 text-red-500 border border-red-500/30",
-  관세: "bg-orange-500/15 text-orange-500 border border-orange-500/30",
-  기술: "bg-blue-500/15 text-blue-500 border border-blue-500/30",
-  경제: "bg-purple-500/15 text-purple-500 border border-purple-500/30",
-  뉴스: "bg-faint/20 text-muted border border-line",
+const CATEGORY_CONFIG: Record<
+  NewsCategory,
+  { color: string; dot: string; border: string }
+> = {
+  긴급: {
+    color: "text-red-500",
+    dot: "bg-red-500",
+    border: "border-red-500/30",
+  },
+  속보: {
+    color: "text-orange-500",
+    dot: "bg-orange-500",
+    border: "border-orange-500/30",
+  },
+  기술: {
+    color: "text-blue-500",
+    dot: "bg-blue-500",
+    border: "border-blue-500/30",
+  },
+  경제: {
+    color: "text-purple-500",
+    dot: "bg-purple-500",
+    border: "border-purple-500/30",
+  },
+  종목: {
+    color: "text-emerald-500",
+    dot: "bg-emerald-500",
+    border: "border-emerald-500/30",
+  },
+  뉴스: {
+    color: "text-muted",
+    dot: "bg-muted",
+    border: "border-line",
+  },
 };
 
 const ALL_CATEGORIES: ("전체" | NewsCategory)[] = [
   "전체",
   "긴급",
-  "관세",
+  "속보",
   "기술",
   "경제",
+  "종목",
   "뉴스",
 ];
 
-function CategoryBadge({ category }: { category: NewsCategory }) {
-  return (
-    <span
-      className={`inline-flex items-center px-2 py-0.5 rounded-full text-xs font-semibold ${BADGE_STYLES[category]}`}
-    >
-      {category}
-    </span>
-  );
-}
-
-function TranslatedBadge() {
-  return (
-    <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-medium bg-emerald-500/10 text-emerald-600 border border-emerald-500/25">
-      <svg className="w-3 h-3" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.8">
-        <path d="M2 4h7M6 2v2M3 7c.5 2 2 3.5 4 4M9 4c-.5 3-3 6-7 7" strokeLinecap="round" strokeLinejoin="round"/>
-        <path d="M9 9l2 5M11 14l2-5M10 12h3" strokeLinecap="round" strokeLinejoin="round"/>
-      </svg>
-      번역됨
-    </span>
-  );
-}
-
-function ArticleCard({
+function TimelineItem({
   article,
   index,
+  isLast,
 }: {
   article: NewsArticle;
   index: number;
+  isLast: boolean;
 }) {
+  const config = CATEGORY_CONFIG[article.category];
+
   return (
-    <motion.a
-      href={article.url}
-      target="_blank"
-      rel="noopener noreferrer"
-      initial={{ opacity: 0, y: 20 }}
+    <motion.div
+      initial={{ opacity: 0, y: 16 }}
       animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: -10 }}
-      transition={{ duration: 0.3, delay: index * 0.04, ease: "easeOut" }}
-      className="group flex gap-4 p-4 rounded-2xl bg-panel border border-line hover:border-ring hover:shadow-sm transition-all cursor-pointer"
+      exit={{ opacity: 0, y: -8 }}
+      transition={{ duration: 0.3, delay: index * 0.03, ease: "easeOut" }}
+      className="flex gap-4"
     >
-      {/* Thumbnail */}
-      {article.urlToImage ? (
-        // eslint-disable-next-line @next/next/no-img-element
-        <img
-          src={article.urlToImage}
-          alt=""
-          className="w-20 h-16 object-cover rounded-lg shrink-0 bg-elevated"
-          onError={(e) => {
-            (e.currentTarget as HTMLImageElement).style.display = "none";
-          }}
-        />
-      ) : (
-        <div className="w-20 h-16 rounded-lg bg-elevated shrink-0 flex items-center justify-center text-2xl select-none">
-          📰
+      {/* Timeline track */}
+      <div className="flex flex-col items-center shrink-0">
+        <div className="relative">
+          <span className={`block w-2.5 h-2.5 rounded-full ${config.dot}`} />
+          {(article.category === "긴급" || article.category === "속보") && (
+            <span
+              className={`absolute inset-0 w-2.5 h-2.5 rounded-full ${config.dot} animate-ping opacity-50`}
+            />
+          )}
         </div>
-      )}
+        {!isLast && <div className="w-px flex-1 bg-line/40 mt-1" />}
+      </div>
 
       {/* Content */}
-      <div className="flex flex-col gap-1.5 flex-1 min-w-0">
-        <div className="flex items-center gap-2 flex-wrap">
-          <CategoryBadge category={article.category} />
-          {article.translated && <TranslatedBadge />}
-          {article.isMacro && (
-            <span className="text-[10px] text-faint border border-line px-1.5 py-0.5 rounded-full">
-              Global Macro
+      <a
+        href={article.url}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={`group flex-1 pb-6 cursor-pointer`}
+      >
+        <div className="flex items-center gap-2 mb-1">
+          <span className={`text-[11px] font-bold ${config.color}`}>
+            {article.category}
+          </span>
+          <span className="text-[11px] text-faint">
+            {formatDistanceToNow(article.publishedAt)}
+          </span>
+          {article.related && (
+            <span className="text-[10px] font-medium text-accent-down bg-accent-down/8 px-1.5 py-0.5 rounded">
+              ${article.related}
             </span>
           )}
         </div>
-        <h3 className="text-sm font-semibold text-ink leading-snug line-clamp-2 group-hover:text-accent-down transition-colors">
+
+        <h3 className="text-sm font-semibold text-ink leading-snug group-hover:text-accent-down transition-colors">
           {article.title}
         </h3>
-        {article.description && (
-          <p className="text-xs text-muted line-clamp-1">{article.description}</p>
+
+        {article.summary && (
+          <p className="text-xs text-muted mt-1 line-clamp-2 leading-relaxed">
+            {article.summary}
+          </p>
         )}
-        <div className="flex items-center gap-2 text-xs text-faint mt-auto">
-          <span className="font-medium">{article.source.name}</span>
-          <span>·</span>
-          <span>{formatDistanceToNow(article.publishedAt)}</span>
+
+        <div className="flex items-center gap-2 mt-2 text-[11px] text-faint">
+          <span className="font-medium">{article.source}</span>
+          {article.translated && (
+            <>
+              <span>·</span>
+              <span className="text-emerald-600">번역됨</span>
+            </>
+          )}
         </div>
-      </div>
-    </motion.a>
+      </a>
+    </motion.div>
   );
 }
 
@@ -113,7 +135,9 @@ export default function NewsPage() {
   const [filter, setFilter] = useState<"전체" | NewsCategory>("전체");
 
   const filtered =
-    filter === "전체" ? articles : articles.filter((a) => a.category === filter);
+    filter === "전체"
+      ? articles
+      : articles.filter((a) => a.category === filter);
 
   return (
     <div className="min-h-screen bg-page">
@@ -122,20 +146,23 @@ export default function NewsPage() {
         <HeaderToolbar />
       </header>
 
-      <main className="max-w-4xl mx-auto px-6 py-10">
-        {/* Page header */}
+      <main className="max-w-3xl mx-auto px-6 py-10">
+        {/* Header */}
         <div className="mb-8">
-          <div className="flex items-center gap-2 mb-1">
-            <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse" />
-            <span className="text-xs font-medium text-red-500 uppercase tracking-wider">
-              Live
+          <div className="flex items-center gap-2 mb-2">
+            <span className="relative flex h-2.5 w-2.5">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75" />
+              <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-red-500" />
+            </span>
+            <span className="text-xs font-bold text-red-500 uppercase tracking-wider">
+              Live Feed
             </span>
           </div>
           <div className="flex items-end justify-between gap-4">
             <div>
-              <h1 className="text-2xl font-bold text-ink">뉴스 전체보기</h1>
+              <h1 className="text-2xl font-bold text-ink">시장 브리핑</h1>
               <p className="text-sm text-muted mt-1">
-                전 세계 주요 이슈 &amp; 종목 관련 뉴스
+                실시간 글로벌 시장 뉴스 요약
               </p>
             </div>
             <button
@@ -157,8 +184,8 @@ export default function NewsPage() {
           </div>
         </div>
 
-        {/* Category filter tabs */}
-        <div className="flex items-center gap-2 mb-6 overflow-x-auto pb-1">
+        {/* Category filter */}
+        <div className="flex items-center gap-2 mb-8 overflow-x-auto pb-1">
           {ALL_CATEGORIES.map((cat) => (
             <button
               key={cat}
@@ -174,27 +201,28 @@ export default function NewsPage() {
           ))}
         </div>
 
-        {/* Articles */}
+        {/* Timeline feed */}
         {loading ? (
-          <div className="flex flex-col gap-3">
+          <div className="flex flex-col gap-4">
             {Array.from({ length: 8 }).map((_, i) => (
-              <div
-                key={i}
-                className="flex gap-4 p-4 rounded-2xl bg-panel border border-line"
-              >
-                <div className="w-20 h-16 rounded-lg bg-elevated animate-pulse shrink-0" />
-                <div className="flex flex-col gap-2 flex-1">
-                  <div className="h-3 w-16 bg-elevated rounded animate-pulse" />
+              <div key={i} className="flex gap-4">
+                <div className="flex flex-col items-center">
+                  <div className="w-2.5 h-2.5 rounded-full bg-elevated animate-pulse" />
+                  <div className="w-px flex-1 bg-line/40 mt-1" />
+                </div>
+                <div className="flex-1 pb-6 flex flex-col gap-2">
+                  <div className="h-3 w-24 bg-elevated rounded animate-pulse" />
                   <div className="h-4 w-full bg-elevated rounded animate-pulse" />
-                  <div className="h-3 w-2/3 bg-elevated rounded animate-pulse" />
+                  <div className="h-3 w-3/4 bg-elevated rounded animate-pulse" />
                 </div>
               </div>
             ))}
           </div>
         ) : error || filtered.length === 0 ? (
           <div className="py-20 text-center">
-            <p className="text-4xl mb-4">🕊️</p>
-            <p className="text-muted text-sm">현재 평화로운 시장 상황입니다</p>
+            <p className="text-muted text-sm">
+              {error ?? (filter === "전체" ? "뉴스를 불러오지 못했습니다" : "해당 카테고리의 뉴스가 없습니다")}
+            </p>
           </div>
         ) : (
           <AnimatePresence mode="wait">
@@ -204,10 +232,15 @@ export default function NewsPage() {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.2 }}
-              className="flex flex-col gap-3"
+              className="flex flex-col"
             >
               {filtered.map((article, i) => (
-                <ArticleCard key={article.id} article={article} index={i} />
+                <TimelineItem
+                  key={article.id}
+                  article={article}
+                  index={i}
+                  isLast={i === filtered.length - 1}
+                />
               ))}
             </motion.div>
           </AnimatePresence>

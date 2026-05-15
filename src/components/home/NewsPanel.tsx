@@ -4,58 +4,62 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useNews, NewsArticle, NewsCategory } from "@/hooks/useNews";
 import { formatDistanceToNow } from "./newsUtils";
 
-const BADGE_STYLES: Record<NewsCategory, string> = {
-  긴급: "bg-red-500/15 text-red-500 border border-red-500/30",
-  관세: "bg-orange-500/15 text-orange-500 border border-orange-500/30",
-  기술: "bg-blue-500/15 text-blue-500 border border-blue-500/30",
-  경제: "bg-purple-500/15 text-purple-500 border border-purple-500/30",
-  뉴스: "bg-faint/20 text-muted border border-line",
+const CATEGORY_COLORS: Record<NewsCategory, string> = {
+  긴급: "text-red-500 bg-red-500",
+  속보: "text-orange-500 bg-orange-500",
+  기술: "text-blue-500 bg-blue-500",
+  경제: "text-purple-500 bg-purple-500",
+  종목: "text-emerald-500 bg-emerald-500",
+  뉴스: "text-muted bg-muted",
 };
 
-function CategoryBadge({ category }: { category: NewsCategory }) {
+function TimelineDot({ category }: { category: NewsCategory }) {
+  const color = CATEGORY_COLORS[category].split(" ")[1];
   return (
-    <span
-      className={`inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-semibold ${BADGE_STYLES[category]}`}
-    >
-      {category}
-    </span>
-  );
-}
-
-function TranslatedBadge() {
-  return (
-    <span className="inline-flex items-center gap-0.5 px-1.5 py-0.5 rounded text-[10px] font-medium bg-emerald-500/10 text-emerald-600 border border-emerald-500/25">
-      <svg className="w-2.5 h-2.5" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2">
-        <path d="M2 4h7M6 2v2M3 7c.5 2 2 3.5 4 4M9 4c-.5 3-3 6-7 7" strokeLinecap="round" strokeLinejoin="round"/>
-        <path d="M9 9l2 5M11 14l2-5M10 12h3" strokeLinecap="round" strokeLinejoin="round"/>
-      </svg>
-      번역됨
-    </span>
+    <div className="relative flex items-center justify-center">
+      <span className={`w-2 h-2 rounded-full ${color}`} />
+      {(category === "긴급" || category === "속보") && (
+        <span
+          className={`absolute w-2 h-2 rounded-full ${color} animate-ping opacity-60`}
+        />
+      )}
+    </div>
   );
 }
 
 function NewsItem({ article, index }: { article: NewsArticle; index: number }) {
+  const textColor = CATEGORY_COLORS[article.category].split(" ")[0];
+
   return (
     <motion.a
       href={article.url}
       target="_blank"
       rel="noopener noreferrer"
-      initial={{ opacity: 0, y: 16 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.35, delay: index * 0.07, ease: "easeOut" }}
-      className="group flex flex-col gap-1.5 py-3 border-b border-line last:border-0 hover:bg-elevated/40 px-1 rounded-md transition-colors cursor-pointer"
+      initial={{ opacity: 0, x: -8 }}
+      animate={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.3, delay: index * 0.05, ease: "easeOut" }}
+      className="group flex items-start gap-3 py-2.5 hover:bg-elevated/50 -mx-2 px-2 rounded-lg transition-colors cursor-pointer"
     >
-      <div className="flex items-center gap-1.5 flex-wrap">
-        <CategoryBadge category={article.category} />
-        {article.translated && <TranslatedBadge />}
+      <div className="flex flex-col items-center pt-1.5 shrink-0">
+        <TimelineDot category={article.category} />
+        <div className="w-px h-full bg-line/50 mt-1" />
       </div>
-      <p className="text-sm text-ink font-medium leading-snug line-clamp-2 group-hover:text-accent-down transition-colors">
-        {article.title}
-      </p>
-      <div className="flex items-center gap-2 text-[11px] text-faint">
-        <span>{article.source.name}</span>
-        <span>·</span>
-        <span>{formatDistanceToNow(article.publishedAt)}</span>
+
+      <div className="flex-1 min-w-0">
+        <div className="flex items-center gap-2 mb-0.5">
+          <span className={`text-[10px] font-bold ${textColor}`}>
+            {article.category}
+          </span>
+          <span className="text-[10px] text-faint">
+            {formatDistanceToNow(article.publishedAt)}
+          </span>
+        </div>
+        <p className="text-[13px] text-ink font-medium leading-snug line-clamp-2 group-hover:text-accent-down transition-colors">
+          {article.title}
+        </p>
+        <p className="text-[11px] text-muted mt-0.5 truncate">
+          {article.source}
+        </p>
       </div>
     </motion.a>
   );
@@ -65,10 +69,13 @@ function NewsSkeleton() {
   return (
     <div className="flex flex-col gap-3">
       {Array.from({ length: 5 }).map((_, i) => (
-        <div key={i} className="flex flex-col gap-1.5 py-3 border-b border-line last:border-0">
-          <div className="h-3 w-16 bg-elevated rounded animate-pulse" />
-          <div className="h-4 w-full bg-elevated rounded animate-pulse" />
-          <div className="h-3 w-2/3 bg-elevated rounded animate-pulse" />
+        <div key={i} className="flex items-start gap-3 py-2.5">
+          <div className="w-2 h-2 rounded-full bg-elevated animate-pulse mt-1.5" />
+          <div className="flex-1 flex flex-col gap-1.5">
+            <div className="h-2.5 w-20 bg-elevated rounded animate-pulse" />
+            <div className="h-3.5 w-full bg-elevated rounded animate-pulse" />
+            <div className="h-2.5 w-16 bg-elevated rounded animate-pulse" />
+          </div>
         </div>
       ))}
     </div>
@@ -81,15 +88,17 @@ interface NewsPanelProps {
 
 export function NewsPanel({ limit = 6 }: NewsPanelProps) {
   const { articles, loading, error } = useNews();
-
   const displayed = articles.slice(0, limit);
 
   return (
     <div className="flex flex-col gap-2">
       <div className="flex items-center justify-between">
         <h2 className="text-sm font-semibold text-ink flex items-center gap-1.5">
-          <span className="inline-block w-1.5 h-1.5 rounded-full bg-red-500 animate-pulse" />
-          실시간 뉴스
+          <span className="relative flex h-2 w-2">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75" />
+            <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500" />
+          </span>
+          실시간 브리핑
         </h2>
         <a
           href="/news"

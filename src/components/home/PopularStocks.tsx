@@ -10,22 +10,16 @@ interface PopularStocksProps {
 
 // Display order / ranking
 const POPULAR_ORDER = [
-  "AMD",
   "NVDA",
-  "TSLA",
-  "INTC",
-  "MU",
   "AAPL",
+  "TSLA",
   "MSFT",
   "AMZN",
   "META",
   "GOOG",
+  "AMD",
   "QQQ",
   "SPY",
-  "VOO",
-  "LLY",
-  "SNDK",
-  "BRK.A",
 ];
 
 export function PopularStocks({ stocks }: PopularStocksProps) {
@@ -41,11 +35,7 @@ export function PopularStocks({ stocks }: PopularStocksProps) {
         {ordered.map((stock, index) => (
           <Link
             key={stock.ticker}
-            href={
-              stock.priceHistory.length > 0
-                ? `/stock/${stock.ticker}`
-                : "#"
-            }
+            href={`/stock/${encodeURIComponent(stock.ticker)}`}
             className="flex items-center gap-3 px-4 py-3.5 hover:bg-muted-row transition-colors duration-150 group"
           >
             {/* Rank */}

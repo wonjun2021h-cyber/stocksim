@@ -1,0 +1,4154 @@
+[
+  {
+    "ticker": "GOOG",
+    "name": "알파벳 (GOOG)",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "AAPL",
+    "name": "애플",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "MSFT",
+    "name": "마이크로소프트",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "AMZN",
+    "name": "아마존",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "META",
+    "name": "메타 플랫폼스",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "TSLA",
+    "name": "테슬라",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "QQQ",
+    "name": "QQQ ETF (나스닥100)",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "SPY",
+    "name": "SPY ETF (S&P500)",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "VOO",
+    "name": "뱅가드 S&P500 ETF",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "LLY",
+    "name": "일라이 릴리",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "NVDA",
+    "name": "엔비디아",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "MMM",
+    "name": "3M",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "AOS",
+    "name": "A.O. 스미스",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "ABT",
+    "name": "애보트 래버러토리스",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "ABBV",
+    "name": "애브비",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "ACN",
+    "name": "액센추어",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "ADBE",
+    "name": "어도비",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "AMD",
+    "name": "AMD",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "AES",
+    "name": "AES",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "AFL",
+    "name": "애플락",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "A",
+    "name": "아질런트 테크놀로지스",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "APD",
+    "name": "에어 프로덕츠",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "ABNB",
+    "name": "에어비앤비",
+    "uptrending": false,
+    "dataPoints": 1361,
+    "startDate": "2020-12-11",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "AKAM",
+    "name": "아카마이 테크놀로지스",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "ALB",
+    "name": "알베말",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "ARE",
+    "name": "알렉산드리아 리얼 에스테이트",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "ALGN",
+    "name": "얼라인 테크놀로지",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "ALLE",
+    "name": "알레지온",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "LNT",
+    "name": "앨렛 에너지",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "ALL",
+    "name": "올스테이트",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "GOOGL",
+    "name": "알파벳 (GOOGL)",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "MO",
+    "name": "알트리아",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "AMCR",
+    "name": "암코르",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "AEE",
+    "name": "아메런",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "AEP",
+    "name": "아메리칸 일렉트릭 파워",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "AXP",
+    "name": "아메리칸 익스프레스",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "AIG",
+    "name": "AIG",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "AMT",
+    "name": "아메리칸 타워",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "AWK",
+    "name": "아메리칸 워터 웍스",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "AMP",
+    "name": "아메리프라이즈 파이낸셜",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "AME",
+    "name": "AMETEK",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "AMGN",
+    "name": "암젠",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "APH",
+    "name": "앰페놀",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "ADI",
+    "name": "아날로그 디바이시스",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "AON",
+    "name": "AON",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "APA",
+    "name": "APA",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "APO",
+    "name": "아폴로 글로벌 매니지먼트",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "AMAT",
+    "name": "어플라이드 머티리얼즈",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "APP",
+    "name": "앱러빈",
+    "uptrending": true,
+    "dataPoints": 1276,
+    "startDate": "2021-04-16",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "APTV",
+    "name": "앱티브",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "ACGL",
+    "name": "아치 캐피탈",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "ADM",
+    "name": "아처 대니얼스 미들랜드",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "ARES",
+    "name": "아레스 매니지먼트",
+    "uptrending": false,
+    "dataPoints": 3026,
+    "startDate": "2014-05-05",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "ANET",
+    "name": "아리스타 네트웍스",
+    "uptrending": true,
+    "dataPoints": 3002,
+    "startDate": "2014-06-09",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "AJG",
+    "name": "아서 J. 갤러거",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "AIZ",
+    "name": "애슈어런트",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "T",
+    "name": "AT&T",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "ATO",
+    "name": "아토모스",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "ADSK",
+    "name": "오토데스크",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "ADP",
+    "name": "ADP",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "AZO",
+    "name": "오토존",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "AVB",
+    "name": "에이벌론베이 커뮤니티스",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "AVY",
+    "name": "에이버리 데니슨",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "AXON",
+    "name": "액손 엔터프라이즈",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "BKR",
+    "name": "베이커 휴즈",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "BALL",
+    "name": "볼 코퍼레이션",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "BAC",
+    "name": "뱅크오브아메리카",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "BAX",
+    "name": "백스터 인터내셔널",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "BDX",
+    "name": "벡튼 디킨슨",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "BRK-B",
+    "name": "버크셔 해서웨이",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "BBY",
+    "name": "베스트바이",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "TECH",
+    "name": "바이오-테크네",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "BIIB",
+    "name": "바이오젠",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "BLK",
+    "name": "블랙록",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "BX",
+    "name": "블랙스톤",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "XYZ",
+    "name": "XYZ",
+    "uptrending": true,
+    "dataPoints": 2634,
+    "startDate": "2015-11-20",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "BK",
+    "name": "뱅크오브뉴욕멜론",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "BA",
+    "name": "보잉",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "BKNG",
+    "name": "부킹 홀딩스",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "BSX",
+    "name": "보스턴 사이언티픽",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "BMY",
+    "name": "브리스톨-마이어스 스퀴브",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "AVGO",
+    "name": "브로드컴",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "BR",
+    "name": "브로드리지 파이낸셜",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "BRO",
+    "name": "브라운 앤드 브라운",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "BF-B",
+    "name": "브라운-포먼",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "BLDR",
+    "name": "빌더스 퍼스트소스",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "BG",
+    "name": "번지",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "BXP",
+    "name": "BXP",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "CHRW",
+    "name": "C.H. 로빈슨",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "CDNS",
+    "name": "케이던스 디자인 시스템",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "CPT",
+    "name": "캠든 프로퍼티 트러스트",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "CPB",
+    "name": "캠벨 수프",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "COF",
+    "name": "캐피털 원",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "CAH",
+    "name": "카디널 헬스",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "CCL",
+    "name": "카니발",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "CARR",
+    "name": "캐리어 글로벌",
+    "uptrending": true,
+    "dataPoints": 1546,
+    "startDate": "2020-03-20",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "CVNA",
+    "name": "카바나",
+    "uptrending": true,
+    "dataPoints": 2273,
+    "startDate": "2017-05-01",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "CASY",
+    "name": "케이시스 제너럴 스토어스",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "CAT",
+    "name": "캐터필러",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "CBOE",
+    "name": "CBOE 글로벌 마켓츠",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "CBRE",
+    "name": "CBRE 그룹",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "CDW",
+    "name": "CDW",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "COR",
+    "name": "센코라",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "CNC",
+    "name": "센틴",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "CNP",
+    "name": "센터포인트 에너지",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "CF",
+    "name": "CF 인더스트리스",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "CRL",
+    "name": "찰스 리버 래버러토리스",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "SCHW",
+    "name": "찰스 슈왑",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "CHTR",
+    "name": "차터 커뮤니케이션스",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "CVX",
+    "name": "쉐브론",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "CMG",
+    "name": "치폴레 멕시칸 그릴",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "CB",
+    "name": "처브",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "CHD",
+    "name": "처치 앤드 드와이트",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "CIEN",
+    "name": "시에나",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "CI",
+    "name": "시그나",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "CINF",
+    "name": "신시나티 파이낸셜",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "CTAS",
+    "name": "신타스",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "CSCO",
+    "name": "시스코 시스템즈",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "C",
+    "name": "씨티그룹",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "CFG",
+    "name": "시티즌스 파이낸셜",
+    "uptrending": true,
+    "dataPoints": 2926,
+    "startDate": "2014-09-25",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "CLX",
+    "name": "클로록스",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "CME",
+    "name": "CME 그룹",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "CMS",
+    "name": "CMS 에너지",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "KO",
+    "name": "코카콜라",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "CTSH",
+    "name": "코그니전트",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "COHR",
+    "name": "코히어런트",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "COIN",
+    "name": "코인베이스",
+    "uptrending": false,
+    "dataPoints": 1277,
+    "startDate": "2021-04-15",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "CL",
+    "name": "콜게이트-파몰리브",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "CMCSA",
+    "name": "컴캐스트",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "FIX",
+    "name": "컴포트 시스템즈 USA",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "CAG",
+    "name": "코나그라 브랜즈",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "COP",
+    "name": "코노코필립스",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "ED",
+    "name": "콘솔리데이티드 에디슨",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "STZ",
+    "name": "컨스텔레이션 브랜즈",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "CEG",
+    "name": "콘스텔레이션 에너지",
+    "uptrending": true,
+    "dataPoints": 1083,
+    "startDate": "2022-01-20",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "COO",
+    "name": "쿠퍼 서지컬",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "CPRT",
+    "name": "코파트",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "GLW",
+    "name": "코닝",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "CPAY",
+    "name": "코페이",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "CTVA",
+    "name": "코르테바",
+    "uptrending": true,
+    "dataPoints": 1752,
+    "startDate": "2019-05-28",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "CSGP",
+    "name": "코스타 그룹",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "COST",
+    "name": "코스트코",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "CRH",
+    "name": "CRH",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "CRWD",
+    "name": "크라우드스트라이크",
+    "uptrending": true,
+    "dataPoints": 1740,
+    "startDate": "2019-06-13",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "CCI",
+    "name": "크라운 캐슬",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "CSX",
+    "name": "CSX",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "CMI",
+    "name": "커민스",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "CVS",
+    "name": "CVS 헬스",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "DHR",
+    "name": "다나허",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "DRI",
+    "name": "다든 레스토랑",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "DDOG",
+    "name": "데이터독",
+    "uptrending": true,
+    "dataPoints": 1671,
+    "startDate": "2019-09-20",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "DVA",
+    "name": "다비타",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "DECK",
+    "name": "데커스 아웃도어",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "DE",
+    "name": "존 디어",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "DELL",
+    "name": "델 테크놀로지스",
+    "uptrending": true,
+    "dataPoints": 2448,
+    "startDate": "2016-08-18",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "DAL",
+    "name": "델타 항공",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "DVN",
+    "name": "데본 에너지",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "DXCM",
+    "name": "덱스콤",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "FANG",
+    "name": "다이아몬드백 에너지",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "DLR",
+    "name": "디지털 리얼티 트러스트",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "DG",
+    "name": "달러 제너럴",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "DLTR",
+    "name": "달러 트리",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "D",
+    "name": "도미니언 에너지",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "DPZ",
+    "name": "도미노 피자",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "DASH",
+    "name": "도어대시",
+    "uptrending": false,
+    "dataPoints": 1362,
+    "startDate": "2020-12-10",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "DOV",
+    "name": "도버",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "DOW",
+    "name": "다우",
+    "uptrending": false,
+    "dataPoints": 1798,
+    "startDate": "2019-03-21",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "DHI",
+    "name": "D.R. 호튼",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "DTE",
+    "name": "DTE 에너지",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "DUK",
+    "name": "듀크 에너지",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "DD",
+    "name": "듀폰",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "ETN",
+    "name": "이튼",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "EBAY",
+    "name": "이베이",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "SATS",
+    "name": "EchoStar",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "ECL",
+    "name": "에콜랩",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "EIX",
+    "name": "에디슨 인터내셔널",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "EW",
+    "name": "에드워즈 라이프사이언스",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "EA",
+    "name": "일렉트로닉 아츠",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "ELV",
+    "name": "엘레반스 헬스",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "EME",
+    "name": "EMCOR 그룹",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "EMR",
+    "name": "에머슨 일렉트릭",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "ETR",
+    "name": "엔터지",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "EOG",
+    "name": "EOG 리소시스",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "EPAM",
+    "name": "EPAM 시스템스",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "EQT",
+    "name": "EQT",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "EFX",
+    "name": "에퀴팩스",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "EQIX",
+    "name": "에퀴닉스",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "EQR",
+    "name": "에쿼티 레지덴셜",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "ERIE",
+    "name": "이리 인뎀니티",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "ESS",
+    "name": "에섹스 프로퍼티 트러스트",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "EL",
+    "name": "에스티 로더",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "EG",
+    "name": "에버레스트 그룹",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "EVRG",
+    "name": "에버지",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "ES",
+    "name": "에버소스 에너지",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "EXC",
+    "name": "엑셀론",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "EXE",
+    "name": "익스팬드 에너지",
+    "uptrending": true,
+    "dataPoints": 1320,
+    "startDate": "2021-02-11",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "EXPE",
+    "name": "익스피디아",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "EXPD",
+    "name": "익스피디터스 인터내셔널",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "EXR",
+    "name": "엑스트라 스페이스 스토리지",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "XOM",
+    "name": "엑손모빌",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "FFIV",
+    "name": "F5",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "FDS",
+    "name": "팩트셋 리서치",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "FICO",
+    "name": "페어 아이작 (FICO)",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "FAST",
+    "name": "패스널",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "FRT",
+    "name": "페더럴 리얼티 인베스트먼트",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "FDX",
+    "name": "페덱스",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "FIS",
+    "name": "피델리티 내셔널 인포메이션",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "FITB",
+    "name": "피프스 서드 뱅코프",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "FSLR",
+    "name": "퍼스트 솔라",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "FE",
+    "name": "퍼스트에너지",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "FISV",
+    "name": "피서브",
+    "uptrending": false,
+    "dataPoints": 3108,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "F",
+    "name": "포드 모터",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "FTNT",
+    "name": "포티넷",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "FTV",
+    "name": "포르티브",
+    "uptrending": true,
+    "dataPoints": 2479,
+    "startDate": "2016-07-06",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "FOXA",
+    "name": "폭스 클래스A",
+    "uptrending": false,
+    "dataPoints": 1804,
+    "startDate": "2019-03-13",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "FOX",
+    "name": "폭스 클래스B",
+    "uptrending": false,
+    "dataPoints": 1803,
+    "startDate": "2019-03-14",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "BEN",
+    "name": "프랭클린 리소시스",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "FCX",
+    "name": "프리포트-맥모란",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "GRMN",
+    "name": "가민",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "IT",
+    "name": "가트너",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "GE",
+    "name": "GE 에어로스페이스",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "GEHC",
+    "name": "GE 헬스케어",
+    "uptrending": true,
+    "dataPoints": 854,
+    "startDate": "2022-12-16",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "GEV",
+    "name": "GE 버노바",
+    "uptrending": true,
+    "dataPoints": 534,
+    "startDate": "2024-03-28",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "GEN",
+    "name": "젠 디지털",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "GNRC",
+    "name": "제너락 홀딩스",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "GD",
+    "name": "제너럴 다이나믹스",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "GIS",
+    "name": "제너럴 밀스",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "GM",
+    "name": "제너럴 모터스",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "GPC",
+    "name": "제뉴인 파츠",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "GILD",
+    "name": "길리어드 사이언스",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "GPN",
+    "name": "글로벌 페이먼츠",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "GL",
+    "name": "글로브 라이프",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "GDDY",
+    "name": "고대디",
+    "uptrending": true,
+    "dataPoints": 2797,
+    "startDate": "2015-04-01",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "GS",
+    "name": "골드만삭스",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "HAL",
+    "name": "할리버튼",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "HIG",
+    "name": "하트포드 파이낸셜",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "HAS",
+    "name": "해스브로",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "HCA",
+    "name": "HCA 헬스케어",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "DOC",
+    "name": "닥터 리얼티 트러스트",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "HSIC",
+    "name": "헨리 샤인",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "HSY",
+    "name": "허쉬",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "HPE",
+    "name": "HP 엔터프라이즈",
+    "uptrending": false,
+    "dataPoints": 2657,
+    "startDate": "2015-10-20",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "HLT",
+    "name": "힐튼 월드와이드",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "HD",
+    "name": "홈디포",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "HON",
+    "name": "허니웰",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "HRL",
+    "name": "호멜 푸드",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "HST",
+    "name": "호스트 호텔스 앤드 리조트",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "HWM",
+    "name": "하우멧 에어로스페이스",
+    "uptrending": true,
+    "dataPoints": 2395,
+    "startDate": "2016-11-02",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "HPQ",
+    "name": "HP",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "HUBB",
+    "name": "허벨",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "HUM",
+    "name": "휴마나",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "HBAN",
+    "name": "헌팅턴 뱅크쉐어스",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "HII",
+    "name": "헌팅턴 인갈스 인더스트리스",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "IBM",
+    "name": "IBM",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "IEX",
+    "name": "아이덱스",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "IDXX",
+    "name": "아이덱스 래버러토리스",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "ITW",
+    "name": "일리노이 툴 웍스",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "INCY",
+    "name": "인사이트",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "IR",
+    "name": "잉거솔 랜드",
+    "uptrending": false,
+    "dataPoints": 2263,
+    "startDate": "2017-05-15",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "PODD",
+    "name": "인슐릿",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "INTC",
+    "name": "인텔",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "IBKR",
+    "name": "인터랙티브 브로커스",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "ICE",
+    "name": "인터컨티넨털 익스체인지",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "IFF",
+    "name": "인터내셔널 플레이버스 앤드 프래그런스",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "IP",
+    "name": "인터내셔널 페이퍼",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "INTU",
+    "name": "인튜이트",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "ISRG",
+    "name": "인튜이티브 서지컬",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "IVZ",
+    "name": "인베스코",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "INVH",
+    "name": "인비테이션 홈스",
+    "uptrending": false,
+    "dataPoints": 2333,
+    "startDate": "2017-02-02",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "IQV",
+    "name": "아이큐비아",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "IRM",
+    "name": "아이언 마운틴",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "JBHT",
+    "name": "J.B. 헌트 트랜스포트",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "JBL",
+    "name": "재빌",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "JKHY",
+    "name": "잭 헨리 앤드 어소시에이츠",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "J",
+    "name": "제이컵스 솔루션스",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "JNJ",
+    "name": "존슨앤존슨",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "JCI",
+    "name": "존슨 컨트롤스",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "JPM",
+    "name": "JP모건 체이스",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "KVUE",
+    "name": "켄뷰",
+    "uptrending": false,
+    "dataPoints": 759,
+    "startDate": "2023-05-05",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "KDP",
+    "name": "큐리그 닥터 페퍼",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "KEY",
+    "name": "키코프",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "KEYS",
+    "name": "키사이트 테크놀로지스",
+    "uptrending": true,
+    "dataPoints": 2908,
+    "startDate": "2014-10-21",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "KMB",
+    "name": "킴벌리-클라크",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "KIM",
+    "name": "킴코 리얼티",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "KMI",
+    "name": "킨더 모건",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "KKR",
+    "name": "KKR",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "KLAC",
+    "name": "KLA",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "KHC",
+    "name": "크래프트 하인즈",
+    "uptrending": false,
+    "dataPoints": 2731,
+    "startDate": "2015-07-07",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "KR",
+    "name": "크로거",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "LHX",
+    "name": "L3해리스 테크놀로지스",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "LH",
+    "name": "래버러토리 코프 오브 아메리카",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "LRCX",
+    "name": "램 리서치",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "LVS",
+    "name": "라스베이거스 샌즈",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "LDOS",
+    "name": "레이도스",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "LEN",
+    "name": "레나",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "LII",
+    "name": "레녹스 인터내셔널",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "LIN",
+    "name": "린데",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "LYV",
+    "name": "라이브 네이션",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "LMT",
+    "name": "록히드 마틴",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "L",
+    "name": "로우즈 코퍼레이션",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "LOW",
+    "name": "로우스",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "LULU",
+    "name": "룰루레몬 애슬레티카",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "LITE",
+    "name": "루멘텀 홀딩스",
+    "uptrending": true,
+    "dataPoints": 2718,
+    "startDate": "2015-07-24",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "LYB",
+    "name": "라이온델바젤 인더스트리스",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "MTB",
+    "name": "M&T 뱅크",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "MPC",
+    "name": "마라톤 페트롤리엄",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "MAR",
+    "name": "메리어트 인터내셔널",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "MRSH",
+    "name": "마쉬 앤드 매클레넌",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "MLM",
+    "name": "마틴 마리에타 머티리얼스",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "MAS",
+    "name": "마스코",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "MA",
+    "name": "마스터카드",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "MKC",
+    "name": "맥코믹",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "MCD",
+    "name": "맥도날드",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "MCK",
+    "name": "맥케슨",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "MDT",
+    "name": "메드트로닉",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "MRK",
+    "name": "머크",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "MET",
+    "name": "메트라이프",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "MTD",
+    "name": "메틀러-톨레도",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "MGM",
+    "name": "MGM 리조트",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "MCHP",
+    "name": "마이크로칩 테크놀로지",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "MU",
+    "name": "마이크론 테크놀로지",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "MAA",
+    "name": "미드-아메리카 아파트먼트",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "MRNA",
+    "name": "모더나",
+    "uptrending": false,
+    "dataPoints": 1867,
+    "startDate": "2018-12-10",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "TAP",
+    "name": "몰슨 쿠어스 비버리지",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "MDLZ",
+    "name": "몬델리즈 인터내셔널",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "MPWR",
+    "name": "모놀리식 파워 시스템스",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "MNST",
+    "name": "몬스터 비버리지",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "MCO",
+    "name": "무디스",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "MS",
+    "name": "모건 스탠리",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "MOS",
+    "name": "모자이크",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "MSI",
+    "name": "모토로라 솔루션스",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "MSCI",
+    "name": "MSCI",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "NDAQ",
+    "name": "나스닥",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "NTAP",
+    "name": "넷앱",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "NFLX",
+    "name": "넷플릭스",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "NEM",
+    "name": "뉴몬트",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "NWSA",
+    "name": "뉴스 코프 클래스A",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "NWS",
+    "name": "뉴스 코프 클래스B",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "NEE",
+    "name": "넥스트에라 에너지",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "NKE",
+    "name": "나이키",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "NI",
+    "name": "나이소스",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "NDSN",
+    "name": "노드슨",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "NSC",
+    "name": "노퍽 서던",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "NTRS",
+    "name": "노던 트러스트",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "NOC",
+    "name": "노스럽 그루먼",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "NCLH",
+    "name": "노르웨이지안 크루즈 라인",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "NRG",
+    "name": "NRG 에너지",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "NUE",
+    "name": "누코",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "NVR",
+    "name": "NVR",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "NXPI",
+    "name": "NXP 반도체",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "ORLY",
+    "name": "오라일리 오토모티브",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "OXY",
+    "name": "옥시덴탈 페트롤리엄",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "ODFL",
+    "name": "올드 도미니언 프레이트 라인",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "OMC",
+    "name": "옴니콤 그룹",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "ON",
+    "name": "ON 반도체",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "OKE",
+    "name": "ONEOK",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "ORCL",
+    "name": "오라클",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "OTIS",
+    "name": "오티스 월드와이드",
+    "uptrending": false,
+    "dataPoints": 1546,
+    "startDate": "2020-03-20",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "PCAR",
+    "name": "패카",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "PKG",
+    "name": "패키징 코프 오브 아메리카",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "PLTR",
+    "name": "팔란티어",
+    "uptrending": false,
+    "dataPoints": 1411,
+    "startDate": "2020-10-01",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "PANW",
+    "name": "팔로알토 네트웍스",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "PSKY",
+    "name": "파크웨이 스카이",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "PH",
+    "name": "파커-해니핀",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "PAYX",
+    "name": "페이첵스",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "PYPL",
+    "name": "페이팔",
+    "uptrending": false,
+    "dataPoints": 2731,
+    "startDate": "2015-07-07",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "PNR",
+    "name": "펜테어",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "PEP",
+    "name": "펩시코",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "PFE",
+    "name": "화이자",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "PCG",
+    "name": "PG&E",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "PM",
+    "name": "필립 모리스 인터내셔널",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "PSX",
+    "name": "필립스 66",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "PNW",
+    "name": "피나클 웨스트 캐피탈",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "PNC",
+    "name": "PNC 파이낸셜",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "POOL",
+    "name": "풀 코퍼레이션",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "PPG",
+    "name": "PPG 인더스트리스",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "PPL",
+    "name": "PPL",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "PFG",
+    "name": "프린시펄 파이낸셜",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "PG",
+    "name": "프록터앤갬블",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "PGR",
+    "name": "프로그레시브",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "PLD",
+    "name": "프롤로지스",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "PRU",
+    "name": "프루덴셜 파이낸셜",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "PEG",
+    "name": "퍼블릭 서비스 엔터프라이즈",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "PTC",
+    "name": "PTC",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "PSA",
+    "name": "퍼블릭 스토리지",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "PHM",
+    "name": "펄티그룹",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "PWR",
+    "name": "퀀타 서비시스",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "QCOM",
+    "name": "퀄컴",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "DGX",
+    "name": "퀘스트 다이어그노스틱스",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "Q",
+    "name": "코르보",
+    "uptrending": false,
+    "dataPoints": 137,
+    "startDate": "2025-10-28",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "RL",
+    "name": "랄프 로렌",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "RJF",
+    "name": "레이먼드 제임스 파이낸셜",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "RTX",
+    "name": "RTX",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "O",
+    "name": "리얼티 인컴",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "REG",
+    "name": "리젠시 센터스",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "REGN",
+    "name": "리제네론 파마수티컬스",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "RF",
+    "name": "리전스 파이낸셜",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "RSG",
+    "name": "리퍼블릭 서비시스",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "RMD",
+    "name": "레스메드",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "RVTY",
+    "name": "레버티",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "HOOD",
+    "name": "로빈후드 마켓",
+    "uptrending": false,
+    "dataPoints": 1203,
+    "startDate": "2021-07-30",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "ROK",
+    "name": "로크웰 오토메이션",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "ROL",
+    "name": "롤린스",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "ROP",
+    "name": "로퍼 테크놀로지스",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "ROST",
+    "name": "로스 스토어스",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "RCL",
+    "name": "로얄 캐리비안",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "SPGI",
+    "name": "S&P 글로벌",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "CRM",
+    "name": "세일즈포스",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "SNDK",
+    "name": "샌디스크",
+    "uptrending": false,
+    "dataPoints": 313,
+    "startDate": "2025-02-14",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "SBAC",
+    "name": "SBA 커뮤니케이션스",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "SLB",
+    "name": "슐럼버거",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "STX",
+    "name": "시게이트 테크놀로지",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "SRE",
+    "name": "셈프라",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "NOW",
+    "name": "서비스나우",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "SHW",
+    "name": "셔윈-윌리엄스",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "SPG",
+    "name": "사이먼 프로퍼티 그룹",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "SWKS",
+    "name": "스카이웍스 솔루션스",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "SJM",
+    "name": "J.M. 스머커",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "SW",
+    "name": "스머핏 웨스트록",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "SNA",
+    "name": "스냅-온",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "SOLV",
+    "name": "솔벤텀",
+    "uptrending": false,
+    "dataPoints": 535,
+    "startDate": "2024-03-27",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "SO",
+    "name": "서던",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "LUV",
+    "name": "사우스웨스트 항공",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "SWK",
+    "name": "스탠리 블랙앤데커",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "SBUX",
+    "name": "스타벅스",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "STT",
+    "name": "스테이트 스트리트",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "STLD",
+    "name": "스틸 다이나믹스",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "STE",
+    "name": "스테리스",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "SYK",
+    "name": "스트라이커",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "SMCI",
+    "name": "슈퍼마이크로 컴퓨터",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "SYF",
+    "name": "싱크로니 파이낸셜",
+    "uptrending": true,
+    "dataPoints": 2964,
+    "startDate": "2014-08-01",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "SNPS",
+    "name": "시놉시스",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "SYY",
+    "name": "시스코 (식품유통)",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "TMUS",
+    "name": "T-모바일 US",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "TROW",
+    "name": "T. 로우 프라이스",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "TTWO",
+    "name": "테이크-투 인터랙티브",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "TPR",
+    "name": "태피스트리",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "TRGP",
+    "name": "터가 리소시스",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "TGT",
+    "name": "타겟",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "TEL",
+    "name": "TE 커넥티비티",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "TDY",
+    "name": "텔레다인 테크놀로지스",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "TER",
+    "name": "테라다인",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "TXN",
+    "name": "텍사스 인스트루먼츠",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "TPL",
+    "name": "텍사스 퍼시픽 랜드",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "TXT",
+    "name": "텍스트론",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "TMO",
+    "name": "써모피셔 사이언티픽",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "TJX",
+    "name": "TJX 컴퍼니스",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "TKO",
+    "name": "TKO 그룹",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "TTD",
+    "name": "트레이드 데스크",
+    "uptrending": false,
+    "dataPoints": 2424,
+    "startDate": "2016-09-22",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "TSCO",
+    "name": "트랙터 서플라이",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "TT",
+    "name": "트레인 테크놀로지스",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "TDG",
+    "name": "트랜스다이그룹",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "TRV",
+    "name": "트래블러스 컴퍼니스",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "TRMB",
+    "name": "트림블",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "TFC",
+    "name": "트루이스트 파이낸셜",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "TYL",
+    "name": "타일러 테크놀로지스",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "TSN",
+    "name": "타이슨 푸드",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "USB",
+    "name": "US 뱅코프",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "UBER",
+    "name": "우버",
+    "uptrending": false,
+    "dataPoints": 1762,
+    "startDate": "2019-05-13",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "UDR",
+    "name": "UDR",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "ULTA",
+    "name": "울타 뷰티",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "UNP",
+    "name": "유니온 퍼시픽",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "UAL",
+    "name": "유나이티드 항공",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "UPS",
+    "name": "UPS",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "URI",
+    "name": "유나이티드 렌탈스",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "UNH",
+    "name": "유나이티드헬스 그룹",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "UHS",
+    "name": "유니버설 헬스 서비시스",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "VLO",
+    "name": "발레로 에너지",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "VEEV",
+    "name": "비바 시스템스",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "VTR",
+    "name": "벤타스",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "VLTO",
+    "name": "베랄토",
+    "uptrending": false,
+    "dataPoints": 654,
+    "startDate": "2023-10-05",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "VRSN",
+    "name": "베리사인",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "VRSK",
+    "name": "버리스크 애널리틱스",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "VZ",
+    "name": "버라이즌",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "VRTX",
+    "name": "버텍스 파마수티컬스",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "VRT",
+    "name": "버티브 홀딩스",
+    "uptrending": true,
+    "dataPoints": 1955,
+    "startDate": "2018-08-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "VTRS",
+    "name": "비아트리스",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "VICI",
+    "name": "VICI 프로퍼티스",
+    "uptrending": false,
+    "dataPoints": 2102,
+    "startDate": "2018-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "V",
+    "name": "비자",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "VST",
+    "name": "비스트라",
+    "uptrending": true,
+    "dataPoints": 2414,
+    "startDate": "2016-10-06",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "VMC",
+    "name": "불칸 머티리얼스",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "WRB",
+    "name": "W.R. 버클리",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "GWW",
+    "name": "W.W. 그레인저",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "WAB",
+    "name": "웨스팅하우스 에어 브레이크",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "WMT",
+    "name": "월마트",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "DIS",
+    "name": "월트 디즈니",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "WBD",
+    "name": "워너 브라더스 디스커버리",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "WM",
+    "name": "웨이스트 매니지먼트",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "WAT",
+    "name": "워터스",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "WEC",
+    "name": "WEC 에너지",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "WFC",
+    "name": "웰스파고",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "WELL",
+    "name": "웰타워",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "WST",
+    "name": "웨스트 파마수티컬 서비시스",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "WDC",
+    "name": "웨스턴 디지털",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "WY",
+    "name": "웨어하우저",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "WSM",
+    "name": "윌리엄스-소노마",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "WMB",
+    "name": "윌리엄스 컴퍼니스",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "WTW",
+    "name": "윌리스 타워스 왓슨",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "WDAY",
+    "name": "워크데이",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "WYNN",
+    "name": "윈 리조트",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "XEL",
+    "name": "엑셀 에너지",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "XYL",
+    "name": "자일럼",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "YUM",
+    "name": "얌 브랜즈",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "ZBRA",
+    "name": "지브라 테크놀로지스",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "ZBH",
+    "name": "짐머 바이오멧",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "ZTS",
+    "name": "조에티스",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "ALNY",
+    "name": "알닐람 파마수티컬스",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "ARM",
+    "name": "ARM 홀딩스",
+    "uptrending": true,
+    "dataPoints": 668,
+    "startDate": "2023-09-15",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "ASML",
+    "name": "ASML",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "CCEP",
+    "name": "코카콜라 유로퍼시픽 파트너스",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "FER",
+    "name": "페로비알",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "INSM",
+    "name": "인스메드",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "MRVL",
+    "name": "마벨 테크놀로지",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "MELI",
+    "name": "메르카도리브레",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "MSTR",
+    "name": "마이크로스트래티지",
+    "uptrending": true,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "PDD",
+    "name": "PDD 홀딩스",
+    "uptrending": false,
+    "dataPoints": 1960,
+    "startDate": "2018-07-27",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "SHOP",
+    "name": "쇼피파이",
+    "uptrending": true,
+    "dataPoints": 2762,
+    "startDate": "2015-05-21",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "TRI",
+    "name": "톰슨 로이터스",
+    "uptrending": false,
+    "dataPoints": 3109,
+    "startDate": "2014-01-03",
+    "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "ZS",
+    "name": "지스케일러",
+    "uptrending": true,
+    "dataPoints": 2051,
+    "startDate": "2018-03-19",
+    "endDate": "2026-05-14"
+  }
+]

@@ -9,6 +9,7 @@ import { StockHeader } from "@/components/stock/StockHeader";
 import { CalculatorForm } from "@/components/stock/CalculatorForm";
 import { Skeleton } from "@/components/ui/Skeleton";
 import { fetchAndParseStocks, fetchAllStocks } from "@/lib/csvParser";
+import { loadStockByTicker } from "@/lib/stockDataLoader";
 import type { StockInfo } from "@/lib/types";
 
 export default function StockCalculatorPage() {
@@ -22,14 +23,23 @@ export default function StockCalculatorPage() {
 
   useEffect(() => {
     Promise.all([fetchAndParseStocks(), fetchAllStocks()]).then(
-      ([map, all]) => {
-        const found = map.get(ticker);
+      async ([map, all]) => {
+        setAllStocks(all);
+
+        const jsonStock = await loadStockByTicker(ticker);
+        if (jsonStock) {
+          setStock(jsonStock);
+          setLoading(false);
+          return;
+        }
+
+        const found =
+          map.get(ticker) ?? map.get(ticker.toUpperCase());
         if (!found) {
           router.replace("/");
           return;
         }
         setStock(found);
-        setAllStocks(all);
         setLoading(false);
       }
     );
@@ -64,7 +74,7 @@ export default function StockCalculatorPage() {
             </>
           ) : (
             <>
-              <StockHeader stock={stock} showPrice />
+              <StockHeader stock={stock} />
               <CalculatorForm ticker={ticker} />
             </>
           )}

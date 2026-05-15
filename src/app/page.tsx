@@ -36,10 +36,10 @@ export default function HomePage() {
         </HeaderToolbar>
       </header>
 
-      <main className="max-w-5xl mx-auto px-6 py-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+      <main className="max-w-5xl mx-auto px-6 py-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-start lg:pt-6">
 
         {/* ── Column 1: Hero + News Feed ── */}
-        <section className="flex flex-col gap-6 pt-6">
+        <section className="flex flex-col gap-6">
           {/* Hero text */}
           <div className="flex flex-col gap-4">
             <div className="space-y-2">

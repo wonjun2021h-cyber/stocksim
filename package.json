@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "update-names": "node scripts/update-korean-names.mjs",
+    "refresh": "node scripts/refresh-stocks.mjs"
   },
   "dependencies": {
     "framer-motion": "^12.38.0",

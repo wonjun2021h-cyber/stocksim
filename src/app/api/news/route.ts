@@ -1,39 +1,105 @@
 import { NextRequest, NextResponse } from "next/server";
 
-const API_KEY = "af78accbc0234420b58a147955356df0";
-const BASE_URL = "https://newsapi.org/v2/everything";
-const MACRO_QUERY =
-  "war OR tariff OR trade OR inflation OR recession OR federal+reserve OR sanctions OR GDP";
+type NewsCategory = "긴급" | "속보" | "기술" | "경제" | "종목" | "뉴스";
 
-type NewsCategory = "긴급" | "관세" | "기술" | "경제" | "뉴스";
+// Yahoo Finance RSS feeds — no API key needed, real-time
+const MARKET_RSS_FEEDS = [
+  "https://feeds.finance.yahoo.com/rss/2.0/headline?region=US&lang=en-US",
+  "https://finance.yahoo.com/news/rssindex",
+];
 
-function categorize(title: string, description: string | null): NewsCategory {
-  const text = `${title} ${description ?? ""}`.toLowerCase();
-  if (/war|attack|military|conflict|missile|invasion|crisis|strike|troops/.test(text))
+function getRssUrl(ticker: string) {
+  return `https://feeds.finance.yahoo.com/rss/2.0/headline?s=${ticker}&region=US&lang=en-US`;
+}
+
+function categorize(title: string, description: string): NewsCategory {
+  const text = `${title} ${description}`.toLowerCase();
+  if (
+    /breaking|urgent|war|attack|missile|invasion|crisis|conflict|strike|troops|emergency/.test(
+      text
+    )
+  )
     return "긴급";
-  if (/tariff|trade|import|export|wto|customs|duty|sanction/.test(text))
-    return "관세";
-  if (/tech|ai|artificial intelligence|chip|semiconductor|nvidia|apple|google|microsoft|robot/.test(text))
+  if (
+    /tariff|trade|sanction|import|export|customs|duty|deal|agreement/.test(text)
+  )
+    return "속보";
+  if (
+    /tech|ai|artificial intelligence|chip|semiconductor|nvidia|apple|google|microsoft|robot|software|openai|meta/.test(
+      text
+    )
+  )
     return "기술";
-  if (/fed|federal reserve|interest rate|inflation|gdp|economy|recession|employment|cpi/.test(text))
+  if (
+    /fed|federal reserve|interest rate|inflation|gdp|economy|recession|employment|cpi|treasury|bond|rate/.test(
+      text
+    )
+  )
     return "경제";
+  if (
+    /surge|crash|rally|plunge|record|beat|miss|earnings|profit|revenue|stock/.test(
+      text
+    )
+  )
+    return "속보";
   return "뉴스";
+}
+
+interface ParsedItem {
+  title: string;
+  description: string;
+  link: string;
+  pubDate: string;
+  source: string;
+}
+
+function extractTag(xml: string, tag: string): string {
+  const cdataMatch = new RegExp(
+    `<${tag}[^>]*>\\s*<!\\[CDATA\\[([\\s\\S]*?)\\]\\]>\\s*</${tag}>`,
+    "i"
+  ).exec(xml);
+  if (cdataMatch) return cdataMatch[1].trim();
+
+  const plainMatch = new RegExp(
+    `<${tag}[^>]*>([\\s\\S]*?)</${tag}>`,
+    "i"
+  ).exec(xml);
+  if (plainMatch) return plainMatch[1].trim();
+
+  return "";
+}
+
+function parseRSS(xml: string, sourceName: string): ParsedItem[] {
+  const items: ParsedItem[] = [];
+  const itemRegex = /<item>([\s\S]*?)<\/item>/gi;
+  let match;
+
+  while ((match = itemRegex.exec(xml)) !== null) {
+    const block = match[1];
+    const title = extractTag(block, "title");
+    const description = extractTag(block, "description");
+    const link =
+      extractTag(block, "link") || extractTag(block, "guid") || "";
+    const pubDate = extractTag(block, "pubDate");
+
+    if (title && link) {
+      items.push({ title, description, link, pubDate, source: sourceName });
+    }
+  }
+
+  return items;
 }
 
 async function translateToKorean(text: string): Promise<string> {
   if (!text || text.trim().length === 0) return text;
   try {
-    const encoded = encodeURIComponent(text.slice(0, 500));
+    const encoded = encodeURIComponent(text.slice(0, 300));
     const url = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=en&tl=ko&dt=t&q=${encoded}`;
     const res = await fetch(url, { signal: AbortSignal.timeout(4000) });
     if (!res.ok) return text;
     const data = await res.json();
-    // Response format: [[["translated","original",...],...],...]
     if (Array.isArray(data) && Array.isArray(data[0])) {
-      const translated = data[0]
-        .map((seg: [string]) => seg[0])
-        .join("");
-      return translated || text;
+      return data[0].map((seg: [string]) => seg[0]).join("") || text;
     }
     return text;
   } catch {
@@ -41,71 +107,98 @@ async function translateToKorean(text: string): Promise<string> {
   }
 }
 
-interface RawArticle {
-  title?: string;
-  description?: string | null;
-  url?: string;
-  urlToImage?: string | null;
-  publishedAt?: string;
-  source?: { name?: string };
+async function fetchRSS(url: string, sourceName: string): Promise<ParsedItem[]> {
+  try {
+    const res = await fetch(url, {
+      cache: "no-store",
+      headers: { "User-Agent": "Mozilla/5.0 (compatible; stocksim/1.0)" },
+      signal: AbortSignal.timeout(6000),
+    });
+    if (!res.ok) return [];
+    const xml = await res.text();
+    return parseRSS(xml, sourceName);
+  } catch {
+    return [];
+  }
 }
 
 export async function GET(req: NextRequest) {
   const { searchParams } = new URL(req.url);
-  const type = searchParams.get("type") ?? "macro";
+  const type = searchParams.get("type") ?? "market";
   const ticker = searchParams.get("ticker") ?? "";
-  const query = type === "ticker" && ticker ? ticker : MACRO_QUERY;
 
   try {
-    const newsUrl = new URL(BASE_URL);
-    newsUrl.searchParams.set("q", query);
-    newsUrl.searchParams.set("language", "en");
-    newsUrl.searchParams.set("sortBy", "publishedAt");
-    newsUrl.searchParams.set("pageSize", type === "ticker" ? "5" : "10");
-    newsUrl.searchParams.set("apiKey", API_KEY);
+    let rawItems: ParsedItem[] = [];
 
-    const newsRes = await fetch(newsUrl.toString(), { cache: "no-store" });
-
-    if (!newsRes.ok) {
-      return NextResponse.json({ articles: [] }, { status: newsRes.status });
+    if (type === "company" && ticker) {
+      rawItems = await fetchRSS(getRssUrl(ticker), ticker.toUpperCase());
+    } else {
+      const results = await Promise.all(
+        MARKET_RSS_FEEDS.map((feed, i) =>
+          fetchRSS(feed, i === 0 ? "Yahoo Finance" : "Yahoo Finance")
+        )
+      );
+      const seen = new Set<string>();
+      for (const items of results) {
+        for (const item of items) {
+          if (!seen.has(item.link)) {
+            seen.add(item.link);
+            rawItems.push(item);
+          }
+        }
+      }
     }
 
-    const newsData = await newsRes.json();
-    const raw: RawArticle[] = (newsData.articles ?? []).filter(
-      (a: RawArticle) => a.title && a.url && a.title !== "[Removed]"
-    );
+    // Sort by date descending
+    rawItems.sort((a, b) => {
+      const ta = a.pubDate ? new Date(a.pubDate).getTime() : 0;
+      const tb = b.pubDate ? new Date(b.pubDate).getTime() : 0;
+      return tb - ta;
+    });
 
-    // Categorize on original English text
-    const categories = raw.map((a) =>
-      categorize(a.title ?? "", a.description ?? null)
-    );
+    const sliced = rawItems.slice(0, 15);
 
-    // Translate in parallel — but if any fail, keep original
-    const translationResults = await Promise.all(
-      raw.map(async (a, i) => {
-        const [translatedTitle, translatedDesc] = await Promise.all([
-          translateToKorean(a.title ?? ""),
-          a.description ? translateToKorean(a.description) : Promise.resolve(null),
+    const articles = await Promise.all(
+      sliced.map(async (item, i) => {
+        const category =
+          type === "company" && ticker
+            ? "종목"
+            : categorize(item.title, item.description);
+
+        const summaryRaw = item.description
+          .replace(/<[^>]+>/g, "")
+          .replace(/&amp;/g, "&")
+          .replace(/&lt;/g, "<")
+          .replace(/&gt;/g, ">")
+          .replace(/&quot;/g, '"')
+          .trim()
+          .slice(0, 150);
+
+        const [translatedTitle, translatedSummary] = await Promise.all([
+          translateToKorean(item.title),
+          summaryRaw ? translateToKorean(summaryRaw) : Promise.resolve(""),
         ]);
 
-        const titleChanged = translatedTitle !== a.title;
-        const descChanged = translatedDesc !== a.description;
-        const wasTranslated = titleChanged || descChanged;
+        const publishedAt = item.pubDate
+          ? new Date(item.pubDate).toISOString()
+          : new Date().toISOString();
 
         return {
-          title: translatedTitle || a.title,
-          description: translatedDesc ?? a.description ?? null,
-          url: a.url,
-          urlToImage: a.urlToImage ?? null,
-          publishedAt: a.publishedAt,
-          source: { name: a.source?.name ?? "Unknown" },
-          category: categories[i],
-          translated: wasTranslated,
+          id: `${i}-${publishedAt}`,
+          title: translatedTitle,
+          summary: translatedSummary,
+          url: item.link,
+          image: null,
+          publishedAt,
+          source: item.source,
+          category,
+          related: type === "company" && ticker ? ticker : null,
+          translated: translatedTitle !== item.title,
         };
       })
     );
 
-    return NextResponse.json({ articles: translationResults });
+    return NextResponse.json({ articles });
   } catch {
     return NextResponse.json({ articles: [] }, { status: 500 });
   }

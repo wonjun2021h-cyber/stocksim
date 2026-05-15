@@ -6,11 +6,14 @@ import { Navbar } from "@/components/layout/Navbar";
 import { HeaderToolbar } from "@/components/layout/HeaderToolbar";
 import { SearchBar } from "@/components/layout/SearchBar";
 import { StockHeader } from "@/components/stock/StockHeader";
-import { ResultCards, ShareActions } from "@/components/stock/ResultCards";
+import { ResultCards } from "@/components/stock/ResultCards";
+import { ShareActions } from "@/components/stock/ShareActions";
 import { Skeleton } from "@/components/ui/Skeleton";
 import { fetchAndParseStocks, fetchAllStocks } from "@/lib/csvParser";
+import { loadStockByTicker } from "@/lib/stockDataLoader";
 import {
   calculateSimulationByStockName,
+  calculateSimulationScenarios,
   type SimulationResult,
 } from "@/lib/simulation-logic";
 import type { StockInfo } from "@/lib/types";
@@ -39,14 +42,26 @@ export default function ResultPage() {
       return;
     }
 
-    Promise.all([fetchAndParseStocks(), fetchAllStocks()]).then(([map, all]) => {
-      const found = map.get(ticker);
+    Promise.all([fetchAndParseStocks(), fetchAllStocks()]).then(async ([map, all]) => {
+      setAllStocks(all);
+
+      // 1) JSON 파일에서 히스토리 포함해 로드 시도 (다운로드된 종목)
+      const jsonStock = await loadStockByTicker(ticker);
+      if (jsonStock && jsonStock.priceHistory.length > 0) {
+        setStock(jsonStock);
+        const calc = calculateSimulationScenarios(jsonStock.priceHistory, ticker);
+        setResult(calc);
+        setLoading(false);
+        return;
+      }
+
+      // 2) CSV 폴백
+      const found = map.get(ticker) ?? map.get(ticker.toUpperCase());
       if (!found) {
         router.replace("/");
         return;
       }
       setStock(found);
-      setAllStocks(all);
       const calc = calculateSimulationByStockName(found.name, all);
       setResult(calc);
       setLoading(false);
@@ -62,7 +77,6 @@ export default function ResultPage() {
   const durationYears = durationDays / 365;
   const investmentCount = Math.max(1, Math.floor(durationDays / periodDays) + 1);
   const totalInvestedKRW = amount * investmentCount;
-
   // Positive message based on result
   const isGood = result !== null && result.base > 0;
 
@@ -76,8 +90,10 @@ export default function ResultPage() {
       </header>
 
       <main className="flex-1 max-w-lg mx-auto w-full px-6 py-8 flex flex-col gap-6">
-        <div className="rounded-2xl bg-panel p-6 space-y-6 border border-line dark:border-transparent">
-          {/* Stock header */}
+        <div
+          id="result-share-capture"
+          className="rounded-2xl bg-panel p-6 space-y-6 border border-line dark:border-transparent"
+        >
           {loading || !stock ? (
             <div className="flex items-center gap-3">
               <Skeleton className="w-14 h-14 rounded-full" />
@@ -102,6 +118,7 @@ export default function ResultPage() {
               result={result}
               totalInvestedKRW={totalInvestedKRW}
               durationYears={durationYears}
+              totalPayments={investmentCount}
               periodicPayment={amount}
               paymentIntervalDays={periodDays}
               ticker={ticker}
@@ -114,19 +131,17 @@ export default function ResultPage() {
               </p>
             </div>
           )}
-
-          {/* Positive message */}
-          {!loading && (
-            <p className="text-ink font-semibold text-center text-base">
-              {isGood
-                ? "수익을 낼 수 있어요!! 📈"
-                : "장기 투자로 기회를 잡아보세요! 📊"}
-            </p>
-          )}
         </div>
 
-        {/* Share actions placeholder */}
-        {!loading && stock && (
+        {!loading && (
+          <p className="text-ink font-semibold text-center text-base">
+            {isGood
+              ? "수익을 낼 수 있어요!! 📈"
+              : "장기 투자로 기회를 잡아보세요! 📊"}
+          </p>
+        )}
+
+        {!loading && stock && result && (
           <ShareActions ticker={ticker} />
         )}
 

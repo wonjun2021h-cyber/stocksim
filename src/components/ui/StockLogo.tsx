@@ -1,26 +1,41 @@
 "use client";
 
-const LOGO_COLORS: Record<string, { bg: string; text: string }> = {
-  GOOG: { bg: "#4285F4", text: "#fff" },
-  AAPL: { bg: "#555555", text: "#fff" },
-  MSFT: { bg: "#00A4EF", text: "#fff" },
-  AMZN: { bg: "#FF9900", text: "#fff" },
-  META: { bg: "#0866FF", text: "#fff" },
-  TSLA: { bg: "#CC0000", text: "#fff" },
-  "BRK.A": { bg: "#8B4513", text: "#fff" },
-  QQQ: { bg: "#1A1A5E", text: "#fff" },
-  SPY: { bg: "#004B87", text: "#fff" },
-  VOO: { bg: "#812D2D", text: "#fff" },
-  LLY: { bg: "#D52B1E", text: "#fff" },
-  NVDA: { bg: "#76B900", text: "#fff" },
-  SNDK: { bg: "#E2231A", text: "#fff" },
-  AMD: { bg: "#ED1C24", text: "#fff" },
-  INTC: { bg: "#0071C5", text: "#fff" },
-  MU: { bg: "#C72026", text: "#fff" },
-  NFLX: { bg: "#E50914", text: "#fff" },
-  COST: { bg: "#005DAA", text: "#fff" },
-  SBUX: { bg: "#00704A", text: "#fff" },
-};
+/** 티커마다 고정되는 파스텔~비비드 팔레트 (렌더마다 바뀌지 않음) */
+const LOGO_PALETTE = [
+  "#E53935",
+  "#D81B60",
+  "#8E24AA",
+  "#5E35B1",
+  "#3949AB",
+  "#1E88E5",
+  "#00897B",
+  "#43A047",
+  "#7CB342",
+  "#F9A825",
+  "#FB8C00",
+  "#F4511E",
+  "#6D4C41",
+  "#546E7A",
+  "#00838F",
+  "#C2185B",
+  "#512DA8",
+  "#303F9F",
+  "#1976D2",
+  "#388E3C",
+];
+
+function hashTicker(ticker: string): number {
+  let h = 0;
+  for (let i = 0; i < ticker.length; i++) {
+    h = (h * 31 + ticker.charCodeAt(i)) >>> 0;
+  }
+  return h;
+}
+
+function colorsForTicker(ticker: string): { bg: string; text: string } {
+  const idx = hashTicker(ticker.toUpperCase()) % LOGO_PALETTE.length;
+  return { bg: LOGO_PALETTE[idx], text: "#fff" };
+}
 
 interface StockLogoProps {
   ticker: string;
@@ -35,8 +50,8 @@ const SIZE_MAP = {
 };
 
 export function StockLogo({ ticker, size = "md", className = "" }: StockLogoProps) {
-  const colors = LOGO_COLORS[ticker] ?? { bg: "#555", text: "#fff" };
-  const label = ticker.replace(".A", "").substring(0, 3);
+  const colors = colorsForTicker(ticker);
+  const label = ticker.replace(/[.-]/g, "").substring(0, 3).toUpperCase();
 
   return (
     <div

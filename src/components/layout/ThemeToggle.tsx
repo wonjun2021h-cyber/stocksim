@@ -10,7 +10,7 @@ function applyTheme(mode: "light" | "dark") {
 }
 
 export function ThemeToggle() {
-  const [mode, setMode] = useState<"light" | "dark">("dark");
+  const [mode, setMode] = useState<"light" | "dark">("light");
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -21,7 +21,7 @@ export function ThemeToggle() {
         ? stored
         : document.documentElement.classList.contains("dark")
           ? "dark"
-          : "dark";
+          : "light";
     setMode(resolved);
   }, []);
 

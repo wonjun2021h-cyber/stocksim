@@ -2,34 +2,36 @@
 
 import { useState, useEffect, useCallback } from "react";
 
-export type NewsCategory = "긴급" | "관세" | "기술" | "경제" | "뉴스";
+export type NewsCategory = "긴급" | "속보" | "기술" | "경제" | "종목" | "뉴스";
 
 export interface NewsArticle {
   id: string;
   title: string;
-  description: string | null;
+  summary: string;
   url: string;
-  urlToImage: string | null;
+  image: string | null;
   publishedAt: string;
-  source: { name: string };
+  source: string;
   category: NewsCategory;
-  isMacro: boolean;
+  related: string | null;
   translated: boolean;
 }
 
 interface RawArticle {
+  id?: number;
   title?: string;
-  description?: string | null;
+  summary?: string;
   url?: string;
-  urlToImage?: string | null;
+  image?: string | null;
   publishedAt?: string;
-  source?: { name?: string };
+  source?: string;
   category?: NewsCategory;
+  related?: string | null;
   translated?: boolean;
 }
 
 async function fetchArticles(
-  type: "macro" | "ticker",
+  type: "market" | "company",
   ticker?: string
 ): Promise<NewsArticle[]> {
   const params = new URLSearchParams({ type });
@@ -41,16 +43,16 @@ async function fetchArticles(
   const data = await res.json();
   return (data.articles ?? [])
     .filter((a: RawArticle) => a.title && a.url)
-    .map((a: RawArticle, i: number) => ({
-      id: `${type}-${i}-${a.publishedAt}`,
+    .map((a: RawArticle) => ({
+      id: String(a.id ?? Math.random()),
       title: a.title ?? "",
-      description: a.description ?? null,
+      summary: a.summary ?? "",
       url: a.url ?? "",
-      urlToImage: a.urlToImage ?? null,
+      image: a.image ?? null,
       publishedAt: a.publishedAt ?? "",
-      source: { name: a.source?.name ?? "Unknown" },
+      source: a.source ?? "Unknown",
       category: a.category ?? "뉴스",
-      isMacro: type === "macro",
+      related: a.related ?? null,
       translated: a.translated ?? false,
     }));
 }
@@ -64,21 +66,27 @@ export function useNews(ticker?: string) {
     setLoading(true);
     setError(null);
     try {
-      const macroArticles = await fetchArticles("macro");
+      const marketArticles = await fetchArticles("market");
 
-      let tickerArticles: NewsArticle[] = [];
+      let companyArticles: NewsArticle[] = [];
       if (ticker) {
-        tickerArticles = await fetchArticles("ticker", ticker);
+        companyArticles = await fetchArticles("company", ticker);
       }
 
       const seen = new Set<string>();
       const combined: NewsArticle[] = [];
-      for (const a of [...macroArticles, ...tickerArticles]) {
+      for (const a of [...marketArticles, ...companyArticles]) {
         if (!seen.has(a.url)) {
           seen.add(a.url);
           combined.push(a);
         }
       }
+
+      combined.sort(
+        (a, b) =>
+          new Date(b.publishedAt).getTime() -
+          new Date(a.publishedAt).getTime()
+      );
 
       setArticles(combined);
     } catch {
