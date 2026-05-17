@@ -11,6 +11,8 @@ export interface StockInfo {
   annualReturnPeriodYears: number | null;
   hasInsufficientData: boolean;
   hasPeriodMismatchWarning: boolean;
+  /** 가격 데이터 마지막 날짜 (YYYY-MM-DD) — 신선도 표시용 */
+  dataEndDate?: string;
   priceHistory: StockDataPoint[];
 }
 

@@ -76,24 +76,30 @@ export default function StocksPage() {
                     <p className="text-subtle text-xs">{stock.ticker}</p>
                   </div>
                   <span className="text-subtle text-xs">🇺🇸</span>
-                  {stock.hasInsufficientData ? (
-                    <span className="text-xs font-semibold text-accent-warn">
-                      데이터 부족
-                    </span>
-                  ) : stock.annualReturnRate !== null && (
-                    <span
-                      className={`text-xs font-semibold ${
-                        stock.annualReturnRate >= 0
-                          ? "text-accent-up"
-                          : "text-accent-down"
-                      }`}
-                    >
-                      {stock.hasPeriodMismatchWarning ? "⚠️ " : ""}
-                      {stock.annualReturnRate >= 0 ? "+" : ""}
-                      {stock.annualReturnRate.toFixed(1)}% CAGR (
-                      {Math.round((stock.annualReturnPeriodYears ?? 0) * 10) / 10}년 기준)
-                    </span>
-                  )}
+                  <div className="flex flex-col items-end gap-0.5 shrink-0">
+                    {stock.hasInsufficientData ? (
+                      <span className="text-xs font-semibold text-accent-warn">
+                        데이터 부족
+                      </span>
+                    ) : stock.annualReturnRate !== null && (
+                      <span
+                        className={`text-xs font-semibold ${
+                          stock.annualReturnRate >= 0
+                            ? "text-accent-up"
+                            : "text-accent-down"
+                        }`}
+                      >
+                        {stock.hasPeriodMismatchWarning ? "⚠️ " : ""}
+                        {stock.annualReturnRate >= 0 ? "+" : ""}
+                        {stock.annualReturnRate.toFixed(1)}% CAGR
+                      </span>
+                    )}
+                    {stock.dataEndDate && (
+                      <span className="text-[10px] text-faint">
+                        {stock.dataEndDate}
+                      </span>
+                    )}
+                  </div>
                 </Link>
               ))}
             </div>

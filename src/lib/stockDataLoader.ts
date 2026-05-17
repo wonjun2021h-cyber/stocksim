@@ -140,6 +140,9 @@ function buildStockInfo(data: StockFileData): StockInfo {
       annualStats.periodYears !== null
         ? annualStats.periodYears < COMPARISON_BASE_YEARS
         : false,
+    dataEndDate: priceHistory.length > 0
+      ? priceHistory[priceHistory.length - 1].date
+      : undefined,
     priceHistory,
   };
 }

@@ -142,6 +142,15 @@ export function ResultCards({
           )}
         </p>
       </div>
+
+      {/* 면책 문구 */}
+      <p
+        data-no-share
+        className="text-xs text-subtle leading-relaxed pt-1"
+      >
+        ⚠ 이 결과는 과거 종가 기준 참고용 시뮬레이션이며 투자 조언이 아닙니다.
+        배당·분할은 반영되지 않았으며, 과거 수익이 미래를 보장하지 않습니다.
+      </p>
     </div>
   );
 }

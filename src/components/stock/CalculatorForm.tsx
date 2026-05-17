@@ -180,9 +180,12 @@ export function CalculatorForm({ ticker }: CalculatorFormProps) {
         <button
           type="button"
           onClick={handleSubmit}
-          className="px-6 py-2.5 rounded-full bg-ring hover:bg-muted-row text-ink text-sm font-medium transition-colors duration-150 active:scale-95 border border-line"
+          className="flex items-center gap-2 px-6 py-2.5 rounded-full bg-ring hover:bg-muted-row text-ink text-sm font-medium transition-colors duration-150 active:scale-95 border border-line"
         >
           결과 확인하기
+          <svg className="w-4 h-4" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2">
+            <path d="M3 8h10M9 4l4 4-4 4" strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
         </button>
       </div>
     </div>

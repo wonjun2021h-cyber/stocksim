@@ -19,7 +19,9 @@ export function Navbar() {
       <Link href="/" className="text-ink font-bold text-lg tracking-tight shrink-0">
         StockSim
       </Link>
-      <div className="flex items-center gap-6 min-w-0">
+
+      {/* 데스크톱 전용 네비 링크 */}
+      <div className="hidden md:flex items-center gap-6 min-w-0">
         {NAV_ITEMS.map(({ label, href }) => {
           const isActive =
             href === "/" ? pathname === "/" : pathname.startsWith(href);
@@ -41,7 +43,9 @@ export function Navbar() {
           );
         })}
       </div>
-      <div className="ml-auto shrink-0 pl-4">
+
+      {/* 데스크톱 전용 테마 토글 */}
+      <div className="ml-auto hidden md:block shrink-0 pl-4">
         <ThemeToggle />
       </div>
     </nav>

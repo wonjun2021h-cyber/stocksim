@@ -110,7 +110,7 @@ async function translateToKorean(text: string): Promise<string> {
 async function fetchRSS(url: string, sourceName: string): Promise<ParsedItem[]> {
   try {
     const res = await fetch(url, {
-      cache: "no-store",
+      next: { revalidate: 1800 }, // 30분 캐시 — 뉴스 요청마다 외부 RSS 호출 방지
       headers: { "User-Agent": "Mozilla/5.0 (compatible; stocksim/1.0)" },
       signal: AbortSignal.timeout(6000),
     });
@@ -198,7 +198,11 @@ export async function GET(req: NextRequest) {
       })
     );
 
-    return NextResponse.json({ articles });
+    return NextResponse.json({ articles }, {
+      headers: {
+        "Cache-Control": "public, s-maxage=1800, stale-while-revalidate=3600",
+      },
+    });
   } catch {
     return NextResponse.json({ articles: [] }, { status: 500 });
   }

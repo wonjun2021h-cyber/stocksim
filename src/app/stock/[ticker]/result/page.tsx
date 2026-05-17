@@ -35,6 +35,7 @@ export default function ResultPage() {
   const [allStocks, setAllStocks] = useState<StockInfo[]>([]);
   const [result, setResult] = useState<SimulationResult | null>(null);
   const [loading, setLoading] = useState(true);
+  const [dataEndDate, setDataEndDate] = useState<string | null>(null);
 
   useEffect(() => {
     if (!amount || !periodDays || !durationValue) {
@@ -42,13 +43,15 @@ export default function ResultPage() {
       return;
     }
 
-    Promise.all([fetchAndParseStocks(), fetchAllStocks()]).then(async ([map, all]) => {
+    (async () => {
+      const [map, all] = await Promise.all([fetchAndParseStocks(), fetchAllStocks()]);
       setAllStocks(all);
 
-      // 1) JSON 파일에서 히스토리 포함해 로드 시도 (다운로드된 종목)
+      // 1) JSON 파일에서 히스토리 포함해 로드 시도
       const jsonStock = await loadStockByTicker(ticker);
       if (jsonStock && jsonStock.priceHistory.length > 0) {
         setStock(jsonStock);
+        setDataEndDate(jsonStock.dataEndDate ?? null);
         const calc = calculateSimulationScenarios(jsonStock.priceHistory, ticker);
         setResult(calc);
         setLoading(false);
@@ -62,10 +65,16 @@ export default function ResultPage() {
         return;
       }
       setStock(found);
+      setDataEndDate(found.dataEndDate ?? null);
       const calc = calculateSimulationByStockName(found.name, all);
+      if (!calc) {
+        // 히스토리 없음 — 종목 입력 페이지로 돌아감
+        router.replace(`/stock/${ticker}`);
+        return;
+      }
       setResult(calc);
       setLoading(false);
-    });
+    })();
   }, [ticker, amount, periodDays, durationValue, durationUnit, router]);
 
   const durationDays =
@@ -138,6 +147,12 @@ export default function ResultPage() {
             {isGood
               ? "수익을 낼 수 있어요!! 📈"
               : "장기 투자로 기회를 잡아보세요! 📊"}
+          </p>
+        )}
+
+        {!loading && dataEndDate && (
+          <p className="text-center text-xs text-subtle">
+            📅 데이터 기준일: {dataEndDate}
           </p>
         )}
 

@@ -189,46 +189,54 @@ export async function fetchAndParseStocks(): Promise<Map<string, StockInfo>> {
   return map;
 }
 
+export interface StockIndexEntry {
+  ticker: string;
+  name: string;
+  uptrending: boolean;
+  dataPoints: number;
+  startDate: string;
+  endDate: string;
+}
+
 /**
  * Helper to get all stocks as a list (for stock browser / search).
- * Merges CSV stocks with JSON-based stocks (JSON takes priority for duplicates).
+ * JSON index 우선 사용. JSON이 비어 있을 때만 CSV 폴백.
+ * → 불필요한 CSV 로딩 제거로 첫 로딩 속도 개선.
  */
 export async function fetchAllStocks(): Promise<StockInfo[]> {
-  // Always load CSV stocks
-  const csvPromise = fetch("/data/stocks.csv")
-    .then((r) => r.text())
-    .then((text) => parseWideFormatCSV(text))
-    .catch(() => [] as StockInfo[]);
-
-  // Try loading JSON index (populated after download script runs)
-  const jsonPromise = fetch("/data/stocks/index.json")
-    .then((r) => (r.ok ? r.json() : []))
-    .then(async (index: { ticker: string; name: string; uptrending: boolean; dataPoints: number; startDate: string; endDate: string }[]) => {
-      if (!Array.isArray(index) || index.length === 0) return [] as StockInfo[];
-      // Return lightweight StockInfo objects (no full history — loaded on demand)
-      return index.map((entry) => ({
-        ticker: entry.ticker,
-        name: entry.name,
-        currentPrice: null,
-        annualReturnRate: null,
-        annualReturnPeriodYears: null,
-        hasInsufficientData: false,
-        hasPeriodMismatchWarning: false,
-        priceHistory: [],
-      })) as StockInfo[];
-    })
-    .catch(() => [] as StockInfo[]);
-
-  const [csvStocks, jsonStocks] = await Promise.all([csvPromise, jsonPromise]);
-
-  // Merge: JSON stocks take priority over CSV for duplicates
-  const merged = new Map<string, StockInfo>();
-  for (const s of csvStocks) {
-    merged.set(s.ticker.toUpperCase(), s);
-  }
-  for (const s of jsonStocks) {
-    merged.set(s.ticker.toUpperCase(), s);
+  // 1) JSON index 시도 (메인 소스)
+  try {
+    const res = await fetch("/data/stocks/index.json");
+    if (res.ok) {
+      const index: StockIndexEntry[] = await res.json();
+      if (Array.isArray(index) && index.length > 0) {
+        return index.map((entry) => ({
+          ticker: entry.ticker,
+          name: entry.name,
+          currentPrice: null,
+          annualReturnRate: null,
+          annualReturnPeriodYears: null,
+          hasInsufficientData: !entry.uptrending,
+          hasPeriodMismatchWarning: false,
+          dataEndDate: entry.endDate,
+          priceHistory: [],
+        })) as StockInfo[];
+      }
+    }
+  } catch {
+    // JSON 실패 → CSV 폴백
   }
 
-  return Array.from(merged.values());
+  // 2) CSV 폴백 (JSON index 없을 때만)
+  try {
+    const res = await fetch("/data/stocks.csv");
+    if (res.ok) {
+      const text = await res.text();
+      return parseWideFormatCSV(text);
+    }
+  } catch {
+    // ignore
+  }
+
+  return [];
 }
