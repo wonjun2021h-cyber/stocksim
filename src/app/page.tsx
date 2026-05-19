@@ -35,6 +35,7 @@ export default function HomePage() {
           <div className="hidden md:block">
             <SearchBar stocks={stocks} variant="navbar" placeholder="주식 검색하기" />
           </div>
+
         </HeaderToolbar>
       </header>
 
@@ -62,21 +63,32 @@ export default function HomePage() {
           <span className="text-6xl shrink-0 select-none" aria-hidden>🎁</span>
         </div>
 
-        {/* 인기주식 + 시뮬레이션 버튼 행 */}
+        {/* 인기주식 + 버튼 행 */}
         <div className="flex items-center justify-between gap-3">
           <div className="flex items-center gap-1.5 text-sm font-semibold text-ink">
             <span>📌</span>
             <span>인기주식</span>
           </div>
-          <Link
-            href="/stocks"
-            className="flex items-center gap-1.5 px-4 py-2 rounded-full bg-orange-500 text-white text-xs font-bold active:opacity-80 transition-opacity shadow-sm"
-          >
-            시뮬레이션 돌리기
-            <svg className="w-3.5 h-3.5" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2.5">
-              <path d="M3 8h10M9 4l4 4-4 4" strokeLinecap="round" strokeLinejoin="round" />
-            </svg>
-          </Link>
+          <div className="flex items-center gap-2">
+            <Link
+              href="/backtest"
+              className="flex items-center gap-1 px-3 py-2 rounded-full border border-line bg-panel text-ink text-xs font-bold active:opacity-80 transition-opacity"
+            >
+              포트폴리오 만들기
+              <svg className="w-3 h-3" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2.5">
+                <path d="M3 8h10M9 4l4 4-4 4" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </Link>
+            <Link
+              href="/stocks"
+              className="flex items-center gap-1 px-3 py-2 rounded-full bg-orange-500 text-white text-xs font-bold active:opacity-80 transition-opacity shadow-sm"
+            >
+              시뮬레이션
+              <svg className="w-3 h-3" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2.5">
+                <path d="M3 8h10M9 4l4 4-4 4" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </Link>
+          </div>
         </div>
 
         {/* 인기 종목 리스트 */}
@@ -119,15 +131,26 @@ export default function HomePage() {
                 내 미래의 자산을 한 번에 계산해드립니다
               </p>
             </div>
-            <Link
-              href="/stocks"
-              className="inline-flex items-center gap-2 self-start px-4 py-2.5 rounded-xl bg-ink text-panel text-sm font-semibold hover:opacity-80 transition-opacity"
-            >
-              주식 시뮬레이션 시작하기
-              <svg className="w-4 h-4" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2">
-                <path d="M3 8h10M9 4l4 4-4 4" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
-            </Link>
+            <div className="flex flex-col gap-2">
+              <Link
+                href="/stocks"
+                className="inline-flex items-center gap-2 self-start px-4 py-2.5 rounded-xl bg-ink text-panel text-sm font-semibold hover:opacity-80 transition-opacity"
+              >
+                주식 시뮬레이션 시작하기
+                <svg className="w-4 h-4" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M3 8h10M9 4l4 4-4 4" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </Link>
+              <Link
+                href="/backtest"
+                className="inline-flex items-center gap-2 self-start px-4 py-2.5 rounded-xl bg-ink text-panel text-sm font-semibold hover:opacity-80 transition-opacity"
+              >
+                포트폴리오 만들기
+                <svg className="w-4 h-4" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M3 8h10M9 4l4 4-4 4" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </Link>
+            </div>
           </div>
 
           <div className="border-t border-line" />

@@ -11,12 +11,14 @@
     "refresh": "node scripts/refresh-stocks.mjs"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.106.0",
     "framer-motion": "^12.38.0",
     "html2canvas": "^1.4.1",
     "next": "^16.2.4",
     "papaparse": "^5.5.3",
     "react": "^19.2.5",
-    "react-dom": "^19.2.5"
+    "react-dom": "^19.2.5",
+    "recharts": "^3.8.1"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.2.4",
