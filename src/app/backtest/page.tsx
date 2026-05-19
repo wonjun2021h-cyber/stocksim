@@ -173,23 +173,6 @@ export default function BacktestPage() {
       {/* 상단 헤더 */}
       <header className="flex items-center justify-between pr-4 md:pr-6">
         <Navbar />
-        <div className="flex items-center gap-3 py-3">
-          {user ? (
-            <div className="flex items-center gap-2">
-              <div className="w-7 h-7 rounded-full bg-elevated flex items-center justify-center text-xs font-bold text-ink">
-                {user.email?.[0]?.toUpperCase() ?? "U"}
-              </div>
-              <span className="text-xs text-muted hidden sm:block">{user.email}</span>
-            </div>
-          ) : (
-            <button
-              onClick={() => setShowAuth(true)}
-              className="text-xs text-muted hover:text-ink transition-colors underline underline-offset-2"
-            >
-              로그인
-            </button>
-          )}
-        </div>
       </header>
 
       {/* 저장 성공 토스트 */}

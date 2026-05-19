@@ -77,11 +77,7 @@ export default function StocksPage() {
                   </div>
                   <span className="text-subtle text-xs">🇺🇸</span>
                   <div className="flex flex-col items-end gap-0.5 shrink-0">
-                    {stock.hasInsufficientData ? (
-                      <span className="text-xs font-semibold text-accent-warn">
-                        데이터 부족
-                      </span>
-                    ) : stock.annualReturnRate !== null && (
+                    {stock.annualReturnRate !== null && (
                       <span
                         className={`text-xs font-semibold ${
                           stock.annualReturnRate >= 0
