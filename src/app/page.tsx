@@ -10,6 +10,7 @@ import { MarketTicker } from "@/components/home/MarketTicker";
 import { PopularStocks } from "@/components/home/PopularStocks";
 import { NewsPanel } from "@/components/home/NewsPanel";
 import { StockListSkeleton } from "@/components/ui/Skeleton";
+import { ChartTrendIcon } from "@/components/ui/ChartTrendIcon";
 import { fetchAllStocks } from "@/lib/csvParser";
 import type { StockInfo } from "@/lib/types";
 
@@ -48,19 +49,19 @@ export default function HomePage() {
         <div className="flex items-center justify-between gap-4 bg-panel rounded-2xl p-5 border border-line dark:border-transparent">
           <div className="flex flex-col gap-2 flex-1 min-w-0">
             <h1 className="text-2xl font-bold text-ink leading-snug">
-              내 미래 자산을
+              몇 년 전 이 주식을
               <br />
-              예측해보세요
+              샀다면, 지금 얼마였을까?
             </h1>
             <p className="text-xs text-muted leading-relaxed">
-              투자 금액 주기 기간을 입력하면
+              투자 금액·주기·기간을 넣으면
               <br />
-              최근 12년치 데이터를 활용해서
+              최근 12년 데이터로
               <br />
-              내 미래의 자산을 한 번에 계산해드립니다
+              시나리오별 수익을 계산해 드려요
             </p>
           </div>
-          <span className="text-6xl shrink-0 select-none" aria-hidden>🎁</span>
+          <ChartTrendIcon className="w-14 h-14 shrink-0 text-red-500 select-none" />
         </div>
 
         {/* 인기주식 + 버튼 행 */}
@@ -119,16 +120,15 @@ export default function HomePage() {
           <div className="flex flex-col gap-4">
             <div className="space-y-2">
               <h1 className="text-3xl font-bold text-ink leading-snug">
-                내 미래 자산을
+                몇 년 전 이 주식을 샀다면,
                 <br />
-                예측해보세요 🎁
+                지금 얼마였을까?
+                <ChartTrendIcon className="inline-block w-8 h-8 ml-1 -mt-0.5 text-red-500 align-middle" />
               </h1>
               <p className="text-sm text-muted leading-relaxed">
-                투자 금액 주기 기간을 입력하면
+                투자 금액·주기·기간을 넣으면, 최근 12년 데이터로
                 <br />
-                최근 12년치 데이터를 활용해서
-                <br />
-                내 미래의 자산을 한 번에 계산해드립니다
+                시나리오별 수익을 계산해 드려요
               </p>
             </div>
             <div className="flex flex-col gap-2">

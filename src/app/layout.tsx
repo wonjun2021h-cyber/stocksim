@@ -4,9 +4,9 @@ import { Footer } from "@/components/layout/Footer";
 import { BottomNav } from "@/components/layout/BottomNav";
 
 export const metadata: Metadata = {
-  title: "StockSim — 내 미래 자산을 예측해보세요",
+  title: "StockSim — 몇 년 전 샀다면, 지금 얼마일까?",
   description:
-    "투자 금액, 주기, 기간을 입력하면 최근 12년치 데이터로 미래 자산을 계산해드립니다",
+    "투자 금액·주기·기간을 넣으면 최근 12년 데이터로 시나리오별 수익을 계산해 드립니다",
 };
 
 export const viewport: Viewport = {

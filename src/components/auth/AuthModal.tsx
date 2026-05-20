@@ -79,9 +79,11 @@ export function AuthModal({
       <div className="w-full sm:max-w-sm bg-panel rounded-t-3xl sm:rounded-3xl p-6 flex flex-col gap-5 shadow-2xl">
         {/* 헤더 */}
         <div className="flex items-start justify-between">
-          <div>
-            <h2 className="text-lg font-bold text-ink">로그인</h2>
-            <p className="text-sm text-muted mt-1 leading-snug">{reason}</p>
+          <div className="flex flex-wrap items-baseline gap-x-2 gap-y-0.5 min-w-0 pr-2">
+            <h2 className="text-lg font-bold text-ink shrink-0">로그인</h2>
+            {reason ? (
+              <p className="text-sm text-muted leading-snug">{reason}</p>
+            ) : null}
           </div>
           <button
             onClick={onClose}

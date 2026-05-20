@@ -100,7 +100,7 @@ export function Navbar() {
       <AuthModal
         isOpen={showAuth}
         onClose={() => setShowAuth(false)}
-        reason=""
+        reason="포트폴리오를 저장해보세요"
         onSuccess={() => setShowAuth(false)}
       />
     </nav>

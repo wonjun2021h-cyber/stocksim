@@ -14,22 +14,21 @@ export function ThemeToggle() {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    setMounted(true);
     const stored = localStorage.getItem(STORAGE_KEY) as "light" | "dark" | null;
     const resolved =
-      stored === "light" || stored === "dark"
-        ? stored
-        : document.documentElement.classList.contains("dark")
-          ? "dark"
-          : "light";
+      stored === "light" || stored === "dark" ? stored : "light";
+    applyTheme(resolved);
     setMode(resolved);
+    setMounted(true);
   }, []);
 
   const toggle = useCallback(() => {
-    const next = mode === "dark" ? "light" : "dark";
-    setMode(next);
-    applyTheme(next);
-  }, [mode]);
+    setMode((prev) => {
+      const next = prev === "dark" ? "light" : "dark";
+      applyTheme(next);
+      return next;
+    });
+  }, []);
 
   if (!mounted) {
     return (
@@ -51,20 +50,14 @@ export function ThemeToggle() {
       onClick={toggle}
       className="relative h-7 w-[52px] shrink-0 rounded-full border border-line bg-panel transition-colors focus-visible:ring-2 focus-visible:ring-line focus-visible:ring-offset-2 focus-visible:ring-offset-page"
     >
+      {/* 활성 손잡이: 라이트=왼쪽(해), 다크=오른쪽(달) */}
       <span
-        className={`pointer-events-none absolute top-1/2 flex h-5 w-5 -translate-y-1/2 items-center justify-center rounded-full bg-elevated shadow-sm transition-all duration-200 ease-out ${
-          isDark ? "left-1" : "right-1"
+        className={`pointer-events-none absolute top-1/2 z-10 flex h-5 w-5 -translate-y-1/2 items-center justify-center rounded-full bg-elevated shadow-sm transition-all duration-200 ease-out ${
+          isDark ? "right-0.5" : "left-0.5"
         }`}
+        aria-hidden
       >
-        {isDark ? (
-          <span className="text-[11px]" aria-hidden>
-            🌙
-          </span>
-        ) : (
-          <span className="text-[11px]" aria-hidden>
-            ☀️
-          </span>
-        )}
+        <span className="text-[11px] leading-none">{isDark ? "🌙" : "☀️"}</span>
       </span>
     </button>
   );
