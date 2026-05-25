@@ -6,6 +6,7 @@ import { Navbar } from "@/components/layout/Navbar";
 import { HeaderToolbar } from "@/components/layout/HeaderToolbar";
 import { SearchBar } from "@/components/layout/SearchBar";
 import { MobileSearchButton } from "@/components/layout/MobileSearch";
+import { MyPageButton } from "@/components/layout/MyPageButton";
 import { MarketTicker } from "@/components/home/MarketTicker";
 import { PopularStocks } from "@/components/home/PopularStocks";
 import { NewsPanel } from "@/components/home/NewsPanel";
@@ -30,13 +31,13 @@ export default function HomePage() {
       <header className="flex items-center justify-between pr-4 md:pr-6">
         <Navbar />
         <HeaderToolbar>
-          {/* 모바일: 검색 버튼 */}
-          <MobileSearchButton stocks={stocks} />
-          {/* 데스크톱: 검색 인풋 */}
-          <div className="hidden md:block">
-            <SearchBar stocks={stocks} variant="navbar" placeholder="주식 검색하기" />
+          <div className="flex items-center gap-2 min-w-0">
+            <MobileSearchButton stocks={stocks} />
+            <div className="hidden md:block min-w-0">
+              <SearchBar stocks={stocks} variant="navbar" placeholder="주식 검색하기" />
+            </div>
+            <MyPageButton />
           </div>
-
         </HeaderToolbar>
       </header>
 
@@ -72,19 +73,19 @@ export default function HomePage() {
           </div>
           <div className="flex items-center gap-2">
             <Link
-              href="/backtest"
-              className="flex items-center gap-1 px-3 py-2 rounded-full border border-line bg-panel text-ink text-xs font-bold active:opacity-80 transition-opacity"
+              href="/stocks"
+              className="flex items-center gap-1 px-3 py-2 rounded-full bg-orange-500 text-white text-xs font-bold active:opacity-80 transition-opacity shadow-sm"
             >
-              포트폴리오 만들기
+              시뮬레이션
               <svg className="w-3 h-3" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2.5">
                 <path d="M3 8h10M9 4l4 4-4 4" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             </Link>
             <Link
-              href="/stocks"
+              href="/backtest"
               className="flex items-center gap-1 px-3 py-2 rounded-full bg-orange-500 text-white text-xs font-bold active:opacity-80 transition-opacity shadow-sm"
             >
-              시뮬레이션
+              포트폴리오 만들기
               <svg className="w-3 h-3" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2.5">
                 <path d="M3 8h10M9 4l4 4-4 4" strokeLinecap="round" strokeLinejoin="round" />
               </svg>

@@ -1,7 +1,9 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, Suspense } from "react";
+import { useSearchParams, useRouter } from "next/navigation";
 import { Navbar } from "@/components/layout/Navbar";
+import { HeaderToolbar } from "@/components/layout/HeaderToolbar";
 import { PortfolioBuilder, type DcaPeriod, type DurationUnit } from "@/components/backtest/PortfolioBuilder";
 import { PortfolioResultDashboard } from "@/components/backtest/PortfolioResultDashboard";
 import { AuthModal } from "@/components/auth/AuthModal";
@@ -54,8 +56,10 @@ function toDurationYears(value: string, unit: DurationUnit): number {
   return Math.max(0.1, v);
 }
 
-export default function BacktestPage() {
+function BacktestPageInner() {
   const { user } = useAuth();
+  const searchParams = useSearchParams();
+  const router = useRouter();
 
   // ── 폼 상태 ──────────────────────────────────────────
   const [dcaAmount, setDcaAmount] = useState("");
@@ -84,6 +88,26 @@ export default function BacktestPage() {
       .then(setStocks)
       .finally(() => setStocksLoading(false));
 
+    // 마이페이지에서 "결과 보기" 로 넘어온 경우
+    const loadParam = searchParams.get("load");
+    if (loadParam) {
+      try {
+        const payload = JSON.parse(decodeURIComponent(atob(loadParam))) as {
+          initialInvestment: number;
+          monthlyDCA: number;
+          durationYears: number;
+          items: PortfolioItem[];
+        };
+        // URL 파라미터 제거
+        router.replace("/backtest");
+        // 바로 시뮬레이션 실행
+        runSimulationDirect(payload);
+      } catch {
+        /* 파싱 실패 시 무시 */
+      }
+      return;
+    }
+
     const saved = loadSettings();
     if (!saved) return;
     if (saved.dcaAmount) setDcaAmount(saved.dcaAmount);
@@ -91,7 +115,36 @@ export default function BacktestPage() {
     if (saved.durationValue) setDurationValue(saved.durationValue);
     if (saved.durationUnit) setDurationUnit(saved.durationUnit);
     if (saved.items?.length) setItems(saved.items);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  // ── 저장된 포트폴리오 직접 실행 (마이페이지 "결과 보기") ──
+  async function runSimulationDirect(payload: {
+    initialInvestment: number;
+    monthlyDCA: number;
+    durationYears: number;
+    items: PortfolioItem[];
+  }) {
+    setPageState("loading");
+    setResult(null);
+    setErrorMessage("");
+    try {
+      const res = await fetch("/api/backtest", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+      if (!res.ok) {
+        const err = await res.json();
+        throw new Error(err.error ?? "API 오류");
+      }
+      setResult(await res.json());
+      setPageState("result");
+    } catch (err) {
+      setErrorMessage(err instanceof Error ? err.message : "오류가 발생했습니다.");
+      setPageState("error");
+    }
+  }
 
   // ── 시뮬레이션 실행 ───────────────────────────────────
   async function handleSimulate() {
@@ -169,10 +222,12 @@ export default function BacktestPage() {
 
   // ── 렌더링 ───────────────────────────────────────────
   return (
+    <>
     <div className="min-h-screen bg-page">
       {/* 상단 헤더 */}
       <header className="flex items-center justify-between pr-4 md:pr-6">
         <Navbar />
+        <HeaderToolbar />
       </header>
 
       {/* 저장 성공 토스트 */}
@@ -275,5 +330,14 @@ export default function BacktestPage() {
         )}
       </main>
     </div>
+    </>
+  );
+}
+
+export default function BacktestPage() {
+  return (
+    <Suspense fallback={<div className="min-h-screen bg-page" />}>
+      <BacktestPageInner />
+    </Suspense>
   );
 }

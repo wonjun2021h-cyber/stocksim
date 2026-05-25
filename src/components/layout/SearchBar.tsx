@@ -115,27 +115,15 @@ export function SearchBar({
               onClick={() => handleSelect(stock.ticker)}
               className="w-full flex items-center gap-3 px-4 py-3 hover:bg-muted-row transition-colors text-left"
             >
-              <div
-                className="w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold shrink-0 bg-ring text-ink"
-              >
+              <div className="w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold shrink-0 bg-ring text-ink">
                 {stock.ticker.substring(0, 2)}
               </div>
               <div>
                 <p className="text-sm font-medium text-ink">{stock.name}</p>
                 <p className="text-xs text-subtle">{stock.ticker}</p>
               </div>
-              {stock.hasInsufficientData ? (
-                <span className="ml-auto text-xs font-medium text-accent-warn">
-                  데이터 부족
-                </span>
-              ) : stock.annualReturnRate !== null && (
-                <span
-                  className={`ml-auto text-xs font-medium ${
-                    stock.annualReturnRate >= 0
-                      ? "text-accent-up"
-                      : "text-accent-down"
-                  }`}
-                >
+              {stock.annualReturnRate !== null && (
+                <span className={`ml-auto text-xs font-medium ${stock.annualReturnRate >= 0 ? "text-accent-up" : "text-accent-down"}`}>
                   {stock.hasPeriodMismatchWarning ? "⚠️ " : ""}
                   {stock.annualReturnRate >= 0 ? "+" : ""}
                   {stock.annualReturnRate.toFixed(1)}% CAGR (
@@ -144,6 +132,15 @@ export function SearchBar({
               )}
             </button>
           ))}
+          <a
+            href="/request-stock"
+            className="flex items-center gap-2 w-full px-4 py-2.5 text-xs text-muted hover:bg-muted-row transition-colors border-t border-line"
+          >
+            <svg className="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
+            </svg>
+            찾으시는 주식이 없나요? 종목 추가 요청하기
+          </a>
         </div>
       )}
     </div>

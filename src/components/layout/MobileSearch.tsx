@@ -45,7 +45,7 @@ export function MobileSearchButton({ stocks }: MobileSearchProps) {
       <button
         type="button"
         onClick={() => setOpen(true)}
-        className="md:hidden flex items-center gap-1.5 px-4 py-2 rounded-full bg-elevated text-ink text-sm font-medium border border-line active:scale-95 transition-transform"
+        className="md:hidden flex items-center gap-1.5 px-3 py-2 rounded-full bg-elevated text-ink text-xs font-medium border border-line active:scale-95 transition-transform min-w-0"
       >
         <svg className="w-3.5 h-3.5 text-subtle shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
@@ -93,7 +93,7 @@ export function MobileSearchButton({ stocks }: MobileSearchProps) {
           </div>
 
           {/* 결과 목록 */}
-          <div className="flex-1 overflow-y-auto">
+          <div className="flex-1 overflow-y-auto flex flex-col">
             {results.length === 0 && query.trim() === "" && (
               <div className="flex flex-col items-center justify-center h-48 gap-2 text-faint">
                 <svg className="w-10 h-10 opacity-30" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -104,8 +104,15 @@ export function MobileSearchButton({ stocks }: MobileSearchProps) {
             )}
 
             {results.length === 0 && query.trim() !== "" && (
-              <div className="flex flex-col items-center justify-center h-48 gap-2 text-faint">
+              <div className="flex flex-col items-center justify-center h-48 gap-3 text-faint">
                 <p className="text-sm">검색 결과가 없습니다</p>
+                <a
+                  href="/request-stock"
+                  onClick={() => setOpen(false)}
+                  className="text-xs text-orange-500 font-semibold hover:underline"
+                >
+                  찾으시는 주식이 없나요? 종목 추가 요청하기
+                </a>
               </div>
             )}
 
@@ -123,9 +130,7 @@ export function MobileSearchButton({ stocks }: MobileSearchProps) {
                   <p className="text-sm font-semibold text-ink truncate">{stock.name}</p>
                   <p className="text-xs text-subtle">{stock.ticker}</p>
                 </div>
-                {stock.hasInsufficientData ? (
-                  <span className="text-xs font-medium text-accent-warn shrink-0">데이터 부족</span>
-                ) : stock.annualReturnRate !== null && (
+                {stock.annualReturnRate !== null && (
                   <span className={`text-xs font-semibold shrink-0 ${stock.annualReturnRate >= 0 ? "text-accent-up" : "text-accent-down"}`}>
                     {stock.annualReturnRate >= 0 ? "+" : ""}{stock.annualReturnRate.toFixed(1)}%
                   </span>
@@ -135,6 +140,19 @@ export function MobileSearchButton({ stocks }: MobileSearchProps) {
                 </svg>
               </button>
             ))}
+
+            {results.length > 0 && (
+              <a
+                href="/request-stock"
+                onClick={() => setOpen(false)}
+                className="mt-auto flex items-center gap-2 px-4 py-4 text-xs text-muted border-t border-line hover:bg-muted-row transition-colors"
+              >
+                <svg className="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
+                </svg>
+                찾으시는 주식이 없나요? 종목 추가 요청하기
+              </a>
+            )}
           </div>
         </div>
       )}

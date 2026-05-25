@@ -10,6 +10,7 @@ export function Footer() {
         </p>
         <nav className="flex items-center gap-4">
           {[
+            { label: "종목 추가 요청", href: "/request-stock" },
             { label: "이용약관", href: "/terms" },
             { label: "개인정보 처리방침", href: "/privacy" },
             { label: "면책 공고", href: "/disclaimer" },

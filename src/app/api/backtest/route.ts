@@ -71,8 +71,8 @@ function validateRequest(body: unknown): {
   if (typeof b.monthlyDCA !== "number" || b.monthlyDCA < 0) {
     return { valid: false, error: "monthlyDCA는 0 이상의 숫자여야 합니다." };
   }
-  if (typeof b.durationYears !== "number" || b.durationYears < 1 || b.durationYears > 30) {
-    return { valid: false, error: "durationYears는 1~30 사이여야 합니다." };
+  if (typeof b.durationYears !== "number" || b.durationYears <= 0 || b.durationYears > 30) {
+    return { valid: false, error: "durationYears는 0~30 사이여야 합니다." };
   }
   if (!Array.isArray(b.items) || b.items.length === 0 || b.items.length > 10) {
     return { valid: false, error: "items는 1~10개 사이여야 합니다." };
@@ -91,13 +91,11 @@ function validateRequest(body: unknown): {
     }
   }
 
-  // 비중 합계 검사 (100 ± 1 허용)
-  const totalWeight = (b.items as Array<{ weight: number }>).reduce(
-    (sum, it) => sum + it.weight,
-    0
-  );
-  if (Math.abs(totalWeight - 100) > 1) {
-    return { valid: false, error: `비중의 합계는 100이어야 합니다. (현재: ${totalWeight.toFixed(2)})` };
+  // 비중 합계 정규화 (소수점 오차 자동 보정)
+  const items = b.items as Array<{ weight: number }>;
+  const totalWeight = items.reduce((sum, it) => sum + it.weight, 0);
+  if (totalWeight > 0) {
+    items.forEach((it) => { it.weight = (it.weight / totalWeight) * 100; });
   }
 
   return { valid: true, data: b as unknown as BacktestRequest };

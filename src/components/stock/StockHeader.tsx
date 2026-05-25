@@ -15,11 +15,7 @@ export function StockHeader({ stock }: StockHeaderProps) {
           <span className="text-subtle text-sm">{stock.ticker}</span>
         </div>
         <div className="mt-1">
-          {stock.hasInsufficientData ? (
-            <p className="text-sm font-medium mt-0.5 text-accent-warn" data-no-share>
-              데이터 부족
-            </p>
-          ) : stock.annualReturnRate !== null && (
+          {stock.annualReturnRate !== null && (
             <p
               data-no-share
               className={`text-sm font-medium mt-0.5 ${

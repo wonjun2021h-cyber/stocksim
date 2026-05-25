@@ -29,6 +29,16 @@ const NAV_ITEMS = [
     ),
   },
   {
+    label: "포트폴리오",
+    href: "/backtest",
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5">
+        <path d="M21.21 15.89A10 10 0 118 2.83" />
+        <path d="M22 12A10 10 0 0012 2v10z" />
+      </svg>
+    ),
+  },
+  {
     label: "복리",
     href: "/compound",
     icon: (
@@ -56,7 +66,7 @@ export function BottomNav() {
 
   return (
     <nav className="fixed bottom-0 left-0 right-0 z-50 md:hidden bg-panel border-t border-line safe-area-pb">
-      <div className="flex items-center justify-between px-1 pt-2 pb-3">
+      <div className="flex items-center justify-between px-0.5 pt-2 pb-3">
         {NAV_ITEMS.map(({ label, href, icon }) => {
           const isActive =
             href === "/" ? pathname === "/" : pathname.startsWith(href);
@@ -69,7 +79,7 @@ export function BottomNav() {
               }`}
             >
               {icon}
-              <span className="text-[10px] font-medium">{label}</span>
+              <span className="text-[9px] font-medium leading-tight text-center">{label}</span>
               {isActive && (
                 <span className="absolute -bottom-0 w-1 h-1 rounded-full bg-ink" />
               )}

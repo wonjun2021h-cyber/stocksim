@@ -7,9 +7,11 @@ import { ScenarioCurveChart } from "@/components/backtest/ScenarioCurveChart";
 
 interface PortfolioResultDashboardProps {
   result: BacktestResponse;
-  /** 저장 버튼 클릭 핸들러 (로그인 여부를 상위에서 체크) */
   onSave: () => void;
   isSaving: boolean;
+  hideSaveButton?: boolean;
+  /** 마이페이지 인라인 등 좁은 컨테이너에서 사용 시 */
+  compact?: boolean;
 }
 
 function fmtKRW(n: number): string {
@@ -32,6 +34,8 @@ export function PortfolioResultDashboard({
   result,
   onSave,
   isSaving,
+  hideSaveButton = false,
+  compact = false,
 }: PortfolioResultDashboardProps) {
   const { meta, allocation, scenarios, portfolioMetrics, warnings } = result;
   const [copyDone, setCopyDone] = useState(false);
@@ -60,7 +64,7 @@ export function PortfolioResultDashboard({
       )}
 
       {/* ── 메인 2-컬럼 레이아웃 ─────────────────────── */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+      <div className={`grid grid-cols-1 gap-5 ${compact ? "" : "md:grid-cols-2"}`}>
         {/* ─ 좌측: 자산 비중 도넛 + 종목 리스트 ──────── */}
         <div className="bg-panel rounded-2xl border border-line dark:border-transparent p-5 flex flex-col gap-4">
           <h3 className="text-sm font-bold text-ink">자산 비중</h3>
@@ -74,20 +78,20 @@ export function PortfolioResultDashboard({
             <h3 className="text-sm font-bold text-ink">투자 시뮬레이션</h3>
             <div className="grid grid-cols-3 gap-2 text-center">
               <div className="bg-elevated rounded-xl py-2.5 px-2">
-                <p className="text-xs text-muted">초기 원금</p>
-                <p className="text-sm font-bold text-ink mt-0.5">
+                <p className="text-xs text-muted truncate">초기 원금</p>
+                <p className="text-xs font-bold text-ink mt-0.5 truncate">
                   {fmtKRW(meta.initialInvestment)}
                 </p>
               </div>
               <div className="bg-elevated rounded-xl py-2.5 px-2">
-                <p className="text-xs text-muted">월 적립금</p>
-                <p className="text-sm font-bold text-ink mt-0.5">
+                <p className="text-xs text-muted truncate">월 적립금</p>
+                <p className="text-xs font-bold text-ink mt-0.5 truncate">
                   {meta.monthlyDCA > 0 ? fmtKRW(meta.monthlyDCA) : "없음"}
                 </p>
               </div>
               <div className="bg-elevated rounded-xl py-2.5 px-2">
-                <p className="text-xs text-muted">총 투자금(원금)</p>
-                <p className="text-sm font-bold text-ink mt-0.5">
+                <p className="text-xs text-muted truncate">총 투자금</p>
+                <p className="text-xs font-bold text-ink mt-0.5 truncate">
                   {fmtKRW(meta.totalInvested)}
                 </p>
               </div>
@@ -108,7 +112,7 @@ export function PortfolioResultDashboard({
       {/* ── 포트폴리오 지표 ───────────────────────────── */}
       <div className="bg-panel rounded-2xl border border-line dark:border-transparent p-5">
         <h3 className="text-sm font-bold text-ink mb-3">포트폴리오 지표</h3>
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+        <div className={`grid gap-3 ${compact ? "grid-cols-2" : "grid-cols-2 sm:grid-cols-4"}`}>
           {[
             {
               label: "최대 낙폭 (MDD)",
@@ -149,29 +153,28 @@ export function PortfolioResultDashboard({
 
       {/* ── 저장 버튼 + 면책 문구 ────────────────────── */}
       <div className="flex flex-col gap-3">
-        {/* 저장하기 버튼
-            [비로그인 유저]: onSave 핸들러에서 AuthModal을 열어줍니다.
-            [로그인 유저]:   바로 DB에 저장합니다. */}
-        <button
-          type="button"
-          onClick={onSave}
-          disabled={isSaving}
-          className="w-full py-3.5 rounded-2xl bg-ink text-panel text-sm font-bold hover:opacity-80 transition-opacity disabled:opacity-50 active:scale-[0.98] flex items-center justify-center gap-2"
-        >
-          {isSaving ? (
-            <>
-              <span className="w-4 h-4 rounded-full border-2 border-panel/30 border-t-panel animate-spin" />
-              저장 중...
-            </>
-          ) : (
-            <>
-              <svg className="w-4 h-4" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2">
-                <path d="M2 14l4-4 3 3 5-7" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
-              포트폴리오 저장하기
-            </>
-          )}
-        </button>
+        {!hideSaveButton && (
+          <button
+            type="button"
+            onClick={onSave}
+            disabled={isSaving}
+            className="w-full py-3.5 rounded-2xl bg-ink text-panel text-sm font-bold hover:opacity-80 transition-opacity disabled:opacity-50 active:scale-[0.98] flex items-center justify-center gap-2"
+          >
+            {isSaving ? (
+              <>
+                <span className="w-4 h-4 rounded-full border-2 border-panel/30 border-t-panel animate-spin" />
+                저장 중...
+              </>
+            ) : (
+              <>
+                <svg className="w-4 h-4" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M2 14l4-4 3 3 5-7" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+                포트폴리오 저장하기
+              </>
+            )}
+          </button>
+        )}
 
         {/* 공유 버튼 */}
         <div className="flex items-center gap-2 justify-center">

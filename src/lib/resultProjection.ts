@@ -49,14 +49,6 @@ function withMeanReversion(cagr: number, investmentYears: number): number {
   return Math.pow(cumulative, 1 / investmentYears) - 1;
 }
 
-function getWorstFloorMultiplier(durationYears: number): number | null {
-  if (durationYears < 1) return null;
-  if (durationYears >= 15) return 1.1;
-  if (durationYears >= 10) return 0.95;
-  if (durationYears >= 5) return 0.8;
-  return 0.6;
-}
-
 function scaleCagrForHorizon(cagr: number, durationYears: number): number {
   if (durationYears >= 1) return cagr;
   return cagr * Math.max(durationYears, 1 / 365);
@@ -101,11 +93,7 @@ export function computeProjection(input: ProjectionInput): ProjectionOutput {
   const rawBestFinalKRW = Math.round(dcaFinalValue(periodicPayment, payments, effectiveBest, years));
   const rawWorstFinalKRW = Math.round(dcaFinalValue(periodicPayment, payments, effectiveWorst, years));
 
-  const floorMultiplier = result.dataInsufficient ? null : getWorstFloorMultiplier(durationYears);
-  const floorKRW =
-    floorMultiplier !== null ? Math.round(totalInvestedKRW * floorMultiplier) : null;
-  const worstFinalKRW =
-    floorKRW !== null ? Math.max(rawWorstFinalKRW, floorKRW) : rawWorstFinalKRW;
+  const worstFinalKRW = rawWorstFinalKRW;
   const bestFinalKRW = rawBestFinalKRW;
 
   const maxGainKRW = bestFinalKRW - totalInvestedKRW;
@@ -121,7 +109,7 @@ export function computeProjection(input: ProjectionInput): ProjectionOutput {
     bestFinalKRW,
     worstFinalKRW,
     rawWorstFinalKRW,
-    worstFloorApplied: worstFinalKRW > rawWorstFinalKRW,
+    worstFloorApplied: false,
     maxGainKRW,
     minGainKRW,
     maxGainPct,

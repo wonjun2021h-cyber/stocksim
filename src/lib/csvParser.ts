@@ -82,7 +82,7 @@ export function parseWideFormatCSV(csvText: string): StockInfo[] {
     const annualStats = computeAnnualReturn(stock.priceHistory, stock.ticker);
     stock.annualReturnRate = annualStats.cagrPercent;
     stock.annualReturnPeriodYears = annualStats.periodYears;
-    stock.hasInsufficientData = annualStats.insufficientData;
+    stock.hasInsufficientData = false;
     stock.hasPeriodMismatchWarning = annualStats.periodYears !== null
       ? annualStats.periodYears < COMPARISON_BASE_YEARS
       : false;
@@ -216,7 +216,7 @@ export async function fetchAllStocks(): Promise<StockInfo[]> {
           currentPrice: null,
           annualReturnRate: null,
           annualReturnPeriodYears: null,
-          hasInsufficientData: !entry.uptrending,
+          hasInsufficientData: false,
           hasPeriodMismatchWarning: false,
           dataEndDate: entry.endDate,
           priceHistory: [],

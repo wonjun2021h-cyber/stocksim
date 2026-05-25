@@ -4,8 +4,8 @@
  *
  * 동작 원리:
  *   1. 각 종목의 마지막 날짜 이후 ~ 오늘까지 새 일봉 다운로드
- *   2. 새 데이터 N개 추가 → 맨 앞(가장 오래된) N개 제거
- *   3. 항상 최초 dataPoints 개수(≒12년치)를 유지
+ *   2. 12년 미만 종목: 맨 뒤에만 추가 (앞 데이터 유지 → 12년치 쌓을 때까지)
+ *   3. 12년 이상 종목: 최근 12년 구간만 유지 (오래된 날짜는 제거)
  *   4. index.json 메타데이터(startDate, endDate, dataPoints) 업데이트
  *
  * IP 차단 방어:
@@ -53,6 +53,21 @@ const TICK_DELAY_MIN = 1_000;    // 종목 간 최소 지연 (ms)
 const TICK_DELAY_MAX = 3_000;    // 종목 간 최대 지연 (ms)
 const MAX_RETRIES = 3;           // 실패 종목 최대 재시도 횟수
 const FETCH_TIMEOUT = 15_000;    // 요청 타임아웃 (ms)
+const HISTORY_YEARS = 12;        // 유지·목표 기간 (년)
+
+/** 오늘 기준 12년 전 날짜 (YYYY-MM-DD) */
+function twelveYearCutoffDate(refDate = new Date()) {
+  const d = new Date(refDate);
+  d.setUTCFullYear(d.getUTCFullYear() - HISTORY_YEARS);
+  return d.toISOString().split("T")[0];
+}
+
+/** 이미 12년치 구간을 갖췄는지 (가장 오래된 날짜가 12년 전 이전) */
+function hasFullTwelveYears(history, cutoffDate) {
+  if (!history?.length) return false;
+  const sorted = [...history].sort((a, b) => a.date.localeCompare(b.date));
+  return sorted[0].date <= cutoffDate;
+}
 
 // 실제 브라우저 User-Agent 풀 — 요청마다 무작위 선택
 const UA_POOL = [
@@ -233,23 +248,23 @@ async function refreshTicker(ticker, entry, today) {
 
   if (uniqueNew.length === 0) return { status: "noNew" };
 
-  const originalLength = stock.history.length;
-
   stock.history.push(...uniqueNew);
-
-  // 추가한 만큼 맨 앞 제거 → 길이 유지
-  if (stock.history.length > originalLength) {
-    stock.history.splice(0, stock.history.length - originalLength);
-  }
-
   stock.history.sort((a, b) => a.date.localeCompare(b.date));
+
+  const cutoff = twelveYearCutoffDate(new Date(today));
+
+  if (hasFullTwelveYears(stock.history, cutoff)) {
+    // 12년 이상: 최근 12년만 유지 (슬라이딩)
+    stock.history = stock.history.filter((p) => p.date >= cutoff);
+  }
+  // 12년 미만: 앞 데이터 유지, 뒤에만 추가 (길이 증가)
 
   stock.dataPoints  = stock.history.length;
   stock.startDate   = stock.history[0].date;
   stock.endDate     = stock.history[stock.history.length - 1].date;
   stock.startPrice  = stock.history[0].close;
   stock.endPrice    = stock.history[stock.history.length - 1].close;
-  stock.uptrending  = isUptrendingStock(stock.history);
+  stock.uptrending  = true;
 
   try {
     writeFileSync(filePath, JSON.stringify(stock));
@@ -260,7 +275,7 @@ async function refreshTicker(ticker, entry, today) {
   entry.dataPoints = stock.dataPoints;
   entry.startDate  = stock.startDate;
   entry.endDate    = stock.endDate;
-  entry.uptrending = stock.uptrending;
+  entry.uptrending = true;
 
   return { status: "updated", added: uniqueNew.length };
 }

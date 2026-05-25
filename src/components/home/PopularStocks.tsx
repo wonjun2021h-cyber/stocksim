@@ -57,11 +57,7 @@ export function PopularStocks({ stocks }: PopularStocksProps) {
             <span className="text-base shrink-0">🇺🇸</span>
 
             {/* Annual return */}
-            {stock.hasInsufficientData ? (
-              <span className="text-xs font-semibold shrink-0 text-accent-warn">
-                데이터 부족
-              </span>
-            ) : stock.annualReturnRate !== null && (
+            {stock.annualReturnRate !== null && (
               <span
                 className={`text-xs font-semibold shrink-0 ${
                   stock.annualReturnRate >= 0

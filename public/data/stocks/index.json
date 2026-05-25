@@ -4150,5 +4150,5101 @@
     "dataPoints": 2051,
     "startDate": "2018-03-19",
     "endDate": "2026-05-14"
+  },
+  {
+    "ticker": "IWM",
+    "name": "iShares 러셀2000 ETF",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "OEF",
+    "name": "iShares S&P 100 ETF",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "XLV",
+    "name": "헬스케어 섹터 ETF",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "XLE",
+    "name": "에너지 섹터 ETF",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "XLP",
+    "name": "필수소비재 섹터 ETF",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "XLB",
+    "name": "소재 섹터 ETF",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "VYM",
+    "name": "뱅가드 고배당 ETF",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "HDV",
+    "name": "iShares 핵심 고배당 ETF",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "DGRO",
+    "name": "iShares 배당성장 ETF",
+    "uptrending": true,
+    "dataPoints": 3005,
+    "startDate": "2014-06-12",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "NOBL",
+    "name": "ProShares 배당귀족 ETF",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "PEY",
+    "name": "고배당률 ETF",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "MOAT",
+    "name": "반에크 와이드모트 ETF",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "VEA",
+    "name": "뱅가드 선진시장 ETF",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "EFA",
+    "name": "iShares 선진국 ETF",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "ACWI",
+    "name": "iShares MSCI 전세계 ETF",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "EEM",
+    "name": "iShares 신흥국 ETF",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "EWT",
+    "name": "iShares 대만 ETF",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "EWZ",
+    "name": "iShares 브라질 ETF",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "TLT",
+    "name": "iShares 20년+ 미국채 ETF",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "IEF",
+    "name": "iShares 7-10년 미국채 ETF",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "SHY",
+    "name": "iShares 1-3년 미국채 ETF",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "EMB",
+    "name": "iShares 신흥국 달러채 ETF",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "VNQ",
+    "name": "뱅가드 리츠 ETF",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "RWR",
+    "name": "SPDR 리츠 ETF",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "IAU",
+    "name": "iShares 금 ETF",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "ARKG",
+    "name": "ARK Genomic Revolution ETF",
+    "uptrending": true,
+    "dataPoints": 2906,
+    "startDate": "2014-10-31",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "ARKW",
+    "name": "ARK Next Gen Internet ETF",
+    "uptrending": true,
+    "dataPoints": 2929,
+    "startDate": "2014-09-30",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "ARKF",
+    "name": "ARK Fintech Innovation ETF",
+    "uptrending": true,
+    "dataPoints": 1836,
+    "startDate": "2019-02-04",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "HERO",
+    "name": "글로벌X 비디오게임 ETF",
+    "uptrending": true,
+    "dataPoints": 1648,
+    "startDate": "2019-10-31",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "ESPO",
+    "name": "반에크 게이밍 ESports ETF",
+    "uptrending": true,
+    "dataPoints": 1909,
+    "startDate": "2018-10-17",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "AWAY",
+    "name": "여행·관광 ETF",
+    "uptrending": false,
+    "dataPoints": 1577,
+    "startDate": "2020-02-13",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "ENB",
+    "name": "엔브리지 (캐나다 파이프라인)",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "CNQ",
+    "name": "Canadian Natural Resources",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "NVO",
+    "name": "노보노르디스크",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "BAYRY",
+    "name": "바이엘 ADR",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "BTI",
+    "name": "브리티시 아메리칸 타바코",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "BCS",
+    "name": "바클레이즈",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "ING",
+    "name": "ING 그룹",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "VOD",
+    "name": "보다폰",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "BHP",
+    "name": "BHP 그룹",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "MAIN",
+    "name": "메인스트리트 캐피탈 (BDC)",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "HTGC",
+    "name": "허큘레스 캐피탈 (BDC)",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "ADC",
+    "name": "Agree Realty",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "LTC",
+    "name": "LTC Properties (헬스케어 리츠)",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "VTI",
+    "name": "뱅가드 전체시장 ETF",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "DIA",
+    "name": "다우존스 ETF",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "IJH",
+    "name": "iShares S&P 중형주 ETF",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "XLI",
+    "name": "산업재 섹터 ETF",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "XLU",
+    "name": "유틸리티 섹터 ETF",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "VTV",
+    "name": "뱅가드 가치주 ETF",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "IVW",
+    "name": "S&P500 성장주 ETF",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "IWD",
+    "name": "러셀1000 가치 ETF",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "QUAL",
+    "name": "iShares 퀄리티 ETF",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "IEFA",
+    "name": "iShares 핵심 선진국 ETF",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "EWU",
+    "name": "iShares 영국 ETF",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "EWA",
+    "name": "iShares 호주 ETF",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "EFAV",
+    "name": "iShares 선진국 최소변동 ETF",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "FXI",
+    "name": "iShares 중국 대형주 ETF",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "INDA",
+    "name": "iShares 인도 ETF",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "AGG",
+    "name": "iShares 미국 종합채권 ETF",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "BND",
+    "name": "뱅가드 미국 채권시장 ETF",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "HYG",
+    "name": "iShares 하이일드 회사채 ETF",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "GOVT",
+    "name": "iShares 미국 국채 ETF",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "VCSH",
+    "name": "뱅가드 단기 회사채 ETF",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "MUB",
+    "name": "iShares 지방채 ETF",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "SCHH",
+    "name": "슈왑 미국 리츠 ETF",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "GDX",
+    "name": "반에크 금광 ETF",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "GDXJ",
+    "name": "반에크 주니어 금광 ETF",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "ICLN",
+    "name": "iShares 청정에너지 ETF",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "TAN",
+    "name": "인베스코 솔라 ETF",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "AIQ",
+    "name": "글로벌X AI·빅데이터 ETF",
+    "uptrending": true,
+    "dataPoints": 2016,
+    "startDate": "2018-05-16",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "E",
+    "name": "에니 (Eni)",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "DEO",
+    "name": "디아지오",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "HSBC",
+    "name": "HSBC 홀딩스",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "BCE",
+    "name": "BCE (캐나다 통신)",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "RIO",
+    "name": "리오 틴토",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "VALE",
+    "name": "발레",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "GBDC",
+    "name": "골럽 캐피탈 BDC",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "GAIN",
+    "name": "Gladstone Investment",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "ACI",
+    "name": "ACI",
+    "uptrending": false,
+    "dataPoints": 1484,
+    "startDate": "2020-06-26",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "AEO",
+    "name": "AEO",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "AGCO",
+    "name": "AGCO",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "AIT",
+    "name": "AIT",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "AMG",
+    "name": "AMG",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "AMKR",
+    "name": "AMKR",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "ANF",
+    "name": "ANF",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "ARW",
+    "name": "ARW",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "ATR",
+    "name": "ATR",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "AXS",
+    "name": "AXS",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "BRKR",
+    "name": "BRKR",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "BWA",
+    "name": "BWA",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "CABO",
+    "name": "CABO",
+    "uptrending": false,
+    "dataPoints": 2754,
+    "startDate": "2015-06-11",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "CFR",
+    "name": "CFR",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "CHE",
+    "name": "CHE",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "CNA",
+    "name": "CNA",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "CNH",
+    "name": "CNH",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "CNO",
+    "name": "CNO",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "CROX",
+    "name": "CROX",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "CRS",
+    "name": "CRS",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "CSL",
+    "name": "CSL",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "CUBE",
+    "name": "CUBE",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "CW",
+    "name": "CW",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "DINO",
+    "name": "DINO",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "DRH",
+    "name": "DRH",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "DTM",
+    "name": "DTM",
+    "uptrending": true,
+    "dataPoints": 1229,
+    "startDate": "2021-07-01",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "DY",
+    "name": "DY",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "EAT",
+    "name": "EAT",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "EBC",
+    "name": "EBC",
+    "uptrending": true,
+    "dataPoints": 1407,
+    "startDate": "2020-10-15",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "ELAN",
+    "name": "ELAN",
+    "uptrending": false,
+    "dataPoints": 1928,
+    "startDate": "2018-09-20",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "ELS",
+    "name": "ELS",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "ESE",
+    "name": "ESE",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "EWBC",
+    "name": "EWBC",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "EXP",
+    "name": "EXP",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "FAF",
+    "name": "FAF",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "FLO",
+    "name": "FLO",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "FNB",
+    "name": "FNB",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "FR",
+    "name": "FR",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "FUL",
+    "name": "FUL",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "G",
+    "name": "G",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "GFF",
+    "name": "GFF",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "GGG",
+    "name": "GGG",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "GPK",
+    "name": "GPK",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "GXO",
+    "name": "GXO",
+    "uptrending": false,
+    "dataPoints": 1215,
+    "startDate": "2021-07-22",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "HCC",
+    "name": "HCC",
+    "uptrending": false,
+    "dataPoints": 2290,
+    "startDate": "2017-04-13",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "HEI",
+    "name": "HEI",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "HGV",
+    "name": "HGV",
+    "uptrending": true,
+    "dataPoints": 2359,
+    "startDate": "2017-01-04",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "HLI",
+    "name": "HLI",
+    "uptrending": true,
+    "dataPoints": 2710,
+    "startDate": "2015-08-13",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "HNI",
+    "name": "HNI",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "HOG",
+    "name": "HOG",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "HP",
+    "name": "HP",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "HRB",
+    "name": "HRB",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "HRI",
+    "name": "HRI",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "IBP",
+    "name": "IBP",
+    "uptrending": true,
+    "dataPoints": 3087,
+    "startDate": "2014-02-13",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "IDA",
+    "name": "IDA",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "KBH",
+    "name": "KBH",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "KEX",
+    "name": "KEX",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "KFY",
+    "name": "KFY",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "KMT",
+    "name": "KMT",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "KRC",
+    "name": "KRC",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "LBRT",
+    "name": "LBRT",
+    "uptrending": false,
+    "dataPoints": 2102,
+    "startDate": "2018-01-11",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "LEA",
+    "name": "LEA",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "LNC",
+    "name": "LNC",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "LNTH",
+    "name": "LNTH",
+    "uptrending": true,
+    "dataPoints": 2744,
+    "startDate": "2015-06-25",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "LPX",
+    "name": "LPX",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "LRN",
+    "name": "LRN",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "LSTR",
+    "name": "LSTR",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "M",
+    "name": "M",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "MAN",
+    "name": "MAN",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "MASI",
+    "name": "MASI",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "MDU",
+    "name": "MDU",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "MKL",
+    "name": "MKL",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "MKSI",
+    "name": "MKSI",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "MOH",
+    "name": "MOH",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "MSA",
+    "name": "MSA",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "MSM",
+    "name": "MSM",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "MTG",
+    "name": "MTG",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "MTZ",
+    "name": "MTZ",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "NAVI",
+    "name": "NAVI",
+    "uptrending": false,
+    "dataPoints": 3043,
+    "startDate": "2014-04-17",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "NFG",
+    "name": "NFG",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "NJR",
+    "name": "NJR",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "NNN",
+    "name": "NNN",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "NOV",
+    "name": "NOV",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "NVT",
+    "name": "NVT",
+    "uptrending": true,
+    "dataPoints": 2032,
+    "startDate": "2018-04-24",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "NWE",
+    "name": "NWE",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "OC",
+    "name": "OC",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "OGE",
+    "name": "OGE",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "OLN",
+    "name": "OLN",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "OMF",
+    "name": "OMF",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "OSK",
+    "name": "OSK",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "PII",
+    "name": "PII",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "POST",
+    "name": "POST",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "PPC",
+    "name": "PPC",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "PR",
+    "name": "PR",
+    "uptrending": true,
+    "dataPoints": 2541,
+    "startDate": "2016-04-15",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "PVH",
+    "name": "PVH",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "R",
+    "name": "R",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "RBC",
+    "name": "RBC",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "RGA",
+    "name": "RGA",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "RHI",
+    "name": "RHI",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "RLI",
+    "name": "RLI",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "RPM",
+    "name": "RPM",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "RRX",
+    "name": "RRX",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "RYN",
+    "name": "RYN",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "SCI",
+    "name": "SCI",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "SEE",
+    "name": "SEE",
+    "uptrending": true,
+    "dataPoints": 3085,
+    "startDate": "2014-01-02",
+    "endDate": "2026-04-09"
+  },
+  {
+    "ticker": "SITE",
+    "name": "SITE",
+    "uptrending": false,
+    "dataPoints": 2522,
+    "startDate": "2016-05-12",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "SLM",
+    "name": "SLM",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "SM",
+    "name": "SM",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "SNX",
+    "name": "SNX",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "SSD",
+    "name": "SSD",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "STAG",
+    "name": "STAG",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "SXT",
+    "name": "SXT",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "TDC",
+    "name": "TDC",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "TDS",
+    "name": "TDS",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "TEX",
+    "name": "TEX",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "THG",
+    "name": "THG",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "TNL",
+    "name": "TNL",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "TOL",
+    "name": "TOL",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "TRN",
+    "name": "TRN",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "TRMK",
+    "name": "TRMK",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "TRU",
+    "name": "TRU",
+    "uptrending": true,
+    "dataPoints": 2744,
+    "startDate": "2015-06-25",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "TTC",
+    "name": "TTC",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "TWI",
+    "name": "TWI",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "TXRH",
+    "name": "TXRH",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "UCB",
+    "name": "UCB",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "UMBF",
+    "name": "UMBF",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "UNF",
+    "name": "UNF",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "UNM",
+    "name": "UNM",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "URBN",
+    "name": "URBN",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "VAL",
+    "name": "VAL",
+    "uptrending": true,
+    "dataPoints": 1271,
+    "startDate": "2021-05-03",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "VMI",
+    "name": "VMI",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "VSH",
+    "name": "VSH",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "VVV",
+    "name": "VVV",
+    "uptrending": false,
+    "dataPoints": 2429,
+    "startDate": "2016-09-23",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "WEN",
+    "name": "WEN",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "WEX",
+    "name": "WEX",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "WHR",
+    "name": "WHR",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "WMS",
+    "name": "WMS",
+    "uptrending": true,
+    "dataPoints": 2975,
+    "startDate": "2014-07-25",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "WOR",
+    "name": "WOR",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "WPC",
+    "name": "WPC",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "WSFS",
+    "name": "WSFS",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "WTFC",
+    "name": "WTFC",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "XRAY",
+    "name": "XRAY",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "ZWS",
+    "name": "ZWS",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "ACM",
+    "name": "ACM",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "ACHC",
+    "name": "ACHC",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "ADNT",
+    "name": "ADNT",
+    "uptrending": false,
+    "dataPoints": 2413,
+    "startDate": "2016-10-17",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "AFG",
+    "name": "AFG",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "AGL",
+    "name": "AGL",
+    "uptrending": false,
+    "dataPoints": 1283,
+    "startDate": "2021-04-15",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "ARMK",
+    "name": "ARMK",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "AUB",
+    "name": "AUB",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "AX",
+    "name": "AX",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "AZZ",
+    "name": "AZZ",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "BBSI",
+    "name": "BBSI",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "BCC",
+    "name": "BCC",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "BCO",
+    "name": "BCO",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "BDN",
+    "name": "BDN",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "BFC",
+    "name": "BFC",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "BJRI",
+    "name": "BJRI",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "BKD",
+    "name": "BKD",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "BLMN",
+    "name": "BLMN",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "BNL",
+    "name": "BNL",
+    "uptrending": true,
+    "dataPoints": 1427,
+    "startDate": "2020-09-17",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "BOX",
+    "name": "BOX",
+    "uptrending": false,
+    "dataPoints": 2850,
+    "startDate": "2015-01-23",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "CAC",
+    "name": "CAC",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "CAR",
+    "name": "CAR",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "CBRL",
+    "name": "CBRL",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "CC",
+    "name": "CC",
+    "uptrending": false,
+    "dataPoints": 2748,
+    "startDate": "2015-06-19",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "CIVB",
+    "name": "CIVB",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "CPF",
+    "name": "CPF",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "CRAI",
+    "name": "CRAI",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "CRMT",
+    "name": "CRMT",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "CRVS",
+    "name": "CRVS",
+    "uptrending": false,
+    "dataPoints": 2557,
+    "startDate": "2016-03-23",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "CSBR",
+    "name": "CSBR",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "CTBI",
+    "name": "CTBI",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "DAKT",
+    "name": "DAKT",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "DBX",
+    "name": "DBX",
+    "uptrending": false,
+    "dataPoints": 2053,
+    "startDate": "2018-03-23",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "DCOM",
+    "name": "DCOM",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "DFH",
+    "name": "DFH",
+    "uptrending": false,
+    "dataPoints": 1341,
+    "startDate": "2021-01-21",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "DIOD",
+    "name": "DIOD",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "DNOW",
+    "name": "DNOW",
+    "uptrending": false,
+    "dataPoints": 3021,
+    "startDate": "2014-05-20",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "DXPE",
+    "name": "DXPE",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "EARN",
+    "name": "EARN",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "EEFT",
+    "name": "EEFT",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "EFSC",
+    "name": "EFSC",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "EGBN",
+    "name": "EGBN",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "EGO",
+    "name": "EGO",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "EHTH",
+    "name": "EHTH",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "EMBC",
+    "name": "EMBC",
+    "uptrending": false,
+    "dataPoints": 1047,
+    "startDate": "2022-03-22",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "ENTG",
+    "name": "ENTG",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "ESCA",
+    "name": "ESCA",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "ESOA",
+    "name": "ESOA",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "ETSY",
+    "name": "ETSY",
+    "uptrending": true,
+    "dataPoints": 2793,
+    "startDate": "2015-04-16",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "EVH",
+    "name": "EVH",
+    "uptrending": false,
+    "dataPoints": 2758,
+    "startDate": "2015-06-05",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "EXLS",
+    "name": "EXLS",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "EXPI",
+    "name": "EXPI",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "FBIZ",
+    "name": "FBIZ",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "FBK",
+    "name": "FBK",
+    "uptrending": true,
+    "dataPoints": 2434,
+    "startDate": "2016-09-16",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "FCN",
+    "name": "FCN",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "FFBC",
+    "name": "FFBC",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "FFIN",
+    "name": "FFIN",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "FISI",
+    "name": "FISI",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "FIVN",
+    "name": "FIVN",
+    "uptrending": true,
+    "dataPoints": 3052,
+    "startDate": "2014-04-04",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "FLGT",
+    "name": "FLGT",
+    "uptrending": false,
+    "dataPoints": 2425,
+    "startDate": "2016-09-29",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "FORM",
+    "name": "FORM",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "FORR",
+    "name": "FORR",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "FOUR",
+    "name": "FOUR",
+    "uptrending": false,
+    "dataPoints": 1499,
+    "startDate": "2020-06-05",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "FOXF",
+    "name": "FOXF",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "FRST",
+    "name": "FRST",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "FSBW",
+    "name": "FSBW",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "GERN",
+    "name": "GERN",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "GHC",
+    "name": "GHC",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "GKOS",
+    "name": "GKOS",
+    "uptrending": true,
+    "dataPoints": 2744,
+    "startDate": "2015-06-25",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "GLDD",
+    "name": "GLDD",
+    "uptrending": true,
+    "dataPoints": 3080,
+    "startDate": "2014-01-02",
+    "endDate": "2026-04-01"
+  },
+  {
+    "ticker": "GRPN",
+    "name": "GRPN",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "GTY",
+    "name": "GTY",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "HAFC",
+    "name": "HAFC",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "HAIN",
+    "name": "HAIN",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "HALO",
+    "name": "HALO",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "HASI",
+    "name": "HASI",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "HAYW",
+    "name": "HAYW",
+    "uptrending": false,
+    "dataPoints": 1306,
+    "startDate": "2021-03-12",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "HDSN",
+    "name": "HDSN",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "HLIT",
+    "name": "HLIT",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "HLNE",
+    "name": "HLNE",
+    "uptrending": true,
+    "dataPoints": 2321,
+    "startDate": "2017-03-01",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "HLX",
+    "name": "HLX",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "HOOK",
+    "name": "HOOK",
+    "uptrending": false,
+    "dataPoints": 1784,
+    "startDate": "2019-04-18",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "HOPE",
+    "name": "HOPE",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "HQY",
+    "name": "HQY",
+    "uptrending": true,
+    "dataPoints": 2971,
+    "startDate": "2014-07-31",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "HSTM",
+    "name": "HSTM",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "HWBK",
+    "name": "HWBK",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "HWC",
+    "name": "HWC",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "ABG",
+    "name": "ABG",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "ABM",
+    "name": "ABM",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "ACLS",
+    "name": "ACLS",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "ACMR",
+    "name": "ACMR",
+    "uptrending": true,
+    "dataPoints": 2149,
+    "startDate": "2017-11-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "AESI",
+    "name": "AESI",
+    "uptrending": true,
+    "dataPoints": 805,
+    "startDate": "2023-03-09",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "AGIO",
+    "name": "AGIO",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "AGYS",
+    "name": "AGYS",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "AIN",
+    "name": "AIN",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "AKR",
+    "name": "AKR",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "ALKS",
+    "name": "ALKS",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "ALRM",
+    "name": "ALRM",
+    "uptrending": false,
+    "dataPoints": 2743,
+    "startDate": "2015-06-26",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "AMCX",
+    "name": "AMCX",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "AMSF",
+    "name": "AMSF",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "AOSL",
+    "name": "AOSL",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "APAM",
+    "name": "APAM",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "APOG",
+    "name": "APOG",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "ARCO",
+    "name": "ARCO",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "ARDX",
+    "name": "ARDX",
+    "uptrending": false,
+    "dataPoints": 3000,
+    "startDate": "2014-06-19",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "ARI",
+    "name": "ARI",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "AROW",
+    "name": "AROW",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "ASB",
+    "name": "ASB",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "ASGN",
+    "name": "ASGN",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "ASIX",
+    "name": "ASIX",
+    "uptrending": false,
+    "dataPoints": 2435,
+    "startDate": "2016-09-15",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "ASTE",
+    "name": "ASTE",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "ATI",
+    "name": "ATI",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "AVNS",
+    "name": "AVNS",
+    "uptrending": false,
+    "dataPoints": 2914,
+    "startDate": "2014-10-21",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "AVNT",
+    "name": "AVNT",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "AXGN",
+    "name": "AXGN",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "BCPC",
+    "name": "BCPC",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "BDC",
+    "name": "BDC",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "BRBR",
+    "name": "BRBR",
+    "uptrending": false,
+    "dataPoints": 1657,
+    "startDate": "2019-10-18",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "BSM",
+    "name": "BSM",
+    "uptrending": false,
+    "dataPoints": 2783,
+    "startDate": "2015-04-30",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "BURL",
+    "name": "BURL",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "BUSE",
+    "name": "BUSE",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "BWIN",
+    "name": "BWIN",
+    "uptrending": false,
+    "dataPoints": 1653,
+    "startDate": "2019-10-24",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "CBUS",
+    "name": "CBUS",
+    "uptrending": false,
+    "dataPoints": 2223,
+    "startDate": "2017-07-20",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "CCOI",
+    "name": "CCOI",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "CDLX",
+    "name": "CDLX",
+    "uptrending": false,
+    "dataPoints": 2082,
+    "startDate": "2018-02-09",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "CFFN",
+    "name": "CFFN",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "CGNX",
+    "name": "CGNX",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "CHCO",
+    "name": "CHCO",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "CHCT",
+    "name": "CHCT",
+    "uptrending": false,
+    "dataPoints": 2769,
+    "startDate": "2015-05-20",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "CLBK",
+    "name": "CLBK",
+    "uptrending": false,
+    "dataPoints": 2033,
+    "startDate": "2018-04-23",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "CLNE",
+    "name": "CLNE",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "CMPR",
+    "name": "CMPR",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "CNMD",
+    "name": "CNMD",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "CNOB",
+    "name": "CNOB",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "COKE",
+    "name": "COKE",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "COWI",
+    "name": "COWI",
+    "uptrending": false,
+    "dataPoints": 3115,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "CPRI",
+    "name": "CPRI",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "EVTL",
+    "name": "EVTL",
+    "uptrending": false,
+    "dataPoints": 1395,
+    "startDate": "2020-11-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "FCNCA",
+    "name": "FCNCA",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "FEAM",
+    "name": "FEAM",
+    "uptrending": false,
+    "dataPoints": 1052,
+    "startDate": "2022-03-15",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "FGBI",
+    "name": "FGBI",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "FMBH",
+    "name": "FMBH",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "FMCB",
+    "name": "FMCB",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "FNF",
+    "name": "FNF",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "FORTY",
+    "name": "FORTY",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "FRBA",
+    "name": "FRBA",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "FRPH",
+    "name": "FRPH",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "FSM",
+    "name": "FSM",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "FTDR",
+    "name": "FTDR",
+    "uptrending": true,
+    "dataPoints": 1933,
+    "startDate": "2018-09-13",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "GPAK",
+    "name": "GPAK",
+    "uptrending": false,
+    "dataPoints": 658,
+    "startDate": "2023-10-09",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "HCM",
+    "name": "HCM",
+    "uptrending": false,
+    "dataPoints": 2562,
+    "startDate": "2016-03-16",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "HDB",
+    "name": "HDB",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "HFFG",
+    "name": "HFFG",
+    "uptrending": false,
+    "dataPoints": 2189,
+    "startDate": "2017-09-07",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "HIMS",
+    "name": "HIMS",
+    "uptrending": true,
+    "dataPoints": 1682,
+    "startDate": "2019-09-13",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "HOVNP",
+    "name": "HOVNP",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "HWKN",
+    "name": "HWKN",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "IART",
+    "name": "IART",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "ICF",
+    "name": "ICF",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "ICLR",
+    "name": "ICLR",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "IDN",
+    "name": "IDN",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "IHRT",
+    "name": "IHRT",
+    "uptrending": false,
+    "dataPoints": 1734,
+    "startDate": "2019-07-01",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "IMCR",
+    "name": "IMCR",
+    "uptrending": false,
+    "dataPoints": 1330,
+    "startDate": "2021-02-05",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "IMKTA",
+    "name": "IMKTA",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "IMMR",
+    "name": "IMMR",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "INDB",
+    "name": "INDB",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "INDV",
+    "name": "INDV",
+    "uptrending": true,
+    "dataPoints": 2867,
+    "startDate": "2014-12-29",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "INMD",
+    "name": "INMD",
+    "uptrending": false,
+    "dataPoints": 1707,
+    "startDate": "2019-08-08",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "INSE",
+    "name": "INSE",
+    "uptrending": false,
+    "dataPoints": 2875,
+    "startDate": "2014-12-16",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "INSG",
+    "name": "INSG",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "IOSP",
+    "name": "IOSP",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "IPIX",
+    "name": "IPIX",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "IPSC",
+    "name": "IPSC",
+    "uptrending": false,
+    "dataPoints": 1238,
+    "startDate": "2021-06-18",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "IRDM",
+    "name": "IRDM",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "IRMD",
+    "name": "IRMD",
+    "uptrending": true,
+    "dataPoints": 2982,
+    "startDate": "2014-07-16",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "IRWD",
+    "name": "IRWD",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "ITGR",
+    "name": "ITGR",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "ITRI",
+    "name": "ITRI",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "ITRN",
+    "name": "ITRN",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "JELD",
+    "name": "JELD",
+    "uptrending": false,
+    "dataPoints": 2343,
+    "startDate": "2017-01-27",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "JOBY",
+    "name": "JOBY",
+    "uptrending": true,
+    "dataPoints": 1390,
+    "startDate": "2020-11-09",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "JOUT",
+    "name": "JOUT",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "JRVR",
+    "name": "JRVR",
+    "uptrending": false,
+    "dataPoints": 2877,
+    "startDate": "2014-12-12",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "JXN",
+    "name": "JXN",
+    "uptrending": true,
+    "dataPoints": 1186,
+    "startDate": "2021-09-01",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "KAI",
+    "name": "KAI",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "KFRC",
+    "name": "KFRC",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "KN",
+    "name": "KN",
+    "uptrending": false,
+    "dataPoints": 3086,
+    "startDate": "2014-02-14",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "KNSL",
+    "name": "KNSL",
+    "uptrending": true,
+    "dataPoints": 2469,
+    "startDate": "2016-07-28",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "KOP",
+    "name": "KOP",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "KPLT",
+    "name": "KPLT",
+    "uptrending": false,
+    "dataPoints": 1607,
+    "startDate": "2019-12-31",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "KTOS",
+    "name": "KTOS",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "KW",
+    "name": "KW",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "LADR",
+    "name": "LADR",
+    "uptrending": false,
+    "dataPoints": 3092,
+    "startDate": "2014-02-06",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "LAKE",
+    "name": "LAKE",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "LCNB",
+    "name": "LCNB",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "LFUS",
+    "name": "LFUS",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "LGND",
+    "name": "LGND",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "LILAK",
+    "name": "LILAK",
+    "uptrending": false,
+    "dataPoints": 2746,
+    "startDate": "2015-06-23",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "LKFN",
+    "name": "LKFN",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "LMAT",
+    "name": "LMAT",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "LMNR",
+    "name": "LMNR",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "LOOP",
+    "name": "LOOP",
+    "uptrending": false,
+    "dataPoints": 2137,
+    "startDate": "2017-11-20",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "LOVE",
+    "name": "LOVE",
+    "uptrending": false,
+    "dataPoints": 1987,
+    "startDate": "2018-06-27",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "LQDT",
+    "name": "LQDT",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "LSCC",
+    "name": "LSCC",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "LWAY",
+    "name": "LWAY",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "LYTS",
+    "name": "LYTS",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "MAC",
+    "name": "MAC",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "MATX",
+    "name": "MATX",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "MBIN",
+    "name": "MBIN",
+    "uptrending": true,
+    "dataPoints": 2153,
+    "startDate": "2017-10-27",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "MBUU",
+    "name": "MBUU",
+    "uptrending": true,
+    "dataPoints": 3096,
+    "startDate": "2014-01-31",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "MDRX",
+    "name": "MDRX",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "MGPI",
+    "name": "MGPI",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "MGRC",
+    "name": "MGRC",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "MIRM",
+    "name": "MIRM",
+    "uptrending": true,
+    "dataPoints": 1722,
+    "startDate": "2019-07-18",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "MKTX",
+    "name": "MKTX",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "MLKN",
+    "name": "MLKN",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "MNRO",
+    "name": "MNRO",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "MNSB",
+    "name": "MNSB",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "MOG-A",
+    "name": "MOG-A",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "MORN",
+    "name": "MORN",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "MPB",
+    "name": "MPB",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "MRCY",
+    "name": "MRCY",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "MRTN",
+    "name": "MRTN",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "MSGE",
+    "name": "MSGE",
+    "uptrending": true,
+    "dataPoints": 779,
+    "startDate": "2023-04-17",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "MSGS",
+    "name": "MSGS",
+    "uptrending": true,
+    "dataPoints": 2686,
+    "startDate": "2015-09-17",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "MTX",
+    "name": "MTX",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "MVBF",
+    "name": "MVBF",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "NBTB",
+    "name": "NBTB",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "NFBK",
+    "name": "NFBK",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "NGS",
+    "name": "NGS",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "NMRK",
+    "name": "NMRK",
+    "uptrending": true,
+    "dataPoints": 2119,
+    "startDate": "2017-12-15",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "NOA",
+    "name": "NOA",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "NOMD",
+    "name": "NOMD",
+    "uptrending": false,
+    "dataPoints": 2864,
+    "startDate": "2015-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "NRDS",
+    "name": "NRDS",
+    "uptrending": false,
+    "dataPoints": 1141,
+    "startDate": "2021-11-04",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "NRIM",
+    "name": "NRIM",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "NRXS",
+    "name": "NRXS",
+    "uptrending": true,
+    "dataPoints": 700,
+    "startDate": "2023-08-09",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "NTCT",
+    "name": "NTCT",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "NTGR",
+    "name": "NTGR",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "NTRA",
+    "name": "NTRA",
+    "uptrending": true,
+    "dataPoints": 2740,
+    "startDate": "2015-07-01",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "NUS",
+    "name": "NUS",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "NVAX",
+    "name": "NVAX",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "NWBI",
+    "name": "NWBI",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "NWL",
+    "name": "NWL",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "NWN",
+    "name": "NWN",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "NWPX",
+    "name": "NWPX",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "OBK",
+    "name": "OBK",
+    "uptrending": true,
+    "dataPoints": 2022,
+    "startDate": "2018-05-08",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "OCFC",
+    "name": "OCFC",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "OFG",
+    "name": "OFG",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "OFIX",
+    "name": "OFIX",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "OFLX",
+    "name": "OFLX",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "OGN",
+    "name": "OGN",
+    "uptrending": false,
+    "dataPoints": 1262,
+    "startDate": "2021-05-14",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "OOMA",
+    "name": "OOMA",
+    "uptrending": true,
+    "dataPoints": 2728,
+    "startDate": "2015-07-20",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "OPBK",
+    "name": "OPBK",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "ORGO",
+    "name": "ORGO",
+    "uptrending": false,
+    "dataPoints": 2358,
+    "startDate": "2017-01-05",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "ORMP",
+    "name": "ORMP",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "OSBC",
+    "name": "OSBC",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "OSIS",
+    "name": "OSIS",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "OSPN",
+    "name": "OSPN",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "OUT",
+    "name": "OUT",
+    "uptrending": false,
+    "dataPoints": 3057,
+    "startDate": "2014-03-28",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "OVLY",
+    "name": "OVLY",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "OXLC",
+    "name": "OXLC",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "OXM",
+    "name": "OXM",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "PAGS",
+    "name": "PAGS",
+    "uptrending": false,
+    "dataPoints": 2094,
+    "startDate": "2018-01-24",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "PAHC",
+    "name": "PAHC",
+    "uptrending": false,
+    "dataPoints": 3047,
+    "startDate": "2014-04-11",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "PBI",
+    "name": "PBI",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "PCRX",
+    "name": "PCRX",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "PEBO",
+    "name": "PEBO",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "PFBC",
+    "name": "PFBC",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "PFIS",
+    "name": "PFIS",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "PGNY",
+    "name": "PGNY",
+    "uptrending": true,
+    "dataPoints": 1652,
+    "startDate": "2019-10-25",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "PHR",
+    "name": "PHR",
+    "uptrending": false,
+    "dataPoints": 1722,
+    "startDate": "2019-07-18",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "PLAB",
+    "name": "PLAB",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "PLAY",
+    "name": "PLAY",
+    "uptrending": false,
+    "dataPoints": 2921,
+    "startDate": "2014-10-10",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "PLPC",
+    "name": "PLPC",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "PLXS",
+    "name": "PLXS",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "PMTS",
+    "name": "PMTS",
+    "uptrending": false,
+    "dataPoints": 2671,
+    "startDate": "2015-10-08",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "POWI",
+    "name": "POWI",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "PPBT",
+    "name": "PPBT",
+    "uptrending": false,
+    "dataPoints": 2640,
+    "startDate": "2015-11-20",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "PRDO",
+    "name": "PRDO",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "PRGO",
+    "name": "PRGO",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "PRGS",
+    "name": "PRGS",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "PRIM",
+    "name": "PRIM",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "PRLD",
+    "name": "PRLD",
+    "uptrending": false,
+    "dataPoints": 1421,
+    "startDate": "2020-09-25",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "PSMT",
+    "name": "PSMT",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "PTGX",
+    "name": "PTGX",
+    "uptrending": true,
+    "dataPoints": 2459,
+    "startDate": "2016-08-11",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "PW",
+    "name": "PW",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "PYXS",
+    "name": "PYXS",
+    "uptrending": false,
+    "dataPoints": 1160,
+    "startDate": "2021-10-08",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "QDEL",
+    "name": "QDEL",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "QNST",
+    "name": "QNST",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "QTRX",
+    "name": "QTRX",
+    "uptrending": false,
+    "dataPoints": 2125,
+    "startDate": "2017-12-07",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "RBBN",
+    "name": "RBBN",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "RCKT",
+    "name": "RCKT",
+    "uptrending": false,
+    "dataPoints": 2833,
+    "startDate": "2015-02-18",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "RCUS",
+    "name": "RCUS",
+    "uptrending": false,
+    "dataPoints": 2059,
+    "startDate": "2018-03-15",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "RDNT",
+    "name": "RDNT",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "REZI",
+    "name": "REZI",
+    "uptrending": true,
+    "dataPoints": 1901,
+    "startDate": "2018-10-29",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "RICK",
+    "name": "RICK",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "RLX",
+    "name": "RLX",
+    "uptrending": false,
+    "dataPoints": 1340,
+    "startDate": "2021-01-22",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "RMNI",
+    "name": "RMNI",
+    "uptrending": false,
+    "dataPoints": 2699,
+    "startDate": "2015-08-28",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "ROAD",
+    "name": "ROAD",
+    "uptrending": true,
+    "dataPoints": 2024,
+    "startDate": "2018-05-04",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "ROCK",
+    "name": "ROCK",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "RPID",
+    "name": "RPID",
+    "uptrending": false,
+    "dataPoints": 1220,
+    "startDate": "2021-07-15",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "RSKD",
+    "name": "RSKD",
+    "uptrending": false,
+    "dataPoints": 1210,
+    "startDate": "2021-07-29",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "RSSS",
+    "name": "RSSS",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "RULE",
+    "name": "RULE",
+    "uptrending": true,
+    "dataPoints": 1141,
+    "startDate": "2021-11-04",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "RUSHA",
+    "name": "RUSHA",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "RYAN",
+    "name": "RYAN",
+    "uptrending": true,
+    "dataPoints": 1215,
+    "startDate": "2021-07-22",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "RYAM",
+    "name": "RYAM",
+    "uptrending": false,
+    "dataPoints": 3003,
+    "startDate": "2014-06-16",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "SAFT",
+    "name": "SAFT",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "SAMG",
+    "name": "SAMG",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "SBCF",
+    "name": "SBCF",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "SBGI",
+    "name": "SBGI",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "SBSI",
+    "name": "SBSI",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "SCHI",
+    "name": "SCHI",
+    "uptrending": false,
+    "dataPoints": 1662,
+    "startDate": "2019-10-11",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "SCKT",
+    "name": "SCKT",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "SCOR",
+    "name": "SCOR",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "SDGR",
+    "name": "SDGR",
+    "uptrending": false,
+    "dataPoints": 1582,
+    "startDate": "2020-02-06",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "SEDG",
+    "name": "SEDG",
+    "uptrending": true,
+    "dataPoints": 2807,
+    "startDate": "2015-03-26",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "SEER",
+    "name": "SEER",
+    "uptrending": false,
+    "dataPoints": 1372,
+    "startDate": "2020-12-04",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "SEMR",
+    "name": "SEMR",
+    "uptrending": false,
+    "dataPoints": 1279,
+    "startDate": "2021-03-24",
+    "endDate": "2026-04-27"
+  },
+  {
+    "ticker": "SENS",
+    "name": "SENS",
+    "uptrending": false,
+    "dataPoints": 2619,
+    "startDate": "2015-12-22",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "SFBS",
+    "name": "SFBS",
+    "uptrending": true,
+    "dataPoints": 3025,
+    "startDate": "2014-05-14",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "SFNC",
+    "name": "SFNC",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "SHEN",
+    "name": "SHEN",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "SHIP",
+    "name": "SHIP",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "SHOO",
+    "name": "SHOO",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "SIBN",
+    "name": "SIBN",
+    "uptrending": false,
+    "dataPoints": 1909,
+    "startDate": "2018-10-17",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "SIGI",
+    "name": "SIGI",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "SIMO",
+    "name": "SIMO",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "SKYW",
+    "name": "SKYW",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "SLQT",
+    "name": "SLQT",
+    "uptrending": false,
+    "dataPoints": 1509,
+    "startDate": "2020-05-21",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "SMBK",
+    "name": "SMBK",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "SMIT",
+    "name": "SMIT",
+    "uptrending": false,
+    "dataPoints": 3113,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "SMPL",
+    "name": "SMPL",
+    "uptrending": false,
+    "dataPoints": 2231,
+    "startDate": "2017-07-10",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "SMTC",
+    "name": "SMTC",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "SOFI",
+    "name": "SOFI",
+    "uptrending": true,
+    "dataPoints": 1353,
+    "startDate": "2021-01-04",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "SOTK",
+    "name": "SOTK",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "SPOK",
+    "name": "SPOK",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "SPSC",
+    "name": "SPSC",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "SPWH",
+    "name": "SPWH",
+    "uptrending": false,
+    "dataPoints": 3043,
+    "startDate": "2014-04-17",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "SRCE",
+    "name": "SRCE",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "SRPT",
+    "name": "SRPT",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "SSBI",
+    "name": "SSBI",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "STC",
+    "name": "STC",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "STEP",
+    "name": "STEP",
+    "uptrending": true,
+    "dataPoints": 1428,
+    "startDate": "2020-09-16",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "STKL",
+    "name": "STKL",
+    "uptrending": false,
+    "dataPoints": 3105,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-07"
+  },
+  {
+    "ticker": "STRS",
+    "name": "STRS",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "SVB",
+    "name": "SVB",
+    "uptrending": true,
+    "dataPoints": 940,
+    "startDate": "2014-01-02",
+    "endDate": "2020-01-24"
+  },
+  {
+    "ticker": "SYBT",
+    "name": "SYBT",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "SXC",
+    "name": "SXC",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "SXI",
+    "name": "SXI",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "TCBI",
+    "name": "TCBI",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "TCBK",
+    "name": "TCBK",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "TCMD",
+    "name": "TCMD",
+    "uptrending": true,
+    "dataPoints": 2469,
+    "startDate": "2016-07-28",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "TDVG",
+    "name": "TDVG",
+    "uptrending": true,
+    "dataPoints": 1457,
+    "startDate": "2020-08-05",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "TFSL",
+    "name": "TFSL",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "TGTX",
+    "name": "TGTX",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "THFF",
+    "name": "THFF",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "THRY",
+    "name": "THRY",
+    "uptrending": false,
+    "dataPoints": 2036,
+    "startDate": "2018-04-18",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "TILE",
+    "name": "TILE",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "TISI",
+    "name": "TISI",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "TKC",
+    "name": "TKC",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "TMDX",
+    "name": "TMDX",
+    "uptrending": true,
+    "dataPoints": 1775,
+    "startDate": "2019-05-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "TNXP",
+    "name": "TNXP",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "TPST",
+    "name": "TPST",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "TRMD",
+    "name": "TRMD",
+    "uptrending": true,
+    "dataPoints": 2073,
+    "startDate": "2018-02-23",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "TRNS",
+    "name": "TRNS",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "TRUP",
+    "name": "TRUP",
+    "uptrending": false,
+    "dataPoints": 2980,
+    "startDate": "2014-07-18",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "TRVI",
+    "name": "TRVI",
+    "uptrending": false,
+    "dataPoints": 1772,
+    "startDate": "2019-05-07",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "TWO",
+    "name": "TWO",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "TXMD",
+    "name": "TXMD",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "TYRA",
+    "name": "TYRA",
+    "uptrending": true,
+    "dataPoints": 1177,
+    "startDate": "2021-09-15",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "UBCP",
+    "name": "UBCP",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "UBOH",
+    "name": "UBOH",
+    "uptrending": true,
+    "dataPoints": 444,
+    "startDate": "2024-08-15",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "UBSI",
+    "name": "UBSI",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "UCTT",
+    "name": "UCTT",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "UEIC",
+    "name": "UEIC",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "ULCC",
+    "name": "ULCC",
+    "uptrending": false,
+    "dataPoints": 1292,
+    "startDate": "2021-04-01",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "ULH",
+    "name": "ULH",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "UNTY",
+    "name": "UNTY",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "UPLD",
+    "name": "UPLD",
+    "uptrending": false,
+    "dataPoints": 2902,
+    "startDate": "2014-11-06",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "UPW",
+    "name": "UPW",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "USAS",
+    "name": "USAS",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "USPH",
+    "name": "USPH",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "UXIN",
+    "name": "UXIN",
+    "uptrending": false,
+    "dataPoints": 1987,
+    "startDate": "2018-06-27",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "VCNX",
+    "name": "VCNX",
+    "uptrending": false,
+    "dataPoints": 1957,
+    "startDate": "2018-08-09",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "VCYT",
+    "name": "VCYT",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "VG",
+    "name": "VG",
+    "uptrending": false,
+    "dataPoints": 334,
+    "startDate": "2025-01-24",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "VGIT",
+    "name": "VGIT",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "VIRC",
+    "name": "VIRC",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "VIVO",
+    "name": "VIVO",
+    "uptrending": false,
+    "dataPoints": 2765,
+    "startDate": "2015-05-27",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "VLRS",
+    "name": "VLRS",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "VNCE",
+    "name": "VNCE",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "VRDN",
+    "name": "VRDN",
+    "uptrending": false,
+    "dataPoints": 3001,
+    "startDate": "2014-06-18",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "VREX",
+    "name": "VREX",
+    "uptrending": false,
+    "dataPoints": 2347,
+    "startDate": "2017-01-23",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "VSCO",
+    "name": "VSCO",
+    "uptrending": true,
+    "dataPoints": 1216,
+    "startDate": "2021-07-21",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "VSEC",
+    "name": "VSEC",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "VSTM",
+    "name": "VSTM",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "VTOL",
+    "name": "VTOL",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "VVOS",
+    "name": "VVOS",
+    "uptrending": false,
+    "dataPoints": 1367,
+    "startDate": "2020-12-11",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "WGO",
+    "name": "WGO",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "WLFC",
+    "name": "WLFC",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "WRLD",
+    "name": "WRLD",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "WSBC",
+    "name": "WSBC",
+    "uptrending": true,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "WTRE",
+    "name": "WTRE",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "WTTR",
+    "name": "WTTR",
+    "uptrending": true,
+    "dataPoints": 2240,
+    "startDate": "2017-06-26",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "WWW",
+    "name": "WWW",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "XNCR",
+    "name": "XNCR",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "XOMA",
+    "name": "XOMA",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "XPEL",
+    "name": "XPEL",
+    "uptrending": false,
+    "dataPoints": 1734,
+    "startDate": "2019-07-01",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "XPER",
+    "name": "XPER",
+    "uptrending": false,
+    "dataPoints": 922,
+    "startDate": "2022-09-20",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "XTLB",
+    "name": "XTLB",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "XXII",
+    "name": "XXII",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "YELP",
+    "name": "YELP",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "ZION",
+    "name": "ZION",
+    "uptrending": false,
+    "dataPoints": 3116,
+    "startDate": "2014-01-02",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "ZLAB",
+    "name": "ZLAB",
+    "uptrending": false,
+    "dataPoints": 2180,
+    "startDate": "2017-09-20",
+    "endDate": "2026-05-22"
+  },
+  {
+    "ticker": "ZNTL",
+    "name": "ZNTL",
+    "uptrending": false,
+    "dataPoints": 1542,
+    "startDate": "2020-04-03",
+    "endDate": "2026-05-22"
   }
 ]

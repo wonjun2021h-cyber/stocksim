@@ -1,4 +1,4 @@
-import { createClient } from "@supabase/supabase-js";
+import { createBrowserClient } from "@supabase/ssr";
 import type { DBPortfolio, DBPortfolioItem } from "@/lib/portfolio-types";
 
 const supabaseUrl =
@@ -6,20 +6,40 @@ const supabaseUrl =
 const supabaseAnonKey =
   process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY ?? "placeholder-anon-key";
 
-if (
-  supabaseUrl === "https://placeholder.supabase.co" ||
-  supabaseAnonKey === "placeholder-anon-key"
-) {
-  if (typeof window !== "undefined") {
-    console.warn(
-      "[Supabase] 환경변수 NEXT_PUBLIC_SUPABASE_URL / NEXT_PUBLIC_SUPABASE_ANON_KEY 가 없습니다. " +
-        ".env.local 파일에 값을 설정해 주세요."
-    );
-  }
+/** .env.local에 실제 Supabase 값이 들어갔는지 */
+export function isSupabaseConfigured(): boolean {
+  const placeholderHosts = [
+    "placeholder.supabase.co",
+    "your-project-ref.supabase.co",
+    "your_project_id.supabase.co",
+    "YOUR_PROJECT_ID.supabase.co",
+  ];
+  const isPlaceholderUrl = placeholderHosts.some((h) => supabaseUrl.includes(h));
+  return (
+    !isPlaceholderUrl &&
+    supabaseAnonKey !== "placeholder-anon-key" &&
+    !supabaseAnonKey.startsWith("your-anon-key") &&
+    supabaseUrl.includes("supabase.co")
+  );
 }
 
-/** 클라이언트 컴포넌트 & API 라우트에서 공용으로 사용하는 Supabase 인스턴스 */
-export const supabase = createClient(supabaseUrl, supabaseAnonKey);
+if (!isSupabaseConfigured() && typeof window !== "undefined") {
+  console.warn(
+    "[Supabase] NEXT_PUBLIC_SUPABASE_URL / NEXT_PUBLIC_SUPABASE_ANON_KEY 가 없습니다. " +
+      ".env.example 을 복사해 .env.local 을 만들고 값을 채워 주세요."
+  );
+}
+
+/** 브라우저용 Supabase (OAuth PKCE는 쿠키에 저장 — @supabase/ssr) */
+export const supabase = createBrowserClient(supabaseUrl, supabaseAnonKey);
+
+/** OAuth 완료 후 돌아올 URL (Supabase 대시보드 Redirect URLs에도 등록 필요) */
+export function getAuthCallbackUrl(nextPath = "/") {
+  const origin =
+    typeof window !== "undefined" ? window.location.origin : "";
+  const safeNext = nextPath.startsWith("/") ? nextPath : "/";
+  return `${origin}/auth/callback?next=${encodeURIComponent(safeNext)}`;
+}
 
 // ── Auth helpers ──────────────────────────────────
 
@@ -29,20 +49,57 @@ export async function getSession() {
   return data.session;
 }
 
-/** Google OAuth 로그인 (리다이렉트 방식) */
-export async function signInWithGoogle() {
-  return supabase.auth.signInWithOAuth({
-    provider: "google",
-    options: { redirectTo: `${location.origin}/backtest` },
+async function signInWithOAuthProvider(
+  provider: "google" | "kakao",
+  nextPath?: string
+) {
+  if (!isSupabaseConfigured()) {
+    throw new Error(
+      "Supabase가 연결되지 않았습니다. 프로젝트 루트에 .env.local 파일을 만들고 URL·anon key를 넣어 주세요."
+    );
+  }
+
+  const next =
+    nextPath ??
+    (typeof window !== "undefined"
+      ? window.location.pathname + window.location.search
+      : "/");
+
+  const { data, error } = await supabase.auth.signInWithOAuth({
+    provider,
+    options: {
+      redirectTo: getAuthCallbackUrl(next),
+    },
   });
+
+  if (error) throw error;
+  return data;
 }
 
-/** Kakao OAuth 로그인 (리다이렉트 방식) */
-export async function signInWithKakao() {
-  return supabase.auth.signInWithOAuth({
-    provider: "kakao",
-    options: { redirectTo: `${location.origin}/backtest` },
+/** Google OAuth 로그인 (리다이렉트 방식 — exchange external code 오류 시 비권장) */
+export async function signInWithGoogle(nextPath?: string) {
+  return signInWithOAuthProvider("google", nextPath);
+}
+
+/**
+ * Google ID 토큰 로그인 — Supabase↔Google 코드 교환을 거치지 않음.
+ * `Unable to exchange external code` 우회용.
+ */
+export async function signInWithGoogleIdToken(credential: string) {
+  if (!isSupabaseConfigured()) {
+    throw new Error("Supabase가 연결되지 않았습니다.");
+  }
+  const { data, error } = await supabase.auth.signInWithIdToken({
+    provider: "google",
+    token: credential,
   });
+  if (error) throw error;
+  return data;
+}
+
+/** Kakao OAuth 로그인 */
+export async function signInWithKakao(nextPath?: string) {
+  return signInWithOAuthProvider("kakao", nextPath);
 }
 
 /** 로그아웃 */
@@ -80,7 +137,6 @@ export async function savePortfolio(
   monthlyDCA: number,
   items: Array<{ ticker: string; name: string; weight: number }>
 ) {
-  // 1. user_portfolios 행 삽입 또는 업데이트
   const { data: portfolio, error: pfError } = await supabase
     .from("user_portfolios")
     .upsert(
@@ -98,7 +154,6 @@ export async function savePortfolio(
 
   if (pfError) throw pfError;
 
-  // 2. 기존 portfolio_items 삭제 후 재삽입
   await supabase
     .from("portfolio_items")
     .delete()
@@ -121,13 +176,23 @@ export async function savePortfolio(
   return portfolio as DBPortfolio;
 }
 
+/** 포트폴리오 이름 변경 */
+export async function renamePortfolio(portfolioId: string, userId: string, newName: string) {
+  const { error } = await supabase
+    .from("user_portfolios")
+    .update({ name: newName.trim(), updated_at: new Date().toISOString() })
+    .eq("id", portfolioId)
+    .eq("user_id", userId);
+  if (error) throw error;
+}
+
 /** 포트폴리오 단건 삭제 */
 export async function deletePortfolio(portfolioId: string, userId: string) {
   const { error } = await supabase
     .from("user_portfolios")
     .delete()
     .eq("id", portfolioId)
-    .eq("user_id", userId); // RLS 이중 보호
+    .eq("user_id", userId);
 
   if (error) throw error;
 }

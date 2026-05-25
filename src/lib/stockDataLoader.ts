@@ -73,7 +73,7 @@ export async function loadAllStocksMetadata(): Promise<StockInfo[]> {
     currentPrice: null,
     annualReturnRate: null,
     annualReturnPeriodYears: null,
-    hasInsufficientData: !entry.uptrending,
+    hasInsufficientData: false,
     hasPeriodMismatchWarning: false,
     priceHistory: [],
   }));
@@ -135,7 +135,7 @@ function buildStockInfo(data: StockFileData): StockInfo {
     currentPrice,
     annualReturnRate: annualStats.cagrPercent,
     annualReturnPeriodYears: annualStats.periodYears,
-    hasInsufficientData: annualStats.insufficientData,
+    hasInsufficientData: false,
     hasPeriodMismatchWarning:
       annualStats.periodYears !== null
         ? annualStats.periodYears < COMPARISON_BASE_YEARS

@@ -35,7 +35,6 @@ export function ResultCards({
   const {
     bestFinalKRW,
     worstFinalKRW,
-    worstFloorApplied,
     maxGainKRW,
     minGainKRW,
     maxGainPct,
@@ -87,18 +86,6 @@ export function ResultCards({
         </div>
       )}
 
-      {result.dataInsufficient && (
-        <div
-          data-no-share
-          className="flex items-center gap-2 rounded-xl bg-danger-bg border border-danger-border px-4 py-2.5"
-        >
-          <span className="text-danger-text text-base">⚠️</span>
-          <p className="text-danger-text text-xs font-medium">
-            장기 데이터 없음 — 하한선 보정이 적용되지 않습니다
-          </p>
-        </div>
-      )}
-
       <p className="text-muted text-sm">
         원금 <span className="text-ink font-semibold">{investedDisplay}원</span>으로
         {result.rollingWindowYears > 0 && (
@@ -135,11 +122,6 @@ export function ResultCards({
         </p>
         <p className="text-muted text-sm mt-1">
           {formatKRW(worstFinalKRW)} 원 예상
-          {worstFloorApplied && (
-            <span className="text-subtle text-xs ml-1" data-no-share>
-              (하한선 적용됨)
-            </span>
-          )}
         </p>
       </div>
 

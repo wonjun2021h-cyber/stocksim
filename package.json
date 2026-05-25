@@ -8,9 +8,11 @@
     "start": "next start",
     "lint": "next lint",
     "update-names": "node scripts/update-korean-names.mjs",
-    "refresh": "node scripts/refresh-stocks.mjs"
+    "refresh": "node scripts/refresh-stocks.mjs",
+    "add-famous": "node scripts/add-famous-stocks.mjs"
   },
   "dependencies": {
+    "@supabase/ssr": "^0.10.3",
     "@supabase/supabase-js": "^2.106.0",
     "framer-motion": "^12.38.0",
     "html2canvas": "^1.4.1",
