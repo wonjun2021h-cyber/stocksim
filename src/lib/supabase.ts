@@ -1,5 +1,5 @@
 import { createBrowserClient } from "@supabase/ssr";
-import type { DBPortfolio, DBPortfolioItem } from "@/lib/portfolio-types";
+import type { DBPortfolio, DBPortfolioItem, DBFavorite } from "@/lib/portfolio-types";
 
 const supabaseUrl =
   process.env.NEXT_PUBLIC_SUPABASE_URL ?? "https://placeholder.supabase.co";
@@ -193,6 +193,47 @@ export async function deletePortfolio(portfolioId: string, userId: string) {
     .delete()
     .eq("id", portfolioId)
     .eq("user_id", userId);
+
+  if (error) throw error;
+}
+
+// ── Favorites DB helpers ──────────────────────────
+
+/** 로그인 유저의 관심 종목 목록 */
+export async function fetchUserFavorites(userId: string) {
+  const { data, error } = await supabase
+    .from("user_favorites")
+    .select("*")
+    .eq("user_id", userId)
+    .order("created_at", { ascending: false });
+
+  if (error) throw error;
+  return data as DBFavorite[];
+}
+
+/** 관심 종목 추가 */
+export async function addFavorite(userId: string, ticker: string, name: string) {
+  const { data, error } = await supabase
+    .from("user_favorites")
+    .insert({
+      user_id: userId,
+      ticker: ticker.toUpperCase(),
+      name,
+    })
+    .select()
+    .single();
+
+  if (error) throw error;
+  return data as DBFavorite;
+}
+
+/** 관심 종목 해제 */
+export async function removeFavorite(userId: string, ticker: string) {
+  const { error } = await supabase
+    .from("user_favorites")
+    .delete()
+    .eq("user_id", userId)
+    .eq("ticker", ticker.toUpperCase());
 
   if (error) throw error;
 }

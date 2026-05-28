@@ -9,6 +9,7 @@
     "lint": "next lint",
     "update-names": "node scripts/update-korean-names.mjs",
     "refresh": "node scripts/refresh-stocks.mjs",
+    "sync-index": "node scripts/sync-index.mjs",
     "add-famous": "node scripts/add-famous-stocks.mjs"
   },
   "dependencies": {

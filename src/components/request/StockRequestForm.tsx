@@ -1,12 +1,11 @@
 "use client";
 
 import { useState } from "react";
-import { submitStockRequest } from "@/lib/feedback";
+import { submitStockRequest, formatFeedbackError } from "@/lib/feedback";
 
 export function StockRequestForm() {
   const [ticker, setTicker] = useState("");
   const [message, setMessage] = useState("");
-  const [contact, setContact] = useState("");
   const [status, setStatus] = useState<"idle" | "sending" | "ok" | "err">("idle");
   const [errorMsg, setErrorMsg] = useState("");
 
@@ -22,16 +21,14 @@ export function StockRequestForm() {
       await submitStockRequest({
         ticker: ticker,
         message: message || undefined,
-        contact: contact || undefined,
       });
       setTicker("");
       setMessage("");
-      setContact("");
       setStatus("ok");
       setTimeout(() => setStatus("idle"), 5000);
     } catch (err) {
       setStatus("err");
-      setErrorMsg(err instanceof Error ? err.message : "전송에 실패했습니다.");
+      setErrorMsg(formatFeedbackError(err));
     }
   }
 
@@ -55,16 +52,6 @@ export function StockRequestForm() {
           placeholder="종목명, ETF 여부 등 추가 설명"
           rows={3}
           className="w-full rounded-xl bg-elevated border border-line px-4 py-3 text-sm text-ink placeholder:text-faint resize-none focus:outline-none focus:border-ring"
-        />
-      </div>
-      <div>
-        <label className="text-xs font-semibold text-muted mb-1.5 block">연락처 (선택)</label>
-        <input
-          type="text"
-          value={contact}
-          onChange={(e) => setContact(e.target.value)}
-          placeholder="답변 받을 이메일 (선택)"
-          className="w-full rounded-xl bg-elevated border border-line px-4 py-2.5 text-sm text-ink placeholder:text-faint focus:outline-none focus:border-ring"
         />
       </div>
       <p className="text-[11px] text-faint leading-relaxed">

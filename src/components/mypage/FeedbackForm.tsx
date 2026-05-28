@@ -1,12 +1,14 @@
 "use client";
 
 import { useState } from "react";
-import { submitUserFeedback } from "@/lib/feedback";
+import { submitUserFeedback, formatFeedbackError } from "@/lib/feedback";
 
 export function FeedbackForm() {
   const [message, setMessage] = useState("");
   const [status, setStatus] = useState<"idle" | "sending" | "ok" | "err">("idle");
   const [errorMsg, setErrorMsg] = useState("");
+
+  const [discordSent, setDiscordSent] = useState<boolean | null>(null);
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -16,14 +18,16 @@ export function FeedbackForm() {
     }
     setStatus("sending");
     setErrorMsg("");
+    setDiscordSent(null);
     try {
-      await submitUserFeedback(message);
+      const result = await submitUserFeedback(message);
       setMessage("");
+      setDiscordSent(result.discordSent);
       setStatus("ok");
       setTimeout(() => setStatus("idle"), 4000);
     } catch (err) {
       setStatus("err");
-      setErrorMsg(err instanceof Error ? err.message : "전송에 실패했습니다.");
+      setErrorMsg(formatFeedbackError(err));
     }
   }
 
@@ -38,7 +42,14 @@ export function FeedbackForm() {
       />
       {errorMsg && <p className="text-xs text-danger-text">{errorMsg}</p>}
       {status === "ok" && (
-        <p className="text-xs text-accent-up font-medium">의견이 전달되었습니다. 감사합니다!</p>
+        <p className="text-xs text-accent-up font-medium">
+          의견이 전달되었습니다. 감사합니다!
+          {discordSent === false && (
+            <span className="block text-faint mt-1">
+              (Discord 알림은 전송되지 않았습니다. .env.local의 DISCORD_WEBHOOK_URL을 확인해 주세요.)
+            </span>
+          )}
+        </p>
       )}
       <button
         type="submit"

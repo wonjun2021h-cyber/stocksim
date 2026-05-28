@@ -1,6 +1,29 @@
 -- StockSim — 의견 / 종목 추가 요청
 -- Supabase SQL Editor에서 user_portfolios 스키마 실행 후 이 파일을 실행하세요.
 
+-- ── 통합 피드백 (웹훅 연동 권장) ─────────────────────────────
+CREATE TABLE IF NOT EXISTS feedbacks (
+  id         UUID        PRIMARY KEY DEFAULT gen_random_uuid(),
+  user_id    UUID        REFERENCES auth.users(id) ON DELETE SET NULL,
+  content    TEXT        NOT NULL CHECK (char_length(trim(content)) >= 1),
+  created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+);
+
+CREATE INDEX IF NOT EXISTS idx_feedbacks_created_at
+  ON feedbacks (created_at DESC);
+
+ALTER TABLE feedbacks ENABLE ROW LEVEL SECURITY;
+
+-- 누구나 제출 (비로그인: user_id NULL, 로그인: 본인 id만)
+DROP POLICY IF EXISTS "feedbacks_insert_public" ON feedbacks;
+CREATE POLICY "feedbacks_insert_public" ON feedbacks
+  FOR INSERT TO anon, authenticated
+  WITH CHECK (user_id IS NULL OR auth.uid() = user_id);
+
+GRANT INSERT ON TABLE public.feedbacks TO anon, authenticated;
+
+-- ── (레거시) 개별 테이블 ────────────────────────────────────
+
 CREATE TABLE IF NOT EXISTS user_feedback (
   id         UUID        PRIMARY KEY DEFAULT gen_random_uuid(),
   user_id    UUID        NOT NULL REFERENCES auth.users(id) ON DELETE CASCADE,

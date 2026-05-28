@@ -202,20 +202,18 @@ async function main() {
     const t = s.ticker.replace(/\./g, "-");
     if (seen.has(t)) continue;
     seen.add(t);
-    if (!existsSync(join(STOCKS_DIR, `${t}.json`))) targets.push({ ...s, ticker: t });
+    targets.push({ ...s, ticker: t });
   }
+
+  const toDownload = targets.filter((s) => !existsSync(join(STOCKS_DIR, `${s.ticker}.json`)));
 
   console.log(`\n⭐ 유명 종목 큐레이션: ${FAMOUS.length}개`);
-  console.log(`⬇  신규 다운로드: ${targets.length}개\n`);
-  if (targets.length === 0) {
-    console.log("모두 보유 중입니다.");
-    return;
-  }
+  console.log(`⬇  신규 다운로드: ${toDownload.length}개`);
 
   let ok = 0, fail = 0;
-  for (let i = 0; i < targets.length; i++) {
-    const { ticker, name } = targets[i];
-    process.stdout.write(`[${String(i + 1).padStart(3)}/${targets.length}] ${ticker.padEnd(7)} `);
+  for (let i = 0; i < toDownload.length; i++) {
+    const { ticker, name } = toDownload[i];
+    process.stdout.write(`[${String(i + 1).padStart(3)}/${toDownload.length}] ${ticker.padEnd(7)} `);
     const history = await downloadHistory(ticker);
     await randomSleep(2000, 4000);
 
@@ -254,8 +252,30 @@ async function main() {
     }
   }
 
+  // JSON은 있지만 index에 빠진 종목 동기화
+  for (const { ticker, name } of targets) {
+    if (existingTickers.has(ticker)) continue;
+    const filePath = join(STOCKS_DIR, `${ticker}.json`);
+    if (!existsSync(filePath)) continue;
+    try {
+      const data = JSON.parse(readFileSync(filePath, "utf-8"));
+      index.push({
+        ticker,
+        name: data.name ?? name,
+        uptrending: Boolean(data.uptrending),
+        dataPoints: data.dataPoints ?? data.history?.length ?? 0,
+        startDate: data.startDate ?? "",
+        endDate: data.endDate ?? "",
+      });
+      existingTickers.add(ticker);
+    } catch {
+      // ignore broken JSON
+    }
+  }
+
+  index.sort((a, b) => a.ticker.localeCompare(b.ticker));
   writeFileSync(INDEX_PATH, JSON.stringify(index, null, 2));
-  console.log(`\n✅ 완료 — 성공 ${ok} / 실패 ${fail} / 총 인덱스 ${index.length}개`);
+  console.log(`\n✅ 완료 — 다운로드 성공 ${ok} / 실패 ${fail} / 총 인덱스 ${index.length}개`);
 }
 
 main().catch(console.error);

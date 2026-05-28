@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import { Footer } from "@/components/layout/Footer";
 import { BottomNav } from "@/components/layout/BottomNav";
+import { AppProviders } from "@/components/providers/AppProviders";
 
 export const metadata: Metadata = {
   title: "StockSim — 몇 년 전 샀다면, 지금 얼마일까?",
@@ -29,7 +30,7 @@ export default function RootLayout({
       </head>
       {/* pb-16 = 모바일 바텀 내비 높이 확보, md:pb-0 = 데스크톱에서 제거 */}
       <body className="antialiased min-h-screen bg-page text-ink flex flex-col pb-16 md:pb-0">
-        {children}
+        <AppProviders>{children}</AppProviders>
         <Footer />
         <BottomNav />
       </body>

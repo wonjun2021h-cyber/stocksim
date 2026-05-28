@@ -251,7 +251,7 @@ function BacktestPageInner() {
         <div className="flex flex-col gap-1">
           <h1 className="text-2xl font-bold text-ink">포트폴리오 만들기</h1>
           <p className="text-sm text-muted">
-            최대 10개 종목 · 520개 미국 주식 · 12년 데이터 기반 시뮬레이션
+            최대 10개 종목 · {stocksLoading ? "…" : `${stocks.length.toLocaleString("ko-KR")}개`} 미국 주식 · 12년 데이터 기반 시뮬레이션
           </p>
         </div>
 

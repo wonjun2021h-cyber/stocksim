@@ -7,6 +7,7 @@ import { HeaderToolbar } from "@/components/layout/HeaderToolbar";
 import { SearchBar } from "@/components/layout/SearchBar";
 import { StockLogo } from "@/components/ui/StockLogo";
 import { StockListSkeleton } from "@/components/ui/Skeleton";
+import { FavoriteButton } from "@/components/stock/FavoriteButton";
 import { fetchAllStocks } from "@/lib/csvParser";
 import type { StockInfo } from "@/lib/types";
 
@@ -63,40 +64,49 @@ export default function StocksPage() {
           ) : (
             <div className="divide-y divide-line">
               {filtered.map((stock) => (
-                <Link
+                <div
                   key={stock.ticker}
-                  href={`/stock/${stock.ticker}`}
-                  className="flex items-center gap-3 px-4 py-3.5 hover:bg-muted-row transition-colors"
+                  className="flex items-center gap-2 px-4 py-3.5 hover:bg-muted-row transition-colors"
                 >
-                  <StockLogo ticker={stock.ticker} size="sm" />
-                  <div className="flex-1 min-w-0">
-                    <p className="text-ink text-sm font-medium truncate">
-                      {stock.name}
-                    </p>
-                    <p className="text-subtle text-xs">{stock.ticker}</p>
-                  </div>
-                  <span className="text-subtle text-xs">🇺🇸</span>
-                  <div className="flex flex-col items-end gap-0.5 shrink-0">
-                    {stock.annualReturnRate !== null && (
-                      <span
-                        className={`text-xs font-semibold ${
-                          stock.annualReturnRate >= 0
-                            ? "text-accent-up"
-                            : "text-accent-down"
-                        }`}
-                      >
-                        {stock.hasPeriodMismatchWarning ? "⚠️ " : ""}
-                        {stock.annualReturnRate >= 0 ? "+" : ""}
-                        {stock.annualReturnRate.toFixed(1)}% CAGR
-                      </span>
-                    )}
-                    {stock.dataEndDate && (
-                      <span className="text-[10px] text-faint">
-                        {stock.dataEndDate}
-                      </span>
-                    )}
-                  </div>
-                </Link>
+                  <Link
+                    href={`/stock/${stock.ticker}`}
+                    className="flex items-center gap-3 flex-1 min-w-0"
+                  >
+                    <StockLogo ticker={stock.ticker} size="sm" />
+                    <div className="flex-1 min-w-0">
+                      <p className="text-ink text-sm font-medium truncate">
+                        {stock.name}
+                      </p>
+                      <p className="text-subtle text-xs">{stock.ticker}</p>
+                    </div>
+                    <span className="text-subtle text-xs">🇺🇸</span>
+                    <div className="flex flex-col items-end gap-0.5 shrink-0">
+                      {stock.annualReturnRate !== null && (
+                        <span
+                          className={`text-xs font-semibold ${
+                            stock.annualReturnRate >= 0
+                              ? "text-accent-up"
+                              : "text-accent-down"
+                          }`}
+                        >
+                          {stock.hasPeriodMismatchWarning ? "⚠️ " : ""}
+                          {stock.annualReturnRate >= 0 ? "+" : ""}
+                          {stock.annualReturnRate.toFixed(1)}% CAGR
+                        </span>
+                      )}
+                      {stock.dataEndDate && (
+                        <span className="text-[10px] text-faint">
+                          {stock.dataEndDate}
+                        </span>
+                      )}
+                    </div>
+                  </Link>
+                  <FavoriteButton
+                    ticker={stock.ticker}
+                    name={stock.name}
+                    size="sm"
+                  />
+                </div>
               ))}
             </div>
           )}

@@ -3,6 +3,7 @@
 import { useState, useCallback, useEffect, useRef } from "react";
 import type { PortfolioItem } from "@/lib/portfolio-types";
 import { PORTFOLIO_COLORS } from "@/lib/portfolio-simulation";
+import { fmtKRW } from "@/lib/formatKrw";
 
 export type DcaPeriod = "day" | "month" | "year";
 export type DurationUnit = "days" | "months" | "years";
@@ -27,6 +28,41 @@ interface PortfolioBuilderProps {
 }
 
 const MAX_ITEMS = 10;
+const MAX_SEARCH_RESULTS = 50;
+
+function searchStocks(
+  stocks: Array<{ ticker: string; name: string }>,
+  query: string
+): Array<{ ticker: string; name: string }> {
+  const q = query.trim().toLowerCase();
+  if (!q) return [];
+
+  const scored: Array<{ stock: { ticker: string; name: string }; score: number }> = [];
+
+  for (const stock of stocks) {
+    const ticker = stock.ticker.toLowerCase();
+    const name = stock.name.toLowerCase();
+    let score = 0;
+
+    if (ticker === q) score = 100;
+    else if (ticker.startsWith(q)) score = 80;
+    else if (name.startsWith(q)) score = 60;
+    else if (ticker.includes(q)) score = 40;
+    else if (name.includes(q)) score = 20;
+    else continue;
+
+    scored.push({ stock, score });
+  }
+
+  return scored
+    .sort(
+      (a, b) =>
+        b.score - a.score ||
+        a.stock.ticker.localeCompare(b.stock.ticker)
+    )
+    .slice(0, MAX_SEARCH_RESULTS)
+    .map(({ stock }) => stock);
+}
 
 const DCA_PERIOD_LABELS: Record<DcaPeriod, string> = {
   day: "일",
@@ -45,13 +81,6 @@ const DURATION_PRESETS: Record<DurationUnit, number[]> = {
   months: [6, 12, 24, 36, 60, 120],
   days:   [30, 90, 180, 365, 730],
 };
-
-function fmtKRW(n: number): string {
-  if (!n || isNaN(n)) return "";
-  if (n >= 1_0000_0000) return `${(n / 1_0000_0000).toFixed(1)}억원`;
-  if (n >= 10000) return `${(n / 10000).toFixed(0)}만원`;
-  return `${n.toLocaleString("ko-KR")}원`;
-}
 
 function parseAmt(s: string): number {
   return Math.max(0, Number(s.replace(/,/g, "")) || 0);
@@ -143,19 +172,7 @@ export function PortfolioBuilder({
     );
   };
 
-  // ── 검색 필터 ─────────────────────────────────────────
-
-  const filteredStocks = (query: string) => {
-    if (!query.trim()) return stocks.slice(0, 12);
-    const q = query.toLowerCase();
-    return stocks
-      .filter(
-        (s) =>
-          s.ticker.toLowerCase().includes(q) ||
-          s.name.toLowerCase().includes(q)
-      )
-      .slice(0, 10);
-  };
+  const getSearchResults = (query: string) => searchStocks(stocks, query);
 
   return (
     <div className="flex flex-col gap-6">
@@ -300,12 +317,13 @@ export function PortfolioBuilder({
             totalAmount > 0 && amt > 0
               ? Math.round((amt / totalAmount) * 1000) / 10
               : 0;
+          const searchResults = getSearchResults(search[idx]);
 
           return (
-            <div key={idx} className="flex items-center gap-2 relative">
+            <div key={idx} className="flex items-start gap-2 relative">
               {/* 컬러 도트 */}
               <span
-                className="w-2.5 h-2.5 rounded-full shrink-0"
+                className="w-2.5 h-2.5 rounded-full shrink-0 mt-3.5"
                 style={{
                   backgroundColor: item.ticker
                     ? PORTFOLIO_COLORS[idx % PORTFOLIO_COLORS.length]
@@ -346,8 +364,8 @@ export function PortfolioBuilder({
                       <li className="px-3 py-3 text-xs text-muted text-center">
                         종목 데이터 로딩 중...
                       </li>
-                    ) : filteredStocks(search[idx]).length > 0 ? (
-                      filteredStocks(search[idx]).map((s) => (
+                    ) : searchResults.length > 0 ? (
+                      searchResults.map((s) => (
                         <li
                           key={s.ticker}
                           onMouseDown={() => {
@@ -367,7 +385,9 @@ export function PortfolioBuilder({
                       ))
                     ) : (
                       <li className="px-3 py-3 text-xs text-muted text-center">
-                        {search[idx] ? "검색 결과가 없습니다" : "티커나 종목명을 입력하세요"}
+                        {search[idx].trim()
+                          ? "검색 결과가 없습니다"
+                          : "티커나 종목명을 입력하세요"}
                       </li>
                     )}
                   </ul>
@@ -375,17 +395,24 @@ export function PortfolioBuilder({
               </div>
 
               {/* 금액 입력 + 비중 표시 */}
-              <div className="w-28 shrink-0 flex flex-col gap-0.5">
-                <input
-                  type="number"
-                  value={item.amount}
-                  onChange={(e) => updateItem(idx, { amount: e.target.value })}
-                  placeholder="0"
-                  min={0}
-                  className="w-full rounded-xl bg-elevated px-2 py-2.5 text-sm text-ink text-right outline-none border border-transparent focus:border-ring transition-colors"
-                />
+              <div className="w-28 shrink-0 flex flex-col gap-1.5">
+                <div className="rounded-xl bg-elevated overflow-hidden">
+                  <input
+                    type="number"
+                    value={item.amount}
+                    onChange={(e) => updateItem(idx, { amount: e.target.value })}
+                    placeholder=""
+                    min={0}
+                    className="w-full bg-transparent px-2 py-2.5 text-sm text-ink text-right outline-none"
+                  />
+                </div>
+                {amt > 0 && (
+                  <p className="text-xs text-muted text-right">
+                    {fmtKRW(amt)}
+                  </p>
+                )}
                 {weight > 0 && (
-                  <p className="text-[10px] text-muted text-right pr-1 font-semibold">
+                  <p className="text-[10px] text-muted text-right font-semibold">
                     {weight.toFixed(1)}%
                   </p>
                 )}
@@ -396,7 +423,7 @@ export function PortfolioBuilder({
                 <button
                   type="button"
                   onClick={() => removeItem(idx)}
-                  className="text-faint hover:text-danger-text transition-colors shrink-0"
+                  className="text-faint hover:text-danger-text transition-colors shrink-0 mt-3"
                   aria-label="종목 삭제"
                 >
                   <svg className="w-4 h-4" viewBox="0 0 16 16" fill="currentColor">
