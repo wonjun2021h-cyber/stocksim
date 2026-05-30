@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { useParams, useSearchParams, useRouter } from "next/navigation";
 import { Navbar } from "@/components/layout/Navbar";
 import { HeaderToolbar } from "@/components/layout/HeaderToolbar";
+import { NavbarSearch } from "@/components/layout/NavbarSearch";
 import { SearchBar } from "@/components/layout/SearchBar";
 import { StockHeader } from "@/components/stock/StockHeader";
 import { ResultCards } from "@/components/stock/ResultCards";
@@ -91,10 +92,10 @@ export default function ResultPage() {
 
   return (
     <div className="min-h-screen bg-page flex flex-col">
-      <header className="flex items-center justify-between pr-6">
+      <header className="flex items-center gap-2 min-w-0 pr-3 md:pr-6">
         <Navbar />
         <HeaderToolbar>
-          <SearchBar stocks={allStocks} variant="navbar" />
+          <NavbarSearch stocks={allStocks} />
         </HeaderToolbar>
       </header>
 

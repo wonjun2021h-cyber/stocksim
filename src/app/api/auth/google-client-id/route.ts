@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { getSiteUrl } from "@/lib/seo";
 
 /** Supabase Google OAuth URL에서 Client ID 자동 추출 (env 없어도 동작) */
 export async function GET() {
@@ -19,7 +20,7 @@ export async function GET() {
 
   try {
     const redirectTo = encodeURIComponent(
-      "http://localhost:3000/auth/callback"
+      `${getSiteUrl()}/auth/callback`
     );
     const res = await fetch(
       `${supabaseUrl}/auth/v1/authorize?provider=google&redirect_to=${redirectTo}`,

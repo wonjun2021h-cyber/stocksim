@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { useParams, useRouter } from "next/navigation";
 import { Navbar } from "@/components/layout/Navbar";
 import { HeaderToolbar } from "@/components/layout/HeaderToolbar";
-import { SearchBar } from "@/components/layout/SearchBar";
+import { NavbarSearch } from "@/components/layout/NavbarSearch";
 import { StockHeader } from "@/components/stock/StockHeader";
 import { CalculatorForm } from "@/components/stock/CalculatorForm";
 import { Skeleton } from "@/components/ui/Skeleton";
@@ -47,10 +47,10 @@ export default function StockCalculatorPage() {
 
   return (
     <div className="min-h-screen bg-page">
-      <header className="flex items-center justify-between pr-6">
+      <header className="flex items-center gap-2 min-w-0 pr-3 md:pr-6">
         <Navbar />
         <HeaderToolbar>
-          <SearchBar stocks={allStocks} variant="navbar" />
+          <NavbarSearch stocks={allStocks} />
         </HeaderToolbar>
       </header>
 

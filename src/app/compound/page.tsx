@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { Navbar } from "@/components/layout/Navbar";
 import { HeaderToolbar } from "@/components/layout/HeaderToolbar";
-import { SearchBar } from "@/components/layout/SearchBar";
+import { NavbarSearch } from "@/components/layout/NavbarSearch";
 
 export default function CompoundPage() {
   const [principal, setPrincipal] = useState("");
@@ -21,10 +21,10 @@ export default function CompoundPage() {
 
   return (
     <div className="min-h-screen bg-page">
-      <header className="flex items-center justify-between pr-6">
+      <header className="flex items-center gap-2 min-w-0 pr-3 md:pr-6">
         <Navbar />
         <HeaderToolbar>
-          <SearchBar stocks={[]} variant="navbar" />
+          <NavbarSearch stocks={[]} />
         </HeaderToolbar>
       </header>
 

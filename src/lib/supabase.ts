@@ -69,10 +69,17 @@ async function signInWithOAuthProvider(
     provider,
     options: {
       redirectTo: getAuthCallbackUrl(next),
+      skipBrowserRedirect: true,
     },
   });
 
   if (error) throw error;
+
+  // 모바일 Safari는 async 이후 자동 리다이렉트가 막히는 경우가 있어 명시적으로 이동
+  if (data.url && typeof window !== "undefined") {
+    window.location.assign(data.url);
+  }
+
   return data;
 }
 

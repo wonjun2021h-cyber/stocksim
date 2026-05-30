@@ -16,6 +16,10 @@ export function HeaderAuth({ variant = "desktop", className = "" }: HeaderAuthPr
   const [showMenu, setShowMenu] = useState(false);
   const isMobile = variant === "mobile";
 
+  if (isMobile && !user) {
+    return null;
+  }
+
   return (
     <>
       {user ? (

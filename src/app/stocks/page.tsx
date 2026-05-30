@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Navbar } from "@/components/layout/Navbar";
 import { HeaderToolbar } from "@/components/layout/HeaderToolbar";
-import { SearchBar } from "@/components/layout/SearchBar";
+import { NavbarSearch } from "@/components/layout/NavbarSearch";
 import { StockLogo } from "@/components/ui/StockLogo";
 import { StockListSkeleton } from "@/components/ui/Skeleton";
 import { fetchAllStocks } from "@/lib/csvParser";
@@ -30,10 +30,10 @@ export default function StocksPage() {
 
   return (
     <div className="min-h-screen bg-page">
-      <header className="flex items-center justify-between pr-6">
+      <header className="flex items-center gap-2 min-w-0 pr-3 md:pr-6">
         <Navbar />
         <HeaderToolbar>
-          <SearchBar stocks={stocks} variant="navbar" />
+          <NavbarSearch stocks={stocks} />
         </HeaderToolbar>
       </header>
 

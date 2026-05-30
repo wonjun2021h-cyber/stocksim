@@ -225,7 +225,7 @@ function BacktestPageInner() {
     <>
     <div className="min-h-screen bg-page">
       {/* 상단 헤더 */}
-      <header className="flex items-center justify-between pr-4 md:pr-6">
+      <header className="flex items-center gap-2 min-w-0 pr-3 md:pr-6">
         <Navbar />
         <HeaderToolbar />
       </header>

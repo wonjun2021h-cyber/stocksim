@@ -29,9 +29,15 @@ SUPABASE_SERVICE_ROLE_KEY=eyJhbG...   # 포트폴리오 API용 (선택)
 | Site URL | `http://localhost:3000` |
 | Redirect URLs | `http://localhost:3000/auth/callback` |
 
-휴대폰에서 테스트할 때는 PC IP도 추가합니다.
+휴대폰에서 **같은 Wi‑Fi IP**(`http://192.168.x.x:3000`)로 접속할 때는 **반드시** Redirect URLs에 추가합니다.  
+PC는 `localhost`라 로그인이 되는데 폰만 「페이지를 못 연다」면 이 설정이 빠진 경우가 대부분입니다.
 
-- `http://192.168.0.10:3000/auth/callback`
+- `http://192.168.0.10:3000/auth/callback` (본인 PC IP로 변경 — 터미널 `npm run dev` 실행 시 표시되는 Network 주소)
+
+배포 URL(Production):
+
+- Site URL: `https://stocksim-mu.vercel.app`
+- Redirect URLs: `https://stocksim-mu.vercel.app/auth/callback`
 
 ## 3. Google / 카카오 OAuth
 

@@ -45,12 +45,12 @@ export function MobileSearchButton({ stocks }: MobileSearchProps) {
       <button
         type="button"
         onClick={() => setOpen(true)}
-        className="md:hidden flex items-center gap-1.5 px-3 py-2 rounded-full bg-elevated text-ink text-xs font-medium border border-line active:scale-95 transition-transform min-w-0"
+        className="md:hidden flex items-center gap-1.5 px-2.5 py-2 rounded-full bg-elevated text-ink text-xs font-medium border border-line active:scale-95 transition-transform shrink-0"
       >
         <svg className="w-3.5 h-3.5 text-subtle shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
         </svg>
-        주식 검색하기
+        검색
       </button>
 
       {/* 전체화면 검색 오버레이 */}

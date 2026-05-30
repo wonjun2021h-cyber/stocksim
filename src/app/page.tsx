@@ -4,8 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Navbar } from "@/components/layout/Navbar";
 import { HeaderToolbar } from "@/components/layout/HeaderToolbar";
-import { SearchBar } from "@/components/layout/SearchBar";
-import { MobileSearchButton } from "@/components/layout/MobileSearch";
+import { NavbarSearch } from "@/components/layout/NavbarSearch";
 import { MyPageButton } from "@/components/layout/MyPageButton";
 import { MarketTicker } from "@/components/home/MarketTicker";
 import { PopularStocks } from "@/components/home/PopularStocks";
@@ -28,14 +27,11 @@ export default function HomePage() {
   return (
     <div className="min-h-screen bg-page">
       {/* ── 상단 헤더 ── */}
-      <header className="flex items-center justify-between pr-4 md:pr-6">
+      <header className="flex items-center gap-2 min-w-0 pr-3 md:pr-6">
         <Navbar />
         <HeaderToolbar>
           <div className="flex items-center gap-2 min-w-0">
-            <MobileSearchButton stocks={stocks} />
-            <div className="hidden md:block min-w-0">
-              <SearchBar stocks={stocks} variant="navbar" placeholder="주식 검색하기" />
-            </div>
+            <NavbarSearch stocks={stocks} />
             <MyPageButton />
           </div>
         </HeaderToolbar>
