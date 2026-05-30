@@ -7,7 +7,6 @@ import { HeaderToolbar } from "@/components/layout/HeaderToolbar";
 import { SearchBar } from "@/components/layout/SearchBar";
 import { StockLogo } from "@/components/ui/StockLogo";
 import { StockListSkeleton } from "@/components/ui/Skeleton";
-import { FavoriteButton } from "@/components/stock/FavoriteButton";
 import { fetchAllStocks } from "@/lib/csvParser";
 import type { StockInfo } from "@/lib/types";
 
@@ -64,14 +63,11 @@ export default function StocksPage() {
           ) : (
             <div className="divide-y divide-line">
               {filtered.map((stock) => (
-                <div
+                <Link
                   key={stock.ticker}
-                  className="flex items-center gap-2 px-4 py-3.5 hover:bg-muted-row transition-colors"
+                  href={`/stock/${stock.ticker}`}
+                  className="flex items-center gap-3 px-4 py-3.5 hover:bg-muted-row transition-colors"
                 >
-                  <Link
-                    href={`/stock/${stock.ticker}`}
-                    className="flex items-center gap-3 flex-1 min-w-0"
-                  >
                     <StockLogo ticker={stock.ticker} size="sm" />
                     <div className="flex-1 min-w-0">
                       <p className="text-ink text-sm font-medium truncate">
@@ -100,13 +96,7 @@ export default function StocksPage() {
                         </span>
                       )}
                     </div>
-                  </Link>
-                  <FavoriteButton
-                    ticker={stock.ticker}
-                    name={stock.name}
-                    size="sm"
-                  />
-                </div>
+                </Link>
               ))}
             </div>
           )}

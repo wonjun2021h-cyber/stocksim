@@ -2,12 +2,46 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import { Footer } from "@/components/layout/Footer";
 import { BottomNav } from "@/components/layout/BottomNav";
-import { AppProviders } from "@/components/providers/AppProviders";
+import {
+  DEFAULT_DESCRIPTION,
+  DEFAULT_TITLE,
+  SITE_NAME,
+  getSiteUrl,
+} from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "StockSim — 몇 년 전 샀다면, 지금 얼마일까?",
-  description:
-    "투자 금액·주기·기간을 넣으면 최근 12년 데이터로 시나리오별 수익을 계산해 드립니다",
+  metadataBase: new URL(getSiteUrl()),
+  title: {
+    default: `${SITE_NAME} — ${DEFAULT_TITLE}`,
+    template: `%s | ${SITE_NAME}`,
+  },
+  description: DEFAULT_DESCRIPTION,
+  applicationName: SITE_NAME,
+  keywords: [
+    "주식 시뮬레이션",
+    "미국 주식",
+    "백테스트",
+    "포트폴리오",
+    "투자 계산기",
+    "CAGR",
+    "적립식 투자",
+  ],
+  authors: [{ name: SITE_NAME }],
+  creator: SITE_NAME,
+  robots: { index: true, follow: true },
+  openGraph: {
+    type: "website",
+    locale: "ko_KR",
+    siteName: SITE_NAME,
+    title: `${SITE_NAME} — ${DEFAULT_TITLE}`,
+    description: DEFAULT_DESCRIPTION,
+    url: getSiteUrl(),
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${SITE_NAME} — ${DEFAULT_TITLE}`,
+    description: DEFAULT_DESCRIPTION,
+  },
 };
 
 export const viewport: Viewport = {
@@ -30,7 +64,7 @@ export default function RootLayout({
       </head>
       {/* pb-16 = 모바일 바텀 내비 높이 확보, md:pb-0 = 데스크톱에서 제거 */}
       <body className="antialiased min-h-screen bg-page text-ink flex flex-col pb-16 md:pb-0">
-        <AppProviders>{children}</AppProviders>
+        {children}
         <Footer />
         <BottomNav />
       </body>

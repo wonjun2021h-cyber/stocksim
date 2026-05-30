@@ -6,7 +6,6 @@ import { Navbar } from "@/components/layout/Navbar";
 import { useAuth } from "@/hooks/useAuth";
 import { AuthModal } from "@/components/auth/AuthModal";
 import { MyPortfolioList } from "@/components/mypage/MyPortfolioList";
-import { MyFavoritesList } from "@/components/mypage/MyFavoritesList";
 import { FeedbackForm } from "@/components/mypage/FeedbackForm";
 
 export default function MyPage() {
@@ -22,7 +21,7 @@ export default function MyPage() {
       <main className="flex-1 max-w-lg mx-auto w-full px-4 md:px-6 py-8 pb-24">
         <h1 className="text-xl font-bold text-ink mb-1">마이페이지</h1>
         <p className="text-xs text-subtle mb-8">
-          관심 종목, 저장한 포트폴리오, 서비스 의견을 관리합니다.
+          저장한 포트폴리오와 서비스 의견을 관리합니다.
         </p>
 
         {loading ? (
@@ -30,7 +29,7 @@ export default function MyPage() {
         ) : !user ? (
           <div className="rounded-2xl bg-panel border border-line p-8 text-center">
             <p className="text-sm text-muted mb-4">
-              관심 종목 저장, 포트폴리오 저장, 의견 보내기는 로그인 후 이용할 수 있습니다.
+              포트폴리오 저장, 의견 보내기는 로그인 후 이용할 수 있습니다.
             </p>
             <button
               type="button"
@@ -48,11 +47,6 @@ export default function MyPage() {
           </div>
         ) : (
           <div className="flex flex-col gap-10">
-            <section>
-              <h2 className="text-sm font-bold text-ink mb-3">관심 종목</h2>
-              <MyFavoritesList />
-            </section>
-
             <section>
               <h2 className="text-sm font-bold text-ink mb-3">저장한 포트폴리오</h2>
               <MyPortfolioList />

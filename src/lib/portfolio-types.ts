@@ -137,15 +137,6 @@ export interface SavedPortfolio extends DBPortfolio {
   items: DBPortfolioItem[];
 }
 
-/** 관심 종목 (찜) */
-export interface DBFavorite {
-  id: string;
-  user_id: string;
-  ticker: string;
-  name: string;
-  created_at: string;
-}
-
 // ── Python 백테스팅 함수 입력 스펙 (주석 문서화) ──
 /**
  * Python calculate_portfolio_backtest() 함수 시그니처:

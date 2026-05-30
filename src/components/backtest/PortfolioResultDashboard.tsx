@@ -1,9 +1,12 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useId } from "react";
 import type { BacktestResponse } from "@/lib/portfolio-types";
 import { AllocationDonutChart } from "@/components/backtest/AllocationDonutChart";
 import { ScenarioCurveChart } from "@/components/backtest/ScenarioCurveChart";
+import { PortfolioShareCard } from "@/components/backtest/PortfolioShareCard";
+import { buildPortfolioShareUrl, copyText } from "@/lib/portfolio-share";
+import { saveElementAsImage } from "@/lib/save-as-image";
 
 interface PortfolioResultDashboardProps {
   result: BacktestResponse;
@@ -38,13 +41,43 @@ export function PortfolioResultDashboard({
   compact = false,
 }: PortfolioResultDashboardProps) {
   const { meta, allocation, scenarios, portfolioMetrics, warnings } = result;
-  const [copyDone, setCopyDone] = useState(false);
+  const captureId = `portfolio-share-${useId().replace(/:/g, "")}`;
+  const [linkFeedback, setLinkFeedback] = useState<string | null>(null);
+  const [shareFeedback, setShareFeedback] = useState<string | null>(null);
+  const [sharePending, setSharePending] = useState(false);
 
-  function handleCopyLink() {
-    navigator.clipboard.writeText(window.location.href).then(() => {
-      setCopyDone(true);
-      setTimeout(() => setCopyDone(false), 2000);
-    });
+  function showFeedback(
+    setter: (msg: string | null) => void,
+    message: string
+  ) {
+    setter(message);
+    window.setTimeout(() => setter(null), 2500);
+  }
+
+  async function handleCopyLink() {
+    try {
+      const url = buildPortfolioShareUrl(result);
+      await copyText(url);
+      showFeedback(setLinkFeedback, "링크 복사됨 ✓");
+    } catch {
+      showFeedback(setLinkFeedback, "복사 실패 — 다시 시도해 주세요");
+    }
+  }
+
+  async function handleSaveImage() {
+    if (sharePending) return;
+    setSharePending(true);
+    setShareFeedback(null);
+    try {
+      await new Promise((r) => setTimeout(r, 200));
+      const tickers = allocation.map((a) => a.ticker).join("-");
+      await saveElementAsImage(captureId, `stocksim-portfolio-${tickers}.png`);
+      showFeedback(setShareFeedback, "이미지 저장됨 ✓");
+    } catch {
+      showFeedback(setShareFeedback, "저장 실패 — 다시 시도해 주세요");
+    } finally {
+      setSharePending(false);
+    }
   }
 
   return (
@@ -151,7 +184,22 @@ export function PortfolioResultDashboard({
         </div>
       </div>
 
-      {/* ── 저장 버튼 + 면책 문구 ────────────────────── */}
+      <p className="text-xs text-subtle leading-relaxed text-center">
+        ⚠ 이 결과는 과거 종가 데이터 기반 참고용 시뮬레이션이며 투자 조언이 아닙니다.
+        배당·주식분할은 반영되지 않았으며, 과거 수익이 미래 수익을 보장하지 않습니다.
+      </p>
+
+      {/* 공유 이미지용 (화면 밖 렌더) */}
+      <div
+        id={captureId}
+        aria-hidden
+        className="pointer-events-none fixed top-0 w-[375px]"
+        style={{ left: "-9999px" }}
+      >
+        <PortfolioShareCard result={result} />
+      </div>
+
+      {/* ── 저장 버튼 + 공유 ────────────────────── */}
       <div className="flex flex-col gap-3">
         {!hideSaveButton && (
           <button
@@ -187,32 +235,22 @@ export function PortfolioResultDashboard({
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
                 d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
             </svg>
-            {copyDone ? "복사됐어요 ✓" : "링크 복사"}
+            {linkFeedback ?? "링크 복사"}
           </button>
 
           <button
             type="button"
-            onClick={() => {
-              const tickers = allocation.map((a) => a.ticker).join(", ");
-              const best = scenarios.best.gainPct;
-              const worst = scenarios.worst.gainPct;
-              const text = `StockSim 포트폴리오 시뮬 결과\n종목: ${tickers}\n최고 ${best > 0 ? "+" : ""}${best}% / 최저 ${worst > 0 ? "+" : ""}${worst}%\n${window.location.href}`;
-              navigator.clipboard.writeText(text).then(() => alert("결과가 복사됐어요!"));
-            }}
-            className="flex items-center gap-1.5 px-4 py-2.5 rounded-full bg-elevated border border-line dark:border-transparent text-xs font-semibold text-muted hover:text-ink transition-colors"
+            onClick={handleSaveImage}
+            disabled={sharePending}
+            className="flex items-center gap-1.5 px-4 py-2.5 rounded-full bg-ink text-panel text-xs font-semibold hover:opacity-90 transition-opacity disabled:opacity-50"
           >
             <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
-                d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" />
+                d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
             </svg>
-            결과 공유
+            {sharePending ? "저장 중..." : shareFeedback ?? "결과 공유"}
           </button>
         </div>
-
-        <p className="text-xs text-subtle leading-relaxed text-center">
-          ⚠ 이 결과는 과거 종가 데이터 기반 참고용 시뮬레이션이며 투자 조언이 아닙니다.
-          배당·주식분할은 반영되지 않았으며, 과거 수익이 미래 수익을 보장하지 않습니다.
-        </p>
       </div>
     </div>
   );

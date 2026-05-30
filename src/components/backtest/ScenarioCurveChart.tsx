@@ -20,6 +20,9 @@ interface ScenarioCurveChartProps {
   totalInvested: number;
   /** 차트 높이 (기본 320) */
   height?: number;
+  /** 공유 이미지용 — 설명 문구 숨김, 고정 너비 차트 */
+  shareMode?: boolean;
+  chartWidth?: number;
 }
 
 // ── 원화 포맷 유틸 ────────────────────────────────────────
@@ -118,6 +121,8 @@ export function ScenarioCurveChart({
   worst,
   totalInvested,
   height = 320,
+  shareMode = false,
+  chartWidth = 335,
 }: ScenarioCurveChartProps) {
   if (
     best.curve.length === 0 &&
@@ -135,6 +140,81 @@ export function ScenarioCurveChart({
   }
 
   const chartData = mergeToChartData(best.curve, median.curve, worst.curve);
+
+  const chartInner = (
+    <LineChart
+      data={chartData}
+      width={shareMode ? chartWidth : undefined}
+      height={shareMode ? height : undefined}
+      margin={{ top: 10, right: 8, left: 0, bottom: 0 }}
+    >
+      <CartesianGrid
+        strokeDasharray="3 3"
+        stroke="var(--app-line)"
+        strokeOpacity={0.5}
+      />
+      <XAxis
+        dataKey="date"
+        tick={{ fill: "var(--app-muted)", fontSize: 10 }}
+        tickLine={false}
+        axisLine={false}
+        tickFormatter={fmtDate}
+        interval="preserveStartEnd"
+      />
+      <YAxis
+        tick={{ fill: "var(--app-muted)", fontSize: 10 }}
+        tickLine={false}
+        axisLine={false}
+        tickFormatter={(v) => fmtKRW(v)}
+        width={52}
+      />
+      {!shareMode && <Tooltip content={<CustomTooltip />} />}
+      <Legend
+        iconType="circle"
+        iconSize={8}
+        wrapperStyle={{ fontSize: "11px", color: "var(--app-muted)" }}
+      />
+      <ReferenceLine
+        y={totalInvested}
+        stroke="var(--app-line)"
+        strokeDasharray="6 3"
+        label={{
+          value: `원금 ${fmtKRW(totalInvested)}`,
+          fill: "var(--app-faint)",
+          fontSize: 10,
+          position: "insideTopLeft",
+        }}
+      />
+      <Line
+        type="monotone"
+        dataKey="best"
+        name="최고 수익"
+        stroke="#FF4D4D"
+        strokeWidth={2}
+        dot={false}
+        activeDot={{ r: 4 }}
+      />
+      <Line
+        type="monotone"
+        dataKey="median"
+        name="평균 수익"
+        stroke="#4DA6FF"
+        strokeWidth={2.5}
+        dot={false}
+        activeDot={{ r: 4 }}
+      />
+      <Line
+        type="monotone"
+        dataKey="worst"
+        name="최저 수익"
+        stroke="#A0A0A0"
+        strokeWidth={1.5}
+        strokeDasharray="5 3"
+        dot={false}
+        activeDot={{ r: 4 }}
+      />
+    </LineChart>
+  );
 
   return (
     <div className="flex flex-col gap-4">
@@ -188,98 +268,27 @@ export function ScenarioCurveChart({
         </div>
       </div>
 
-      {/* 라인 차트 */}
-      <ResponsiveContainer width="100%" height={height}>
-        <LineChart
-          data={chartData}
-          margin={{ top: 10, right: 8, left: 0, bottom: 0 }}
-        >
-          <CartesianGrid
-            strokeDasharray="3 3"
-            stroke="var(--app-line)"
-            strokeOpacity={0.5}
-          />
-          <XAxis
-            dataKey="date"
-            tick={{ fill: "var(--app-muted)", fontSize: 10 }}
-            tickLine={false}
-            axisLine={false}
-            tickFormatter={fmtDate}
-            interval="preserveStartEnd"
-          />
-          <YAxis
-            tick={{ fill: "var(--app-muted)", fontSize: 10 }}
-            tickLine={false}
-            axisLine={false}
-            tickFormatter={(v) => fmtKRW(v)}
-            width={52}
-          />
-          <Tooltip content={<CustomTooltip />} />
-          <Legend
-            iconType="circle"
-            iconSize={8}
-            wrapperStyle={{ fontSize: "11px", color: "var(--app-muted)" }}
-          />
+      {shareMode ? (
+        chartInner
+      ) : (
+        <ResponsiveContainer width="100%" height={height}>
+          {chartInner}
+        </ResponsiveContainer>
+      )}
 
-          {/* 총 투자 원금 기준선 */}
-          <ReferenceLine
-            y={totalInvested}
-            stroke="var(--app-line)"
-            strokeDasharray="6 3"
-            label={{
-              value: `원금 ${fmtKRW(totalInvested)}`,
-              fill: "var(--app-faint)",
-              fontSize: 10,
-              position: "insideTopLeft",
-            }}
-          />
-
-          {/* 최고 수익 시나리오 */}
-          <Line
-            type="monotone"
-            dataKey="best"
-            name="최고 수익"
-            stroke="#FF4D4D"
-            strokeWidth={2}
-            dot={false}
-            activeDot={{ r: 4 }}
-          />
-          {/* 평균(중앙값) 시나리오 */}
-          <Line
-            type="monotone"
-            dataKey="median"
-            name="평균 수익"
-            stroke="#4DA6FF"
-            strokeWidth={2.5}
-            dot={false}
-            activeDot={{ r: 4 }}
-          />
-          {/* 최악 수익 시나리오 */}
-          <Line
-            type="monotone"
-            dataKey="worst"
-            name="최저 수익"
-            stroke="#A0A0A0"
-            strokeWidth={1.5}
-            strokeDasharray="5 3"
-            dot={false}
-            activeDot={{ r: 4 }}
-          />
-        </LineChart>
-      </ResponsiveContainer>
-
-      {/* 하단 시나리오 설명 */}
-      <div className="grid grid-cols-1 gap-1.5 text-xs text-muted">
-        <p>
-          <span className="text-accent-up font-semibold">최고 수익</span>: 지난 12년 중 가장 좋은 시점에 투자를 시작했을 때
-        </p>
-        <p>
-          <span className="text-accent-down font-semibold">평균 수익</span>: 모든 시작 시점의 중앙값 결과
-        </p>
-        <p>
-          <span className="font-semibold">최저 수익</span>: 최고점에 진입하여 최대 낙폭(MDD)을 정면으로 맞았을 때
-        </p>
-      </div>
+      {!shareMode && (
+        <div className="grid grid-cols-1 gap-1.5 text-xs text-muted">
+          <p>
+            <span className="text-accent-up font-semibold">최고 수익</span>: 지난 12년 중 가장 좋은 시점에 투자를 시작했을 때
+          </p>
+          <p>
+            <span className="text-accent-down font-semibold">평균 수익</span>: 모든 시작 시점의 중앙값 결과
+          </p>
+          <p>
+            <span className="font-semibold">최저 수익</span>: 최고점에 진입하여 최대 낙폭(MDD)을 정면으로 맞았을 때
+          </p>
+        </div>
+      )}
     </div>
   );
 }

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import html2canvas from "html2canvas";
+import { saveElementAsImage } from "@/lib/save-as-image";
 
 const CAPTURE_ID = "result-share-capture";
 
@@ -13,44 +13,14 @@ export function ShareActions({ ticker }: ShareActionsProps) {
   const [saving, setSaving] = useState(false);
 
   async function handleSaveImage() {
-    const source = document.getElementById(CAPTURE_ID);
-    if (!source || saving) return;
+    if (saving) return;
 
     setSaving(true);
-    const clone = source.cloneNode(true) as HTMLElement;
-
     try {
-      clone.querySelectorAll("[data-no-share]").forEach((el) => el.remove());
-
-      clone.id = "";
-      clone.style.position = "fixed";
-      clone.style.left = "0";
-      clone.style.top = "0";
-      clone.style.zIndex = "-1";
-      clone.style.width = `${source.offsetWidth}px`;
-      clone.style.margin = "0";
-      document.body.appendChild(clone);
-
-      if (document.fonts?.ready) {
-        await document.fonts.ready;
-      }
-      await new Promise((r) => requestAnimationFrame(() => requestAnimationFrame(r)));
-
-      const canvas = await html2canvas(clone, {
-        backgroundColor: null,
-        scale: 2,
-        useCORS: true,
-        logging: false,
-      });
-
-      const link = document.createElement("a");
-      link.download = `stocksim-${ticker}-result.png`;
-      link.href = canvas.toDataURL("image/png", 1);
-      link.click();
+      await saveElementAsImage(CAPTURE_ID, `stocksim-${ticker}-result.png`);
     } catch {
       alert("이미지 저장에 실패했습니다. 다시 시도해 주세요.");
     } finally {
-      if (clone.parentNode) clone.parentNode.removeChild(clone);
       setSaving(false);
     }
   }

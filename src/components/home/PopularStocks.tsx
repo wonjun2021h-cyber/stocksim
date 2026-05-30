@@ -3,7 +3,6 @@
 import Link from "next/link";
 import type { StockInfo } from "@/lib/types";
 import { StockLogo } from "@/components/ui/StockLogo";
-import { FavoriteButton } from "@/components/stock/FavoriteButton";
 
 interface PopularStocksProps {
   stocks: StockInfo[];
@@ -34,14 +33,11 @@ export function PopularStocks({ stocks }: PopularStocksProps) {
     <div className="rounded-2xl bg-panel overflow-hidden border border-line dark:border-transparent">
       <div className="divide-y divide-line">
         {ordered.map((stock, index) => (
-          <div
+          <Link
             key={stock.ticker}
-            className="flex items-center gap-2 px-4 py-3.5 hover:bg-muted-row transition-colors duration-150 group"
+            href={`/stock/${encodeURIComponent(stock.ticker)}`}
+            className="flex items-center gap-3 px-4 py-3.5 hover:bg-muted-row transition-colors duration-150 group"
           >
-            <Link
-              href={`/stock/${encodeURIComponent(stock.ticker)}`}
-              className="flex items-center gap-3 flex-1 min-w-0"
-            >
               {/* Rank */}
               <span className="text-faint text-sm w-5 text-center shrink-0">
                 {index + 1}
@@ -75,9 +71,7 @@ export function PopularStocks({ stocks }: PopularStocksProps) {
                   {Math.round((stock.annualReturnPeriodYears ?? 0) * 10) / 10}년 기준)
                 </span>
               )}
-            </Link>
-            <FavoriteButton ticker={stock.ticker} name={stock.name} size="sm" />
-          </div>
+          </Link>
         ))}
       </div>
     </div>

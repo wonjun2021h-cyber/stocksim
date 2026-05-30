@@ -3,7 +3,6 @@
 import { useState, useEffect, useRef } from "react";
 import { useRouter } from "next/navigation";
 import type { StockInfo } from "@/lib/types";
-import { FavoriteButton } from "@/components/stock/FavoriteButton";
 
 interface SearchBarProps {
   placeholder?: string;
@@ -110,33 +109,28 @@ export function SearchBar({
       {showDropdown && (
         <div className="absolute top-full mt-2 w-full min-w-[240px] rounded-xl bg-panel border border-line shadow-lg dark:shadow-[0_8px_32px_rgba(0,0,0,0.6)] overflow-hidden z-50">
           {results.map((stock) => (
-            <div
+            <button
               key={stock.ticker}
-              className="flex items-center gap-1 px-2 py-1 hover:bg-muted-row transition-colors"
+              type="button"
+              onClick={() => handleSelect(stock.ticker)}
+              className="flex w-full items-center gap-3 px-4 py-2.5 text-left hover:bg-muted-row transition-colors"
             >
-              <button
-                type="button"
-                onClick={() => handleSelect(stock.ticker)}
-                className="flex-1 flex items-center gap-3 px-2 py-2 text-left min-w-0"
-              >
-                <div className="w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold shrink-0 bg-ring text-ink">
-                  {stock.ticker.substring(0, 2)}
-                </div>
-                <div className="min-w-0">
-                  <p className="text-sm font-medium text-ink truncate">{stock.name}</p>
-                  <p className="text-xs text-subtle">{stock.ticker}</p>
-                </div>
-                {stock.annualReturnRate !== null && (
-                  <span className={`ml-auto text-xs font-medium shrink-0 ${stock.annualReturnRate >= 0 ? "text-accent-up" : "text-accent-down"}`}>
-                    {stock.hasPeriodMismatchWarning ? "⚠️ " : ""}
-                    {stock.annualReturnRate >= 0 ? "+" : ""}
-                    {stock.annualReturnRate.toFixed(1)}% CAGR (
-                    {Math.round((stock.annualReturnPeriodYears ?? 0) * 10) / 10}년 기준)
-                  </span>
-                )}
-              </button>
-              <FavoriteButton ticker={stock.ticker} name={stock.name} size="sm" />
-            </div>
+              <div className="w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold shrink-0 bg-ring text-ink">
+                {stock.ticker.substring(0, 2)}
+              </div>
+              <div className="min-w-0">
+                <p className="text-sm font-medium text-ink truncate">{stock.name}</p>
+                <p className="text-xs text-subtle">{stock.ticker}</p>
+              </div>
+              {stock.annualReturnRate !== null && (
+                <span className={`ml-auto text-xs font-medium shrink-0 ${stock.annualReturnRate >= 0 ? "text-accent-up" : "text-accent-down"}`}>
+                  {stock.hasPeriodMismatchWarning ? "⚠️ " : ""}
+                  {stock.annualReturnRate >= 0 ? "+" : ""}
+                  {stock.annualReturnRate.toFixed(1)}% CAGR (
+                  {Math.round((stock.annualReturnPeriodYears ?? 0) * 10) / 10}년 기준)
+                </span>
+              )}
+            </button>
           ))}
           <a
             href="/request-stock"

@@ -2,7 +2,6 @@
 
 import type { StockInfo } from "@/lib/types";
 import { StockLogo } from "@/components/ui/StockLogo";
-import { FavoriteButton } from "@/components/stock/FavoriteButton";
 
 interface StockHeaderProps {
   stock: StockInfo;
@@ -36,7 +35,6 @@ export function StockHeader({ stock }: StockHeaderProps) {
           )}
         </div>
       </div>
-      <FavoriteButton ticker={stock.ticker} name={stock.name} />
     </div>
   );
 }
