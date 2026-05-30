@@ -27,10 +27,10 @@ export default function HomePage() {
   return (
     <div className="min-h-screen bg-page">
       {/* ── 상단 헤더 ── */}
-      <header className="flex items-center gap-2 min-w-0 pr-3 md:pr-6">
+      <header className="flex items-center justify-between min-w-0 pr-3 md:pr-6">
         <Navbar />
         <HeaderToolbar>
-          <div className="flex items-center gap-2 min-w-0">
+          <div className="flex items-center gap-2 min-w-0 flex-1 md:flex-none justify-end max-w-[calc(100vw-7rem)] md:max-w-none">
             <NavbarSearch stocks={stocks} />
             <MyPageButton />
           </div>

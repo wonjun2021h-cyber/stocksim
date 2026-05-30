@@ -92,10 +92,12 @@ export default function ResultPage() {
 
   return (
     <div className="min-h-screen bg-page flex flex-col">
-      <header className="flex items-center gap-2 min-w-0 pr-3 md:pr-6">
+      <header className="flex items-center justify-between min-w-0 pr-3 md:pr-6">
         <Navbar />
         <HeaderToolbar>
-          <NavbarSearch stocks={allStocks} />
+          <div className="flex flex-1 md:flex-none min-w-0 justify-end max-w-[calc(100vw-7rem)] md:max-w-none">
+            <NavbarSearch stocks={allStocks} />
+          </div>
         </HeaderToolbar>
       </header>
 

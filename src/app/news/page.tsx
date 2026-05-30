@@ -141,7 +141,7 @@ export default function NewsPage() {
 
   return (
     <div className="min-h-screen bg-page">
-      <header className="flex items-center gap-2 min-w-0 pr-3 md:pr-6">
+      <header className="flex items-center justify-between min-w-0 pr-3 md:pr-6">
         <Navbar />
         <HeaderToolbar />
       </header>

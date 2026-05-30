@@ -16,7 +16,9 @@ export function NavbarSearch({
 }: NavbarSearchProps) {
   return (
     <>
-      <MobileSearchButton stocks={stocks} />
+      <div className="md:hidden flex-1 min-w-0">
+        <MobileSearchButton stocks={stocks} />
+      </div>
       <div className="hidden md:block min-w-0">
         <SearchBar
           stocks={stocks}

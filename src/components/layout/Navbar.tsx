@@ -17,7 +17,7 @@ export function Navbar() {
   const pathname = usePathname();
 
   return (
-    <nav className="flex items-center gap-8 px-4 md:px-6 py-4 shrink-0 min-w-0">
+    <nav className="flex flex-1 items-center gap-8 px-4 md:px-6 py-4 min-w-0">
       <Link href="/" className="text-ink font-bold text-lg tracking-tight shrink-0">
         StockSim
       </Link>
