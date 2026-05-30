@@ -29,6 +29,9 @@ export const metadata: Metadata = {
   authors: [{ name: SITE_NAME }],
   creator: SITE_NAME,
   robots: { index: true, follow: true },
+  verification: {
+    google: "doyMLybXD73eXgLy6-0gsMW2ofrn2LHgbLHylOOusyY",
+  },
   openGraph: {
     type: "website",
     locale: "ko_KR",
