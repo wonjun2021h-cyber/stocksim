@@ -3,6 +3,7 @@
 import { Suspense, useEffect, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { supabase } from "@/lib/supabase";
+import { readAuthNextPath } from "@/lib/auth-redirect";
 
 function AuthCallbackInner() {
   const router = useRouter();
@@ -10,8 +11,10 @@ function AuthCallbackInner() {
   const [message, setMessage] = useState("로그인 처리 중...");
 
   useEffect(() => {
-    const next = searchParams.get("next") ?? "/";
-    const safeNext = next.startsWith("/") ? next : "/";
+    const fromQuery = searchParams.get("next");
+    const safeNext = readAuthNextPath(
+      fromQuery?.startsWith("/") ? fromQuery : "/"
+    );
 
     const errorDescription = searchParams.get("error_description");
     const errorCode = searchParams.get("error");

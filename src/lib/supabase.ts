@@ -1,5 +1,9 @@
 import { createBrowserClient } from "@supabase/ssr";
 import type { DBPortfolio, DBPortfolioItem } from "@/lib/portfolio-types";
+import {
+  getAuthOrigin,
+  stashAuthNextPath,
+} from "@/lib/auth-redirect";
 
 const supabaseUrl =
   process.env.NEXT_PUBLIC_SUPABASE_URL ?? "https://placeholder.supabase.co";
@@ -33,12 +37,12 @@ if (!isSupabaseConfigured() && typeof window !== "undefined") {
 /** 브라우저용 Supabase (OAuth PKCE는 쿠키에 저장 — @supabase/ssr) */
 export const supabase = createBrowserClient(supabaseUrl, supabaseAnonKey);
 
-/** OAuth 완료 후 돌아올 URL (Supabase 대시보드 Redirect URLs에도 등록 필요) */
+/** OAuth 완료 후 돌아올 URL (Supabase Redirect URLs: /auth/callback 등록 필요) */
 export function getAuthCallbackUrl(nextPath = "/") {
-  const origin =
-    typeof window !== "undefined" ? window.location.origin : "";
   const safeNext = nextPath.startsWith("/") ? nextPath : "/";
-  return `${origin}/auth/callback?next=${encodeURIComponent(safeNext)}`;
+  stashAuthNextPath(safeNext);
+  const origin = getAuthOrigin();
+  return `${origin}/auth/callback`;
 }
 
 // ── Auth helpers ──────────────────────────────────

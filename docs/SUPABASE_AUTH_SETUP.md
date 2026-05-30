@@ -24,20 +24,26 @@ SUPABASE_SERVICE_ROLE_KEY=eyJhbG...   # 포트폴리오 API용 (선택)
 
 **Authentication → URL Configuration**
 
+### 배포(Production) — 폰·PC 모두 이 설정이 없으면 localhost로 튕김
+
+| 항목 | 값 |
+|------|-----|
+| **Site URL** | `https://stocksim-mu.vercel.app` |
+| **Redirect URLs** | `https://stocksim-mu.vercel.app/auth/callback` |
+| | `https://stocksim-mu.vercel.app/**` |
+
+Site URL이 `http://localhost:3000` 이면 **모바일 로그인 후 localhost로 이동**합니다. 반드시 배포 URL로 바꾸세요.
+
+### 로컬 개발
+
 | 항목 | 예시 |
 |------|------|
-| Site URL | `http://localhost:3000` |
+| Site URL | `http://localhost:3000` (로컬만 할 때) |
 | Redirect URLs | `http://localhost:3000/auth/callback` |
 
-휴대폰에서 **같은 Wi‑Fi IP**(`http://192.168.x.x:3000`)로 접속할 때는 **반드시** Redirect URLs에 추가합니다.  
-PC는 `localhost`라 로그인이 되는데 폰만 「페이지를 못 연다」면 이 설정이 빠진 경우가 대부분입니다.
+휴대폰에서 **같은 Wi‑Fi IP**(`http://192.168.x.x:3000`)로 접속할 때:
 
-- `http://192.168.0.10:3000/auth/callback` (본인 PC IP로 변경 — 터미널 `npm run dev` 실행 시 표시되는 Network 주소)
-
-배포 URL(Production):
-
-- Site URL: `https://stocksim-mu.vercel.app`
-- Redirect URLs: `https://stocksim-mu.vercel.app/auth/callback`
+- `http://192.168.0.10:3000/auth/callback` (본인 PC IP)
 
 ## 3. Google / 카카오 OAuth
 
