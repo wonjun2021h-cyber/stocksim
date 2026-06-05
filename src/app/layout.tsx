@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import Script from "next/script";
 import "./globals.css";
 import { Footer } from "@/components/layout/Footer";
 import { BottomNav } from "@/components/layout/BottomNav";
@@ -32,6 +33,9 @@ export const metadata: Metadata = {
   verification: {
     google: "doyMLybXD73eXgLy6-0gsMW2ofrn2LHgbLHylOOusyY",
   },
+  other: {
+    "google-adsense-account": "ca-pub-6924141967925483",
+  },
   openGraph: {
     type: "website",
     locale: "ko_KR",
@@ -64,6 +68,12 @@ export default function RootLayout({
     <html lang="ko" suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
+        <Script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6924141967925483"
+          crossOrigin="anonymous"
+          strategy="afterInteractive"
+        />
       </head>
       {/* pb-16 = 모바일 바텀 내비 높이 확보, md:pb-0 = 데스크톱에서 제거 */}
       <body className="antialiased min-h-screen bg-page text-ink flex flex-col pb-16 md:pb-0">
