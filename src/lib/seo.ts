@@ -5,6 +5,13 @@ export const DEFAULT_TITLE = "몇 년 전 샀다면, 지금 얼마일까?";
 export const DEFAULT_DESCRIPTION =
   "투자 금액·주기·기간을 넣으면 최근 12년 데이터로 시나리오별 수익을 계산해 드립니다. 미국 주식·ETF 시뮬레이션과 포트폴리오 백테스트.";
 
+export const DEFAULT_OG_IMAGE = {
+  url: "/og-image.png",
+  width: 1024,
+  height: 541,
+  alt: "StockSim — 미래 자산 시뮬레이터 | 미국 주식 & ETF 포트폴리오 예측",
+};
+
 /** 배포 URL — Vercel 빌드 시 VERCEL_URL, 로컬/설정 시 NEXT_PUBLIC_SITE_URL */
 export function getSiteUrl(): string {
   const configured = process.env.NEXT_PUBLIC_SITE_URL?.trim();
@@ -39,11 +46,13 @@ export function buildPageMetadata(options: {
       siteName: SITE_NAME,
       locale: "ko_KR",
       type: "website",
+      images: [DEFAULT_OG_IMAGE],
     },
     twitter: {
       card: "summary_large_image",
       title: options.title,
       description: options.description,
+      images: [DEFAULT_OG_IMAGE.url],
     },
   };
 }
