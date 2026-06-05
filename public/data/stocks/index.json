@@ -9184,6 +9184,14 @@
     "endDate": "2026-05-14"
   },
   {
+    "ticker": "TTE",
+    "name": "토탈에너지 (TotalEnergies)",
+    "uptrending": true,
+    "dataPoints": 3125,
+    "startDate": "2014-01-02",
+    "endDate": "2026-06-05"
+  },
+  {
     "ticker": "TTEC",
     "name": "TTEC",
     "uptrending": false,
