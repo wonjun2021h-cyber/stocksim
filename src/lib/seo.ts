@@ -13,13 +13,17 @@ export const DEFAULT_OG_IMAGE = {
   alt: "StockSim — 미래 자산 시뮬레이터 | 미국 주식 & ETF 포트폴리오 예측",
 };
 
-/** 배포 URL — Vercel 빌드 시 VERCEL_URL, 로컬/설정 시 NEXT_PUBLIC_SITE_URL */
+const PRODUCTION_SITE_URL = "https://stocksim-mu.vercel.app";
+
+/** 배포 URL — 프로덕션 도메인 고정 (SEO·OAuth·sitemap) */
 export function getSiteUrl(): string {
   const configured = process.env.NEXT_PUBLIC_SITE_URL?.trim();
   if (configured) return configured.replace(/\/$/, "");
 
-  const vercel = process.env.VERCEL_URL?.trim();
-  if (vercel) return `https://${vercel.replace(/\/$/, "")}`;
+  const production = process.env.VERCEL_PROJECT_PRODUCTION_URL?.trim();
+  if (production) return `https://${production.replace(/\/$/, "")}`;
+
+  if (process.env.VERCEL) return PRODUCTION_SITE_URL;
 
   return "http://localhost:3000";
 }

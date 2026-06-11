@@ -11,14 +11,21 @@ import {
   getSiteUrl,
 } from "@/lib/seo";
 
+const siteUrl = getSiteUrl();
+
 export const metadata: Metadata = {
-  metadataBase: new URL(getSiteUrl()),
+  metadataBase: new URL(siteUrl),
+  alternates: { canonical: siteUrl },
   title: {
     default: `${SITE_NAME} — ${DEFAULT_TITLE}`,
     template: `%s | ${SITE_NAME}`,
   },
   description: DEFAULT_DESCRIPTION,
   applicationName: SITE_NAME,
+  icons: {
+    icon: [{ url: "/favicon.png", type: "image/png" }],
+    apple: [{ url: "/favicon.png", type: "image/png" }],
+  },
   keywords: [
     "주식 백테스팅",
     "백테스팅 웹",
@@ -36,6 +43,7 @@ export const metadata: Metadata = {
   verification: {
     google: "doyMLybXD73eXgLy6-0gsMW2ofrn2LHgbLHylOOusyY",
   },
+  manifest: "/site.webmanifest",
   other: {
     "google-adsense-account": "ca-pub-6924141967925483",
   },
@@ -45,7 +53,7 @@ export const metadata: Metadata = {
     siteName: SITE_NAME,
     title: `${SITE_NAME} — ${DEFAULT_TITLE}`,
     description: DEFAULT_DESCRIPTION,
-    url: getSiteUrl(),
+    url: siteUrl,
     images: [DEFAULT_OG_IMAGE],
   },
   twitter: {

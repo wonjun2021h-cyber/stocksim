@@ -1,0 +1,16 @@
+{
+  "name": "StockSim",
+  "short_name": "StockSim",
+  "description": "주식 백테스팅 웹 — 미국 주식·ETF 시뮬레이션",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a1628",
+  "theme_color": "#0a1628",
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
