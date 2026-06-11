@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 
 export const SITE_NAME = "StockSim";
-export const DEFAULT_TITLE = "몇 년 전 샀다면, 지금 얼마일까?";
+export const DEFAULT_TITLE =
+  "주식 백테스팅 웹 — 몇 년 전 샀다면, 지금 얼마일까?";
 export const DEFAULT_DESCRIPTION =
-  "투자 금액·주기·기간을 넣으면 최근 12년 데이터로 시나리오별 수익을 계산해 드립니다. 미국 주식·ETF 시뮬레이션과 포트폴리오 백테스트.";
+  "주식 백테스팅 웹 StockSim. 투자 금액·주기·기간을 넣으면 최근 12년 데이터로 시나리오별 수익을 계산합니다. 미국 주식·ETF 시뮬레이션과 포트폴리오 백테스트.";
 
 export const DEFAULT_OG_IMAGE = {
   url: "/og-image.png",

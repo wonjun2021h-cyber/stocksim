@@ -20,6 +20,8 @@ export const metadata: Metadata = {
   description: DEFAULT_DESCRIPTION,
   applicationName: SITE_NAME,
   keywords: [
+    "주식 백테스팅",
+    "백테스팅 웹",
     "주식 시뮬레이션",
     "미국 주식",
     "백테스트",
